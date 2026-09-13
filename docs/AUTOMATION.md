@@ -2,13 +2,12 @@
 
 ## 04.00 — Grokbot taraması
 
-Grokbot her gün Europe/Istanbul 04.00'te [GROKBOT_PROMPT.md](GROKBOT_PROMPT.md) içindeki promptla çalışır. Dünya ve Türkiye gündemini geniş tarar, podcast yazmaz ve sonuçları:
+Grokbot her gün Europe/Istanbul 04.00'te [GROKBOT_PROMPT.md](GROKBOT_PROMPT.md) içindeki promptla çalışır. Dünya ve Türkiye gündemini geniş tarar, podcast yazmaz ve sonuçları şu iki dosyaya kaydeder:
 
-`intake/YYYY/MM/YYYY-MM-DD.json`
+- `intake/YYYY/MM/YYYY-MM-DD.json` — pretty-print UTF-8 JSON (asla tek satır minify değil; alan kısaltması yok)
+- `intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt` — ElevenLabs’a yapıştırılacak Türkçe ses metni
 
-yoluna kaydeder.
-
-Grokbot'un görevi yüksek geri çağırmalı aday keşfidir. Haber atlamamaya çalışır ancak iddiaları “doğrulandı/bildirildi/iddia” seviyesinde işaretler. GitHub'a yazamıyorsa JSON'u tam çıktı olarak verir ve başarısızlığı bildirir.
+Grokbot'un görevi yüksek geri çağırmalı aday keşfidir. Haber atlamamaya çalışır ancak iddiaları “doğrulandı/bildirildi/iddia” seviyesinde işaretler. GitHub'a yazamıyorsa her iki dosyanın içeriğini tam çıktı olarak verir ve başarısızlığı bildirir.
 
 ## 05.00 — ChatGPT doğrulaması ve podcast
 
@@ -29,7 +28,7 @@ eminwhocodes/daily-ai-podcast reposundaki AGENTS.md ve .codex/skills/daily-tech-
 
 ## Sesli dinleme
 
-Görev otomatik olarak ses çalmayı garanti etmez. Rapor Voice içinde bölüm kimlikleriyle kontrol edilir:
+04.00 çıktısının ElevenLabs metni `intake/...elevenlabs.txt` dosyasındadır; Emin bunu TTS’e yapıştırır. Nihai rapor için görev otomatik ses çalmayı garanti etmez; rapor Voice içinde bölüm kimlikleriyle kontrol edilir:
 
 - “B01'den başlayarak podcast gibi anlat.”
 - “B09'daki KAAN bölümünü daha teknik tekrar anlat.”

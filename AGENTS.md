@@ -43,8 +43,15 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 ## Kullanıcı tercihleri
 
 - Emin podcastin kapsamı, tonu, ritmi, kaynak önceliği veya bölüm yapısı hakkında kalıcı bir tercih verdiğinde bu repo kurallarını da tercihe göre güncelle.
-- Tercihi en uygun yere işle: genel davranış için `AGENTS.md`, üretim ayrıntısı için `SKILL.md`, rapor yapısı için `templates/DAILY_REPORT.md`.
+- Tercihi en uygun yere işle: genel davranış için `AGENTS.md`, Grokbot çıktısı için `docs/GROKBOT_PROMPT.md`, üretim ayrıntısı için `SKILL.md`, rapor yapısı için `templates/DAILY_REPORT.md`.
 - Aynı tercihi farklı dosyalarda gereksiz tekrar etme; ancak ajan davranışını güvenceye almak için gereken kısa çapraz kural eklenebilir.
+
+### Intake ve ses çıktısı (kalıcı)
+
+- `intake/**/*.json` dosyaları **asla tek satır / minify edilmez**. Her zaman okunabilir UTF-8 pretty-print (2 boşluk girinti, satır sonları, sonda tek newline) yaz.
+- Alanları `…` veya benzeri kısaltmayla kesme; MCP/payload sınırı varsa dosyayı parçalı yaz veya geçici dosyadan commit et — içerik tam kalsın.
+- Her intake JSON ile birlikte ElevenLabs’a yapıştırılabilir Türkçe ses metni üret: `intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt`
+- Ses metni: markdown/JSON/URL yığını yok; doğal konuşma; özet + öncelikli adaylar; TTS’e uygun kısa paragraflar.
 
 ## Kapsam ve öncelik
 

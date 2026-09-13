@@ -54,7 +54,11 @@ GÜVENLİK VE PİYASA KURALI
 - Yatırım tavsiyesi verme.
 
 ÇIKTI
-Yalnızca geçerli UTF-8 JSON üret. Markdown çiti, giriş veya kapanış cümlesi ekleme. Şema:
+1) Geçerli UTF-8 JSON üret. Markdown çiti, giriş veya kapanış cümlesi ekleme.
+2) JSON'u ASLA tek satıra minify etme. Her zaman pretty-print yaz: 2 boşluk girinti, gerçek satır sonları, dosya sonunda tek newline.
+3) Hiçbir alanı “…” / ellipsis ile kısaltma; headline, what_happened, why_it_matters, technical_facts ve sources tam olsun.
+4) Aynı tarama için ayrıca ElevenLabs ses metni (.txt) üret (aşağıda).
+Şema:
 
 {
   "schema_version": "1.0",
@@ -130,13 +134,24 @@ KALİTE KONTROLÜ
 - Aynı olay tek item altında birleştirildi mi?
 - Gerçek, bildirim ve iddia ayrıldı mı?
 - JSON parse edilebilir mi?
+- JSON pretty-print mi (tek satır değil)?
+- Alanlarda “…” kısaltması yok mu?
+- Aynı tarih için .elevenlabs.txt üretildi mi?
 
 DOSYAYA YAZMA
-- Çıktıyı eminwhocodes/daily-ai-podcast reposunda intake/YYYY/MM/YYYY-MM-DD.json yoluna yaz.
-- Aynı tarih dosyası varsa önce oku; daha güncel ve daha kapsamlı tek geçerli JSON olarak idempotent biçimde güncelle.
-- Repo içindeki başka dosyayı değiştirme.
+- JSON'u eminwhocodes/daily-ai-podcast reposunda intake/YYYY/MM/YYYY-MM-DD.json yoluna pretty-print olarak yaz (minify yasak).
+- Aynı tarama için ElevenLabs metnini intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt yoluna yaz.
+- Aynı tarih dosyası varsa önce oku; daha güncel ve daha kapsamlı tek geçerli JSON + eşleşen txt olarak idempotent biçimde güncelle.
+- Bu iki intake çıktısı dışında repo dosyalarını değiştirme (tercih güncellemesi istenmedikçe).
 - API anahtarı, token veya gizli bilgiyi çıktı/log/repo içine yazma.
-- GitHub yazma başarısızsa JSON'u kaydedilmiş gibi söyleme; tam JSON çıktısını döndür ve hatayı açıkça bildir.
+- GitHub yazma başarısızsa kaydedilmiş gibi söyleme; hem JSON hem txt içeriğini tam döndür ve hatayı açıkça bildir.
+
+ELEVENLABS TXT
+- Amaç: Emin'in metni ElevenLabs'a yapıştırıp seslendirmesi.
+- Dil: Türkçe, doğal konuşma, podcast ritmi; markdown, JSON, kod çiti, URL listesi yok.
+- Yapı: kısa açılış (tarih + 2–3 cümle özet) → critical/high adayları tek tek (ne oldu, neden önemli) → selected medium/watch kısa geçiş → keşiflerden 2–3 not → kısa kapanış.
+- Telaffuzu zor adlarda ilk kullanımda kısa okunuş ipucu ver.
+- Exploit/saldırı tarifi, yatırım tavsiyesi, gizli savunma ayrıntısı yok.
 ```
 
 ## Zamanlama

@@ -6,7 +6,7 @@ Her sabah güncel teknoloji gündemini tarayan, kaynakları doğrulayan ve Türk
 
 - **04.00 — Grokbot:** Dünya ve Türkiye gündemini geniş tarar, kaynak URL'leriyle yapılandırılmış ham dosya üretir.
 - **05.00 — ChatGPT:** Ham adayları yeniden doğrular, ek araştırma yapar ve nihai podcast raporunu oluşturur.
-- **Dinleme:** Rapor bölüm kimlikleriyle ChatGPT Voice içinde anlatılır; kullanıcı bölüm tekrar ettirebilir veya kaldığı yerden devam edebilir.
+- **Dinleme:** Intake için `*.elevenlabs.txt` ElevenLabs’a yapıştırılır; nihai rapor bölüm kimlikleriyle ChatGPT Voice içinde anlatılabilir.
 
 ## Kapsam
 
@@ -23,7 +23,8 @@ Her sabah güncel teknoloji gündemini tarayan, kaynakları doğrulayan ve Türk
 
 ## Dosyalar
 
-- Grokbot ham taraması: `intake/YYYY/MM/YYYY-MM-DD.json`
+- Grokbot ham taraması: `intake/YYYY/MM/YYYY-MM-DD.json` (pretty-print JSON; minify yok)
+- Grokbot ElevenLabs ses metni: `intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt`
 - Nihai podcast: `reports/YYYY/MM/YYYY-MM-DD.md`
 
 Hedef podcast süresi 45–60 dakikadır. Gündem zayıfsa tekrar veya dolgu yapılmaz.
