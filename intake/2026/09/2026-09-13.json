@@ -1,1 +1,152 @@
-PLACEHOLDER_LOAD_FROM_FILE
+{
+  "schema_version": "1.0",
+  "date": "2026-09-13",
+  "timezone": "Europe/Istanbul",
+  "generated_at": "2026-09-13T23:30:00+03:00",
+  "window_start": "2026-09-12T00:00:00+03:00",
+  "window_end": "2026-09-13T23:30:00+03:00",
+  "summary": "Tarama penceresinin öne çıkanları: OpenAI, Astra talebi nedeniyle ChatGPT Pro 200 dolarlık plana yeni kayıt ve yükseltmeleri geçici olarak durdurdu; CISA KEV kataloğuna GitLab CVE-2026-85706 (CVSS 10), MikroTik RouterOS MikroTrick zinciri, ConnectWise ScreenConnect ve Citrix NetScaler girdileri eklendi (MikroTik federal due date bugün 13 Eylül). Google Windows 10/11 için Gemini masaüstü uygulamasını yayınladı; GitHub Copilot Project HydraFusion çok modellli orchestration research preview olarak CLI experimental'da açıldı. Cloudflare Cloud Connector Rules oluşturma/güncelleme kesintisi 12 Eylül'de çözüldü. Türkiye'de TÜBİTAK BiGG Yatırım 2026-2 çağrısı açık (başvuru 30 Eylül'e kadar); SSB Başkanı Görgün TUSAŞ'ta KAAN değerlendirme toplantısına katıldı. NTSB, Miami'deki 21 Air Boeing 767 pist dışına çıkışı için CVR/FDR ön güncellemesini yayımladı.",
+  "scan_status": {
+    "complete": true,
+    "failed_tracks": [
+      "global_defense"
+    ],
+    "notes": [
+      "global_defense: pencere içinde Türkiye dışı yeni doğrulanmış savunma program duyurusu (ilk uçuş, sözleşme, teslimat veya yaptırım) birincil kaynakla netleşmedi; KAAN/NTSB maddeleri tr_defense ve aviation hatlarında tutuldu.",
+      "tr_startup: 24–36 saat içinde tekil yeni round duyurusu zayıf; KPMG&212 Q2 2026 ekosistem özeti (9 Eylül) ve TEKNOFEST Şanlıurfa yaklaşımı watch/medium aday olarak eklendi.",
+      "OpenAI Help Center birincil URL bu taramada 403 döndü; pause metni TechCrunch/CIO ve ikincil kaynaklarla çapraz doğrulandı, status=confirmed bırakıldı.",
+      "UPLOAD STEP 1/21 restored after placeholder mishap"
+    ]
+  },
+  "items": [
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Pause süresi ve yeniden açılış tarihi",
+        "Günlük yeni Pro 20X kayıt hacmi (kamuya açıklanmadı)"
+      ],
+      "action_for_emin": "Astra/Pro kapasite kısıtını agent iş akışlarında yedek model ve API kotası ile planla; yeni Pro 20X koltuğu bekliyorsan Help Center duyurusunu izle.",
+      "published_at": "2026-09-10T00:00:00+00:00",
+      "event_at": "2026-09-10T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "AI-001",
+      "track": "ai",
+      "priority": "critical",
+      "status": "confirmed",
+      "headline": "OpenAI, Astra talebi nedeniyle ChatGPT Pro 200 dolarlık kayıtları geçici olarak durdurdu",
+      "what_happened": "OpenAI, 10 Eylül 2026 itibarıyla ChatGPT Pro 200 dolar (Pro 20X) planına yeni kayıt ve yükseltmeleri geçici olarak durdurduğunu duyurdu. Gerekçe, GPT-6 Astra modeline yönelik olağanüstü talep ve altyapı baskısı. Ürün lideri Thibault (Tibo) Sottiaux, Pro katmanının sistemlere en çok yük bindirdiğini ve mevcut kullanıcı deneyimini korumak için en küçük adımı attıklarını belirtti. Mevcut Pro 200 abonelikleri etkilenmiyor; 100 dolarlık Pro, Go, Plus ve API erişimi açık kalıyor. Yeniden açılış tarihi verilmedi.",
+      "why_it_matters": "Frontier model kapasitesinin tüketici yüksek kullanım katmanında dar boğaza girmesi, agent ve computer-use iş yüklerinin maliyet/rate-limit profilini doğrudan etkiliyor. Yeni Pro 20X koltuğu açılamaması ekiplerin Astra erişimini geciktirebilir.",
+      "entities": [
+        "OpenAI",
+        "ChatGPT Pro",
+        "Astra",
+        "GPT-6"
+      ],
+      "technical_facts": [
+        "Pause as of 2026-09-10 for new sign-ups and upgrades to ChatGPT Pro $200 (Pro 20X)",
+        "Existing Pro $200 subscriptions unaffected",
+        "Pro $100, Go, Plus, and API remain available",
+        "Users who cancel or downgrade during the pause cannot re-subscribe to $200 until the pause lifts",
+        "Astra launched around 2026-09-03 with strong computer-use / reasoning / coding emphasis"
+      ],
+      "sources": [
+        {
+          "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
+          "url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+          "publisher": "TechCrunch",
+          "source_type": "secondary",
+          "supports": "Pause announcement, Sottiaux quotes, Astra demand context"
+        },
+        {
+          "title": "OpenAI pauses $200 Pro tier as Astra demand strains capacity",
+          "url": "https://www.cio.com/article/4221092/openai-pauses-200-pro-tier-as-astra-demand-strains-capacity.html",
+          "publisher": "CIO",
+          "source_type": "secondary",
+          "supports": "Help Center wording summary: as of Sep 10 pause of Pro $200 new sign-ups/upgrades; existing unaffected"
+        },
+        {
+          "title": "About ChatGPT Pro tiers",
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+          "publisher": "OpenAI Help Center",
+          "source_type": "primary",
+          "supports": "Official pause notice URL (this scan got HTTP 403 fetching the page body)"
+        }
+      ]
+    }
+  ],
+  "discoveries": {
+    "skills": [
+      {
+        "name": "Cursor Agent Skills",
+        "url": "https://cursor.com/docs/skills",
+        "why": "Portable SKILL.md standardı; project/user skill ayrımı ve ajanlara tekrar kullanılabilir prosedür paketleme"
+      },
+      {
+        "name": "Claude Agent Skills",
+        "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+        "why": "Progressive disclosure + scripts/resources; Claude Code/API agent ekosisteminde skill paketleme"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Gemini Spark 1",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+        "why": "Google'ın Windows Gemini uygulamasında 24/7 kişisel agent olarak konumlandırılan Spark 1"
+      },
+      {
+        "name": "GitHub Copilot HydraFusion",
+        "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+        "why": "Multi-model Single/Cascade/Critique orchestration research preview in Copilot CLI"
+      }
+    ],
+    "ai_tools": [
+      {
+        "name": "GitHub MCP Server",
+        "url": "https://github.com/github/github-mcp-server/releases/tag/v1.12.1",
+        "why": "Agent'ların GitHub API/governance araçlarına MCP üzerinden güvenli scope ile bağlanması; 1.12.1 OAuth metadata fix"
+      },
+      {
+        "name": "Gemini app for Windows",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+        "why": "Alt+Space desktop overlay + Workspace bağlantılı masaüstü AI aracı"
+      }
+    ],
+    "ai_companies": [
+      {
+        "name": "OpenAI",
+        "url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+        "why": "Astra kapasite kısıtı ve Pro tier yönetimi; frontier demand vs infra gerilimi"
+      },
+      {
+        "name": "Anthropic",
+        "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+        "why": "Agent Skills standardı ve Claude Code/API agent ekosistemi"
+      }
+    ]
+  },
+  "deduplication_notes": [
+    "OpenAI Astra + Pro $200 pause: AI-001 (pause) ve AI-002 (model/capability) ayrı tutuldu; aynı olayın iki yüzü.",
+    "CISA Sep 9–11 batch: GitLab, MikroTik, ScreenConnect, Citrix ayrı item; Artifactory CVEs bu intake'e alınmadı (öncelik edge/self-hosted).",
+    "KAAN: TR-DEF-001 (SSB toplantısı) ile AV-001 (P1 yer/taksi iddiası) ayrı; program_stage karıştırılmadı."
+  ],
+  "editorial_warnings": [
+    "Yatırım tavsiyesi yok; market maddelerinde correlation_note kullanıldı.",
+    "Türk savunma: hassas üs/operasyon/zaafiyet detayı yok; program aşaması abartılmadı.",
+    "Güvenlik maddelerinde yalnızca yama ve savunma odaklı aksiyon; exploit adımı yok.",
+    "OpenAI Help Center birincil URL 403; pause confirmed via secondary + known official wording."
+  ]
+}
