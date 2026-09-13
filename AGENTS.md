@@ -8,48 +8,60 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 
 1. Bugünün tarihini ve `Europe/Istanbul` saat dilimini belirle.
 2. `.codex/skills/daily-tech-podcast/SKILL.md` dosyasını tamamen oku ve uygula.
-3. Günlük rapor için son 24–36 saati tara. Büyük ve hâlâ gelişen bir olayda daha eski bağlam kullanılabilir; eski haberi yeniymiş gibi sunma.
-4. Önce birincil kaynakları incele; önemli iddiaları mümkünse ikinci güvenilir kaynakla doğrula.
-5. Aynı olayın kopya haberlerini tek başlıkta birleştir.
-6. `templates/DAILY_REPORT.md` yapısına uygun rapor oluştur.
-7. Dosyayı `reports/YYYY/MM/YYYY-MM-DD.md` yoluna yaz.
-8. Kaydedilen dosyayı yeniden okuyup tarih, bağlantı, sayı, şirket/ürün adı ve çelişkileri kontrol et.
-9. Kullanıcıya kısa bir “bugün neler var” özeti ve rapor bağlantısı ver; ardından isterse Voice ile bölüm bölüm dinleyebileceğini söyle.
+3. Varsa `intake/YYYY/MM/YYYY-MM-DD.json` Grokbot taramasını oku. Adayları ipucu olarak kullan; hiçbir iddiayı otomatik doğru kabul etme.
+4. Son 24–36 saati ayrıca tara. Büyük ve hâlâ gelişen bir olayda daha eski bağlam kullanılabilir; eski haberi yeniymiş gibi sunma.
+5. Türkiye teknoloji, girişim, savunma ve havacılık takip hatlarını ayrı ayrı kontrol et.
+6. Önce birincil kaynakları incele; önemli iddiaları mümkünse ikinci güvenilir kaynakla doğrula.
+7. Aynı olayın kopya haberlerini tek başlıkta birleştir.
+8. `templates/DAILY_REPORT.md` yapısına uygun rapor oluştur.
+9. Dosyayı `reports/YYYY/MM/YYYY-MM-DD.md` yoluna yaz.
+10. Kaydedilen dosyayı yeniden okuyup tarih, bağlantı, sayı, şirket/ürün adı ve çelişkileri kontrol et.
+11. Kullanıcıya kısa bir özet ve rapor bağlantısı ver; Voice ile bölüm bölüm dinlenebileceğini söyle.
 
 ## Dil ve anlatım
 
 - Türkçe, doğal, samimi ve podcast ritminde yaz.
 - Kullanıcıya “kanka” diye hitap edilebilir; argo ölçülü olsun.
-- Bir kavram ilk kez geçtiğinde kısa ve sade tanım ver, sonra teknik ayrıntıya geç.
-- Haber okuyucusu gibi başlıkları art arda dizme. Olaylar arasında bağ kur: “Bu senin Coolify/Laravel/ajans işleri için ne demek?”
-- Kesin bilgi, şirket açıklaması, üçüncü taraf iddiası ve editoryal çıkarımı açıkça ayır.
-- Gereksiz hype, clickbait, reklam dili ve dolgu kullanma.
-- Kod bloklarını sesli anlatı gövdesine koyma; gerekiyorsa ek bölümde kısa örnek ver.
-- Telaffuzu zor adlarda ilk kullanımda parantez içinde Türkçe okunuş ipucu ekle.
+- Bir kavram ilk geçtiğinde kısa ve sade tanım ver, sonra teknik ayrıntıya geç.
+- Haberleri dizmek yerine bağ kur: “Bu senin Coolify/Laravel/ajans işleri için ne demek?”
+- Kesin bilgi, resmî açıklama, üçüncü taraf iddiası ve editoryal çıkarımı ayır.
+- Hype, clickbait, propaganda, reklam dili ve dolgu kullanma.
+- Kod bloklarını anlatı gövdesine koyma.
+- Telaffuzu zor adlarda ilk kullanımda Türkçe okunuş ipucu ver.
 
 ## Kapsam ve öncelik
 
-Öncelik sırası:
+1. Kritik güvenlik açığı, aktif istismar ve büyük servis kesintisi
+2. Türkiye'yi etkileyen kritik teknoloji, savunma veya havacılık gelişmesi
+3. Dünyadaki büyük askeri/sivil uçak, motor, İHA/SİHA, helikopter, avionik, test ve teslimat gelişmeleri
+4. Geliştiriciyi/üretimi doğrudan etkileyen sürüm ve değişiklikler
+5. AI modelleri, agent'lar, araçlar ve açık kaynak projeler
+6. Laravel/PHP, Python, JS/TS, npm/PyPI, Docker, Coolify ve Cloudflare
+7. Türkiye'deki startup, yatırım, teknopark, TÜBİTAK ve TEKNOFEST gelişmeleri
+8. Büyük teknoloji şirketleri ve açıklanabilir piyasa hareketleri
+9. Günün keşifleri ve tarih bölümü
 
-1. Kritik güvenlik açığı, aktif istismar, büyük servis kesintisi
-2. Geliştiriciyi veya üretimi doğrudan etkileyen önemli sürüm/değişiklik
-3. AI modelleri, agent'lar, araçlar ve açık kaynak projeler
-4. Laravel, PHP, Python, JS/TS, npm/PyPI, Docker, Coolify, Cloudflare
-5. Büyük teknoloji şirketleri ve açıklanabilir piyasa hareketleri
-6. Günün keşifleri ve tarih bölümü
+Savunma ve uçak takibi geniş olmalıdır ancak önemsiz sosyal medya söylentileri podcasti doldurmamalıdır.
 
-Önemsiz küçük sürüm notları yalnızca kullanıcı açısından somut etkisi varsa alınır.
+## Türkiye, savunma ve havacılık
+
+- SSB, MSB, ASELSAN, TUSAŞ, Baykar, ROKETSAN, HAVELSAN, TEI, STM ve ilgili resmî/kurumsal kaynakları kontrol et.
+- KAAN, HÜRJET, HÜRKUŞ, KIZILELMA, ANKA, AKSUNGUR, TB2/TB3, AKINCI, GÖKBEY ve ATAK gibi programları örnek izleme listesi say; listeyle sınırlı kalma.
+- Küresel ölçekte yeni uçak programı, ilk uçuş, kritik test, motor/avionik gelişmesi, büyük sipariş/teslimat, kaza, yere indirme, yaptırım veya ihracat kararını yakala.
+- Sivil havacılıkta Airbus, Boeing, COMAC, Embraer ve önemli motor üreticilerinin emniyet, sertifikasyon, üretim ve teslimat gelişmelerini izle.
+- Yalnızca kamuya açık bilgiyi kullan. Gizli bilgi iddiası, hassas üs/konum, operasyonel zafiyet veya saldırıyı kolaylaştıran teknik ayrıntı verme.
+- Resmî açıklamayı bağımsız başarı doğrulaması gibi sunma; test, prototip, seri üretim ve operasyonel hizmet kavramlarını ayır.
 
 ## Güvenlik ve finans
 
-- CVE kimliği, etkilenen sürümler, düzeltilen sürüm, önem derecesi ve aktif istismar durumunu birincil kaynaktan doğrula.
-- Güvenlik açığını kötüye kullanmaya yarayan operasyonel saldırı adımları verme; savunma ve güncelleme önerisine odaklan.
-- Hisse fiyatı/yüzdesi için piyasa tarihi, para birimi ve seans türünü yaz. Sebep doğrulanmamışsa “muhtemel bağlam” olarak işaretle.
+- CVE, etkilenen/düzeltilen sürüm, önem ve aktif istismar durumunu birincil kaynaktan doğrula.
+- Kötüye kullanıma yarayan saldırı adımları verme; savunmaya odaklan.
+- Hisse verisinde tarih, para birimi ve seans türünü yaz. Doğrulanmamış nedeni “muhtemel bağlam” diye işaretle.
 - Yatırım tavsiyesi verme.
 
 ## Dosya güvenliği
 
-- Kullanıcının mevcut raporlarını silme.
-- Aynı gün dosyası varsa önce içeriğini oku. Daha yeni kaynaklarla güncelliyorsan “Güncelleme zamanı” alanını değiştir.
-- Başka repo dosyalarını değiştirme; günlük otomasyon yalnızca ilgili raporu oluşturmalı veya güncellemelidir.
-- Kaynak erişimi ya da GitHub yazma işlemi başarısızsa bunu açıkça bildir; uydurma kaynak veya sahte commit üretme.
+- Mevcut raporları veya intake dosyalarını silme.
+- Aynı gün raporu varsa önce oku; güncellemede “Güncelleme zamanı” alanını değiştir.
+- Nihai rapor ajanı yalnızca ilgili raporu oluşturmalı/güncellemelidir.
+- Kaynak veya GitHub yazma işlemi başarısızsa açıkça bildir; uydurma kaynak ya da sahte commit üretme.

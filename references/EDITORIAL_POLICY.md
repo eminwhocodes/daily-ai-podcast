@@ -4,71 +4,67 @@
 
 Önce birincil kaynak:
 
-- Resmî ürün blogu, dokümantasyon, sürüm notu ve status sayfası
-- Projenin resmî GitHub release/advisory sayfası
-- CISA KEV, NVD, CVE kaydı ve üretici güvenlik bülteni
-- Şirket SEC bildirimi/yatırımcı ilişkileri açıklaması
-- Paket kayıtlarının resmî npm/PyPI sayfası
+- Resmî ürün blogu, dokümantasyon, release, advisory ve status sayfası
+- Projenin resmî GitHub sayfası
+- CISA KEV, NVD, CVE ve üretici güvenlik bülteni
+- Şirket yatırımcı ilişkileri/SEC/KAP açıklaması
+- npm/PyPI resmî paket kaydı
+- Türkiye için Bakanlık, SSB, MSB, TÜBİTAK, TEKNOFEST/T3 Vakfı, şirket ve teknopark açıklamaları
+- Havacılıkta üretici, düzenleyici/kaza inceleme kurumu ve resmî tedarik makamı
 
 Sonra doğrulayıcı kaynak:
 
-- Reuters, AP ve güvenilir teknik yayınlar
-- Güvenlik araştırmacısının özgün teknik raporu
-- Bakımı aktif projenin issue/PR tartışması
+- Reuters, AP ve güvenilir teknik/ekonomi yayınları
+- Güvenlik araştırmacısının özgün raporu
+- Güvenilir savunma/havacılık yayını
+- Startups.watch, Webrazzi ve benzeri yerel ekosistem kaynakları; yatırım tutarında şirket/KAP kaynağı tercih edilir
 
-Sosyal medya, forum ve topluluk gönderileri keşif için kullanılabilir; tek başına önemli bir iddianın kanıtı değildir. Arama sonucu özetini kaynak sayma; sayfayı açıp içeriği kontrol et.
+Sosyal medya, forum, uçuş takip görüntüsü ve topluluk paylaşımı keşif içindir; önemli iddianın tek kanıtı olamaz. Arama özetini kaynak sayma; sayfayı aç.
 
 ## Tarih ve tekrar
 
-- “Yayınlandı” tarihi ile olayın gerçekleştiği tarihi ayır.
-- Saat dilimini mümkünse belirt.
-- Önceki gün raporundaki olayı yalnızca yeni bilgi varsa tekrar ele al ve “devam gelişmesi” olarak işaretle.
-- Birden fazla sitenin aynı basın bültenini kopyalaması bağımsız doğrulama değildir.
+- Yayın tarihi ile olay tarihini ayır.
+- Önceki olayı yalnızca yeni bilgi varsa “devam gelişmesi” diye tekrar ele al.
+- Aynı bültenin kopyaları bağımsız doğrulama değildir.
+- Ambargo altında yayımlanan veya önceden hazırlanmış içerikte gerçek yayın zamanını kontrol et.
+
+## Türkiye teknoloji ve girişimler
+
+Yatırım, satın alma, kapanma, yeni ürün, ihracat, regülasyon, teşvik ve önemli etkinlik gelişmelerini izle. Yatırım turunda tutar, para birimi, tur, yatırımcılar ve şirketin kendi açıklamasını doğrula. “Yerli/millî” veya “ilk” iddiasını doğrudan gerçek gibi tekrarlama; kapsamını açıkla.
+
+TEKNOFEST haberinde duyuru, başvuru, yarışma sonucu, teknoloji gösterimi ve gerçek ürün teslimatını birbirinden ayır.
+
+## Savunma ve havacılık
+
+- Resmî açıklamayı doğru aktar fakat bağımsız teyit yoksa bunu belirt.
+- Prototip gösterimi, taksi testi, ilk uçuş, kalifikasyon, seri üretim sözleşmesi, teslimat ve operasyonel hizmet farklı aşamalardır.
+- Sözleşme/tutar/teslimat sayısında kamuya açık belge veya güvenilir kaynak kullan.
+- Kaza/olaylarda erken spekülasyondan kaçın; resmî inceleme sürüyorsa kesin neden verme.
+- “Radar görünmez”, menzil, yük, motor gücü gibi performans iddialarında üretici beyanı ile bağımsız doğrulamayı ayır.
+- Kamuya açık olmayan bilgi, hassas konum, görev planı, zafiyet veya saldırıyı kolaylaştıracak ayrıntı yayımlama.
+- Savunma haberini milliyetçi ya da karşıt propaganda tonuna taşımadan teknik/stratejik bağlamda anlat.
 
 ## Güvenlik
 
-Her önemli açıkta mümkün olduğunda şunları kaydet:
-
-- CVE/GHSA kimliği
-- Ürün/paket ve etkilenen sürümler
-- Düzeltilen sürüm veya azaltma adımı
-- CVSS/önem derecesi ve bunu veren kuruluş
-- Aktif istismar ya da PoC durumu
-- Kullanıcının yığınına olası etkisi
-
-Aktif istismar iddiasını CISA KEV, üretici veya güvenilir araştırmacı olmadan kesinleştirme. Exploit kodunu, saldırı zincirini veya zararlı operasyon adımlarını çoğaltma.
+CVE/GHSA, etkilenen ve düzeltilen sürüm, CVSS kaynağı, aktif istismar/PoC durumu ve Emin'in yığınına etkisini doğrula. Exploit kodu veya saldırı zinciri verme; savunmaya odaklan.
 
 ## Açık kaynak ve paketler
 
-Yeni proje keşfinde yıldız sayısına tek başına güvenme. Son commit/release, bakımcı etkinliği, lisans, kurulum yolu, Docker/self-host desteği, issue sağlığı ve gerçek kullanım örneklerini kontrol et. Paket adı benzerliği ve typosquatting riskine dikkat et.
-
-Sürüm notunda yalnızca kullanıcıyı etkileyen değişiklikleri anlat: breaking change, güvenlik düzeltmesi, performans, yeni API veya önemli deprecation.
+Yıldız sayısına tek başına güvenme. Son commit/release, bakımcı etkinliği, lisans, Docker/self-host desteği, issue sağlığı ve kullanım örneklerini kontrol et. Typosquatting riskine dikkat et. Breaking change, güvenlik, performans, API ve deprecation değişikliklerini öne al.
 
 ## Şirketler, kesintiler ve piyasa
 
-- Servis kesintisinde resmî status sayfasını ve olay zamanını kullan.
-- Fiyat değişiminde sembol, borsa, para birimi, veri tarihi, kapanış/seans içi ayrımını yaz.
-- Hareketi anlamlı değilse sırf sayı vermek için bölüme alma.
-- Şirket açıklaması, analist yorumu ve kendi çıkarımını birbirine karıştırma.
-- Nedensellik kanıtlanmadıysa “hareket şu gelişmeyle aynı döneme denk geldi” de.
-- Bu bölüm yatırım tavsiyesi değildir.
+Resmî status sayfası ve olay zamanını kullan. Hisse verisinde sembol, borsa, para birimi, tarih ve seansı yaz. Anlamsız hareketi alma. Nedensellik kanıtlanmadıysa “aynı döneme denk geldi” de. Yatırım tavsiyesi verme.
 
 ## Günün dört keşfi
 
-Her gün birbirinden farklı dört öğe seç:
-
-- Skill: ajan/modelin belirli işi daha iyi yapmasını sağlayan tekrar kullanılabilir talimat veya yetenek paketi
-- Agent: hedefe dönük, araç kullanan otonom/yarı otonom sistem veya açık kaynak agent framework/projesi
-- AI tool: son kullanıcının belirli bir işi yapmasını sağlayan ürün
-- AI firması: ayrı bir şirket veya doğrulanabilir girişim
-
-Her biri için: ne işe yarar, kimin için, neden bugün seçildi, lisans/fiyat/self-host durumu biliniyorsa ve doğrudan bağlantı. Aynı ürünü iki kategoriye koyma.
+Birbirinden farklı 1 skill, 1 agent, 1 AI tool ve 1 AI firması seç. Her biri için işlev, hedef kullanıcı, seçim nedeni, doğrudan bağlantı ve biliniyorsa lisans/fiyat/self-host bilgisini ver.
 
 ## Belirsizlik dili
 
-- Doğrulandı: birincil kaynak açıkça destekliyor.
-- Bildirildi: güvenilir ikincil kaynak söylüyor, birincil teyit yok.
-- İddia: taraflı veya henüz bağımsız doğrulanmamış açıklama.
-- Çıkarım: kaynaklardan yapılan, açıkça etiketlenmiş editoryal değerlendirme.
+- **Doğrulandı:** Birincil kaynak destekliyor.
+- **Bildirildi:** Güvenilir ikincil kaynak var, birincil teyit yok.
+- **İddia:** Taraflı veya bağımsız doğrulanmamış açıklama.
+- **Çıkarım:** Kaynaklardan yapılan açıkça etiketli değerlendirme.
 
-Sayısal veri ve doğrudan alıntılarda kaynağa özellikle yakın bağlantı ver. Uzun alıntı kullanma; özetle.
+Uzun alıntı kullanma; özetle ve sayısal veriye yakın bağlantı ver.

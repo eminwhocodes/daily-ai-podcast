@@ -1,8 +1,9 @@
-# Günlük AI & Teknoloji Podcasti — YYYY-MM-DD
+# Günlük AI, Teknoloji, Savunma & Havacılık Podcasti — YYYY-MM-DD
 
 - Hazırlanma: YYYY-MM-DD HH:mm (Europe/Istanbul)
 - Güncelleme: —
 - Araştırma penceresi: başlangıç → bitiş
+- Grokbot intake: kullanıldı / bulunamadı
 - Tahmini dinleme süresi: XX dakika
 - Kelime sayısı: yaklaşık X.XXX
 - Editoryal not: Bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.
@@ -14,44 +15,38 @@ Bugünün en önemli 5–8 maddesi.
 ## Hızlı eylem listesi
 
 - [ ] Güncellenmesi/kontrol edilmesi gerekenler
-- [ ] İzlenmesi gereken servis veya olay
+- [ ] İzlenecek güvenlik, servis, savunma veya havacılık olayı
 - [ ] Daha sonra incelenecek araç/proje
 
 ---
 
 ## [B01] Açılış: Bugünün haritası
 
-Sesli anlatı metni.
-
 ## [B02] Kritik gelişmeler
-
-Her olay için bağlam, teknik değişiklik, etki, eylem ve belirsizlik.
 
 ## [B03] AI ve agent dünyası
 
-Sesli anlatı metni.
-
 ## [B04] Yazılım ve açık kaynak
-
-Sesli anlatı metni.
 
 ## [B05] Laravel, PHP, Python ve web ekosistemi
 
-Sesli anlatı metni.
-
 ## [B06] Coolify, Docker, Cloudflare ve altyapı
-
-Sesli anlatı metni.
 
 ## [B07] Siber güvenlik
 
-Savunma odaklı anlatım ve güncelleme kontrol listesi.
+## [B08] Türkiye teknoloji, yerli girişimler ve TEKNOFEST
 
-## [B08] Büyük teknoloji, servis kesintileri ve piyasalar
+## [B09] Türk savunma sanayii
 
-Veri tarihi/seansı ve doğrulanmış bağlam belirtilir.
+Program aşamasını açık yaz: duyuru / prototip / test / kalifikasyon / seri üretim / teslimat / operasyonel hizmet.
 
-## [B09] Günün dört keşfi
+## [B10] Dünya savunma ve havacılık
+
+Askeri ve sivil uçaklar, motorlar, avionik, İHA/SİHA, helikopterler, emniyet, sertifikasyon, sipariş ve teslimatlar.
+
+## [B11] Büyük teknoloji, servis kesintileri ve piyasalar
+
+## [B12] Günün dört keşfi
 
 ### Skill
 
@@ -61,20 +56,16 @@ Veri tarihi/seansı ve doğrulanmış bağlam belirtilir.
 
 ### AI firması
 
-## [B10] Bugünün anlam ve önemi
+## [B13] Bugünün anlam ve önemi
 
-Bugün ve gerekiyorsa yarın/arife notu.
+## [B14] Emin için bugün ne yapmalı?
 
-## [B11] Emin için bugün ne yapmalı?
+En fazla 5 uygulanabilir öneri.
 
-En fazla 5 öncelikli, uygulanabilir öneri.
-
-## [B12] Kapanış
-
-Kısa toparlama ve sonraki gün izlenecek başlıklar.
+## [B15] Kapanış
 
 ---
 
 ## Kaynakça
 
-Kaynaklar başlık ve doğrudan bağlantıyla listelenir. Her kaynak mümkün olduğunca ilgili paragrafta da bağlanır.
+Doğrudan bağlantılar; esas iddialarda paragraf içinde de kaynak bulunur.

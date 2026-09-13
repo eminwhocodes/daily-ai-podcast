@@ -2,40 +2,39 @@
 
 Her sabah güncel teknoloji gündemini tarayan, kaynakları doğrulayan ve Türkçe, uzun biçimli bir podcast metni üreten kişisel yayın akışı.
 
-## Amaç
+## Çalışma düzeni
 
-Günün önemli gelişmelerini yalnızca sıralamak değil; ne olduğunu, neden önemli olduğunu, geliştirici ve ürün sahibi açısından etkisini ve takip edilmesi gereken noktaları sohbet eder gibi açıklamak.
+- **04.00 — Grokbot:** Dünya ve Türkiye gündemini geniş tarar, kaynak URL'leriyle yapılandırılmış ham dosya üretir.
+- **05.00 — ChatGPT:** Ham adayları yeniden doğrular, ek araştırma yapar ve nihai podcast raporunu oluşturur.
+- **Dinleme:** Rapor bölüm kimlikleriyle ChatGPT Voice içinde anlatılır; kullanıcı bölüm tekrar ettirebilir veya kaldığı yerden devam edebilir.
 
-Ana konular:
+## Kapsam
 
 - Yapay zekâ, agent ekosistemi ve geliştirici araçları
-- Yazılım, web geliştirme, Laravel, PHP, Python, JavaScript/TypeScript
-- Açık kaynak projeler, GitHub sürümleri, Coolify, Docker ve bulut altyapısı
-- npm, PyPI ve ilgili paket ekosistemleri
+- Yazılım, Laravel/PHP, Python, JavaScript/TypeScript, npm ve PyPI
+- Açık kaynak, GitHub sürümleri, Coolify, Docker, Cloudflare ve bulut altyapısı
 - Siber güvenlik, CVE'ler, aktif istismar ve tedarik zinciri riskleri
-- OpenAI/ChatGPT, Cloudflare, Microsoft, GitHub ve diğer büyük teknoloji şirketleri
-- Önemli servis kesintileri, güvenlik açıklamaları ve anlamlı piyasa hareketleri
-- Her gün: 1 AI skill, 1 agent, 1 AI aracı ve 1 AI şirketi
-- Günün anlam ve önemi; özellikle yaklaşan önemli günler
+- Büyük teknoloji şirketleri, servis kesintileri ve anlamlı piyasa hareketleri
+- Türkiye teknoloji gündemi, TEKNOFEST, TÜBİTAK, teknoparklar, yerli girişimler ve startup yatırımları
+- Türk savunma sanayii: SSB, MSB, ASELSAN, TUSAŞ, Baykar, ROKETSAN, HAVELSAN, TEI, STM ve ilgili ekosistem
+- Türkiye ve dünyada kritik askeri/sivil uçak, motor, İHA/SİHA, helikopter, avionik, test, teslimat ve ihracat gelişmeleri
+- Her gün 1 AI skill, 1 agent, 1 AI aracı, 1 AI şirketi
+- Bugünün ve gerekiyorsa yaklaşan günün anlam ve önemi
 
-## Günlük çıktı
+## Dosyalar
 
-Raporlar şu yola yazılır:
+- Grokbot ham taraması: `intake/YYYY/MM/YYYY-MM-DD.json`
+- Nihai podcast: `reports/YYYY/MM/YYYY-MM-DD.md`
 
-`reports/YYYY/MM/YYYY-MM-DD.md`
-
-Her rapor hem okunabilir araştırma dosyası hem de sesli anlatı metnidir. Hedef süre 45–60 dakikadır; gündem zayıfsa tekrar veya dolgu yapılmaz.
+Hedef podcast süresi 45–60 dakikadır. Gündem zayıfsa tekrar veya dolgu yapılmaz.
 
 ## Repo yapısı
 
-- [AGENTS.md](AGENTS.md): Bu repoda çalışan ajanların ana kuralları
-- [.codex/skills/daily-tech-podcast/SKILL.md](.codex/skills/daily-tech-podcast/SKILL.md): Günlük podcast üretme skill'i
-- [docs/AUTOMATION.md](docs/AUTOMATION.md): ChatGPT zamanlanmış görev kurulumu ve sınırlar
-- [templates/DAILY_REPORT.md](templates/DAILY_REPORT.md): Günlük rapor şablonu
-- [references/EDITORIAL_POLICY.md](references/EDITORIAL_POLICY.md): Kaynak, doğrulama ve editoryal kalite kuralları
+- [AGENTS.md](AGENTS.md): Ana çalışma kuralları
+- [.codex/skills/daily-tech-podcast/SKILL.md](.codex/skills/daily-tech-podcast/SKILL.md): Nihai rapor skill'i
+- [docs/GROKBOT_PROMPT.md](docs/GROKBOT_PROMPT.md): 04.00 Grokbot üretim promptu
+- [docs/AUTOMATION.md](docs/AUTOMATION.md): İki aşamalı otomasyon tasarımı
+- [templates/DAILY_REPORT.md](templates/DAILY_REPORT.md): Nihai rapor şablonu
+- [references/EDITORIAL_POLICY.md](references/EDITORIAL_POLICY.md): Kaynak ve doğrulama kuralları
 
-## Kullanım
-
-Bir ajan günlük rapor hazırlarken önce `AGENTS.md`, ardından skill ve gerekli referansları okur. Rapor oluşturulduktan sonra aynı tarihli dosya varsa körlemesine üzerine yazılmaz; içerik karşılaştırılır ve yalnızca daha güncel/doğru sürüm kaydedilir.
-
-> Bu repo yatırım tavsiyesi, güvenlik garantisi veya otomatik ses dosyası üretmez. Piyasa bölümü bilgilendirme amaçlıdır; güvenlik iddiaları birincil kaynaklarla doğrulanır.
+> Bu repo yatırım tavsiyesi, güvenlik garantisi veya otomatik ses dosyası üretmez. Savunma ve havacılık bölümü yalnızca kamuya açık, güvenli kaynaklardan hazırlanır.

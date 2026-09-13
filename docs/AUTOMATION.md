@@ -1,48 +1,55 @@
-# ChatGPT Zamanlanmış Görev Tasarımı
+# İki Aşamalı Zamanlanmış Görev Tasarımı
 
-## Önerilen sürüm: tek aşamalı
+## 04.00 — Grokbot taraması
 
-Her gün saat 05.00'te (Europe/Istanbul) tek görev çalışır:
+Grokbot her gün Europe/Istanbul 04.00'te [GROKBOT_PROMPT.md](GROKBOT_PROMPT.md) içindeki promptla çalışır. Dünya ve Türkiye gündemini geniş tarar, podcast yazmaz ve sonuçları:
 
-1. Repodaki `AGENTS.md`, skill, politika ve şablonu okur.
-2. Son 24–36 saati web üzerinden tarar.
-3. Günlük raporu üretir.
-4. `reports/YYYY/MM/YYYY-MM-DD.md` yoluna GitHub üzerinden kaydeder.
-5. Sohbette kısa özet ve rapor bağlantısı verir.
+`intake/YYYY/MM/YYYY-MM-DD.json`
 
-Bu yapı, 04.00 Grok + 05.00 ChatGPT zincirinden daha az kimlik bilgisi, daha az entegrasyon ve daha az hata noktası gerektirir.
+yoluna kaydeder.
 
-## Görev promptu
+Grokbot'un görevi yüksek geri çağırmalı aday keşfidir. Haber atlamamaya çalışır ancak iddiaları “doğrulandı/bildirildi/iddia” seviyesinde işaretler. GitHub'a yazamıyorsa JSON'u tam çıktı olarak verir ve başarısızlığı bildirir.
+
+## 05.00 — ChatGPT doğrulaması ve podcast
+
+ChatGPT:
+
+1. Repo kurallarını ve bugünün intake dosyasını okur.
+2. Grok adaylarının kaynaklarını yeniden açar.
+3. Eksik alanlarda kendi güncel araştırmasını yapar.
+4. Yanlış, yinelenen veya önemsiz maddeleri eler.
+5. Nihai raporu `reports/YYYY/MM/YYYY-MM-DD.md` yoluna yazar.
+6. Sohbette kısa özet, süre ve rapor bağlantısını verir.
+
+ChatGPT zamanlanmış görev promptu:
 
 ```text
-eminwhocodes/daily-ai-podcast reposundaki AGENTS.md ve .codex/skills/daily-tech-podcast/SKILL.md talimatlarını tamamen oku. İlgili editoryal politika ile günlük şablonu uygula. Europe/Istanbul tarihine göre son 24–36 saatin teknoloji gündemini web'de güncel kaynaklardan araştır; önemli iddiaları birincil kaynaklarla doğrula. Türkçe, doğal podcast anlatımında, gündem yeterliyse 45–60 dakikalık rapor hazırla. Dosyayı reports/YYYY/MM/YYYY-MM-DD.md yolunda oluştur; aynı günün dosyası varsa önce okuyup yalnızca daha doğru/güncel sürümle güncelle. Başka dosyaları değiştirme. Sonuçta bana 60 saniyelik özeti, tahmini dinleme süresini ve GitHub rapor bağlantısını ver.
+eminwhocodes/daily-ai-podcast reposundaki AGENTS.md ve .codex/skills/daily-tech-podcast/SKILL.md talimatlarını tamamen oku. Bugünün intake/YYYY/MM/YYYY-MM-DD.json Grokbot taraması varsa onu aday havuzu olarak kullan fakat bütün önemli iddiaları kaynaklarını açarak yeniden doğrula; intake yoksa çalışmayı durdurma ve kendi taramanla devam et. Türkiye teknoloji/startup/TEKNOFEST, Türk savunma sanayii ve dünyadaki kritik askeri-sivil uçak/havacılık gelişmelerini özellikle kontrol et. Europe/Istanbul tarihine göre son 24–36 saatin teknoloji gündemini araştır. Türkçe, doğal podcast anlatımında, gündem yeterliyse 45–60 dakikalık rapor hazırla. Dosyayı reports/YYYY/MM/YYYY-MM-DD.md yolunda oluştur; aynı günün dosyası varsa önce okuyup yalnızca daha doğru veya güncel sürümle güncelle. Başka dosyaları değiştirme. Sonuçta 60 saniyelik özeti, tahmini dinleme süresini ve GitHub rapor bağlantısını ver.
 ```
 
 ## Sesli dinleme
 
-Zamanlanmış görev raporu ve sohbet özetini hazırlar; istemci tarafında kendiliğinden bir saatlik sesi başlatacağı varsayılmaz. Rapor, ChatGPT Voice içinde okutulmaya uygun bölüm kimlikleri taşır.
-
-Örnek komutlar:
+Görev otomatik olarak ses çalmayı garanti etmez. Rapor Voice içinde bölüm kimlikleriyle kontrol edilir:
 
 - “B01'den başlayarak podcast gibi anlat.”
-- “B04'ü daha sade dille tekrar anlat.”
-- “B07'deki ikinci güvenlik haberine geri dön.”
-- “Burada dur; sonra B08'den devam edeceğiz.”
+- “B09'daki KAAN bölümünü daha teknik tekrar anlat.”
+- “B10'daki ikinci uçak gelişmesine geri dön.”
+- “Burada dur; sonra B11'den devam et.”
 
-Bu yöntem etkileşimli tekrar ve kaldığın yerden devam etmeyi sağlar. Kalıcı MP3 gerekiyorsa ayrıca bir TTS üretim hattı tasarlanmalıdır.
+Kalıcı MP3 istenirse ayrı bir TTS hattı gerekir.
 
-## İki aşamalı Grok seçeneği
+## Kurulum gereksinimleri
 
-Daha sonra istenirse:
+- Grok API/uygulama erişimi
+- GitHub'da yalnızca bu repoya gerekli minimum yazma yetkisi
+- `XAI_API_KEY` ve GitHub token'ının secret olarak tutulması
+- Harcama/token limiti, timeout ve en fazla bir kontrollü retry
+- Aynı tarih dosyasında idempotent çalışma
+- API anahtarlarının loga veya repoya yazılmaması
 
-- 04.00: Ayrı bir servis/GitHub Actions, Grok API ile ham aday haberleri `intake/YYYY-MM-DD.json` dosyasına yazar.
-- 05.00: ChatGPT ham adayları körlemesine kabul etmez; kaynakları tekrar açar, doğrular ve nihai raporu oluşturur.
+## Hata davranışı
 
-Gerekli ek parçalar: Grok API anahtarı, GitHub secret, harcama limiti, hata/tekrar politikası, şema doğrulaması ve kaynak URL zorunluluğu. API anahtarı repoya yazılmaz. Bu seçenek ilk sürümün parçası değildir.
-
-## İşletim notları
-
-- Görev başarısızsa rapor varmış gibi bildirim yapılmaz.
-- GitHub yazma yetkisi ve web erişimi görev çalışırken mevcut olmalıdır.
-- Uzun çıktı sınırına takılırsa rapor dosyası önceliklidir; sohbet mesajı kısa kalabilir.
-- Günlük rapor boyu haber yoğunluğuna bağlıdır; dolgu yapılmaz.
+- Grok başarısız olsa da 05.00 ChatGPT kendi araştırmasıyla devam eder.
+- Intake bozuksa ChatGPT onu kullanmaz ve raporda belirtir.
+- Kaynak URL'siz aday nihai rapora otomatik alınmaz.
+- Görev rapor/intake varmış gibi sahte başarı bildirmez.
