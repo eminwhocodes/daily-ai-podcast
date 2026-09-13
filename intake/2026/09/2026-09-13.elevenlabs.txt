@@ -1,0 +1,39 @@
+13 Eylül 2026, Europe/Istanbul. Günaydın. Bugünün tarama özetine hoş geldin.
+
+Kısaca: OpenAI, Astra talebi yüzünden ChatGPT Pro'nun iki yüz dolarlık planına yeni kayıtları geçici durdurdu. CISA'nın bilinen sömürü kataloğuna GitLab, MikroTik, ConnectWise ScreenConnect ve Citrix NetScaler zafiyetleri eklendi; MikroTik için federal yama tarihi bugün. Google Windows'a Gemini masaüstü uygulamasını getirdi, GitHub Copilot'ta HydraFusion çok modellli orkestrasyon önizlemesi açıldı. Türkiye'de TÜBİTAK BiGG yatırım çağrısı sürüyor, SSB KAAN'ı değerlendirdi, NTSB ise Miami'deki Boeing yedi yüz altmış yedi kaza ön raporunu yayımladı.
+
+Kritik başlıklar.
+
+OpenAI ve Astra. On Eylül itibarıyla ChatGPT Pro iki yüz dolarlık katmana, yani Pro yirmi X'e yeni abonelik ve yükseltme kapalı. Mevcut iki yüz dolarlık aboneler etkilenmiyor. Yüz dolarlık Pro, Go, Plus ve API açık. Gerekçe: Astra'ya olan talep altyapıyı zorluyor. Yeniden açılış tarihi yok. Bu, agent ve computer-use işlerinde kapasite ve maliyet planını doğrudan etkiler; yeni Pro koltuğu bekliyorsan alternatif model ve API kotası hazır tut.
+
+CISA ve GitLab. CVE iki bin yirmi altı sekiz beş yedi sıfır altı: GitLab'da kimlik doğrulamasız dosya okuma, CVSS on. Repository commits API'sinde path traversal. Self-managed GitLab kullanıyorsan bir dokuz nokta üç nokta iki, bir dokuz nokta iki nokta altı veya bir dokuz nokta bir nokta sekize yükselt. Due date on dört Eylül. Sömürü adımı yok; yama ve log kontrolü var.
+
+MikroTik RouterOS, MikroTrick. CVE iki bin yirmi altı sekiz altı sıfır altı sıfır ve altı yedi iki yedi yedi KEV'de. Due date bugün, on üç Eylül. Düzeltilmiş sürümler arasında altı nokta kırk dokuz nokta yirmi bir, yedi nokta yirmi üç nokta dört, yedi nokta yirmi dört nokta iki var. Check for updates yap; SSH'yi güvenilmeyen ağlara açma.
+
+ConnectWise ScreenConnect. CVE iki bin yirmi altı sekiz dört sekiz altı dokuz, istemci tarafı. Sunucu değil, istemci. Yirmi altı nokta altı nokta beşe güncelle. Due date on dört Eylül.
+
+Citrix NetScaler. CVE iki bin yirmi altı bir dokuz dört dokuz sıfır, kimlik doğrulama baypası. Due date on iki Eylül'dü, geçti. AAA veya gateway olarak yapılandırılmış cihazlarda yama durumunu doğrula.
+
+Yüksek öncelikli ürün haberleri.
+
+Google, on Eylül'de Gemini uygulamasını Windows on ve on bir için global yayınladı. Alt artı Space ile overlay açılıyor. Gemini Spark bir, yirmi dört yedi kişisel agent olarak konumlanıyor. Gmail ve Drive'dan özet çekebiliyor. İndirme: gemini nokta google bölü desktop.
+
+GitHub Copilot Project HydraFusion. Dört Eylül duyurusu, CLI experimental'da research preview. Üç kalıp: Single, Cascade, Critique. TerminalBench'te Opus beş'e göre kalitede artı dört nokta dokuz puan, maliyet tahmininde yüzde altmış yedi düşüş iddiası var. Production GA yok; tek prompt'luk kod görevlerinde dene.
+
+Türkiye ve havacılık.
+
+TÜBİTAK BiGG Yatırım iki bin yirmi altı eksi iki çağrısı açık. Mükemmeliyet Mührü alanlara yüzde üç hisse karşılığı bir milyon üç yüz elli bin lira. Başvurular resmi duyuruya göre otuz Eylül'e kadar. UNIDO GCIP temiz teknoloji kotası da var.
+
+SSB Başkanı Haluk Görgün, on bir Eylül'de TUSAŞ'ta KAAN değerlendirme toplantısındaydı. Mevcut faaliyetler ve teknik gereksinimler konuşuldu. Yeni ilk uçuş veya sözleşme duyurusu yok; abartma.
+
+NTSB, altı Eylül Miami kargo kazası için dokuz Eylül'de CVR ve FDR ön güncellemesi verdi. Yirmi bir Air, Boeing yedi yüz altmış üç A. Burun ve sağ ana takım yaklaşık yüz elli sekiz knot'ta temas. Geç go-around denemesi var. Kök neden yok; spekülasyon yok.
+
+Orta ve izleme notları.
+
+Cloudflare Cloud Connector kuralları on iki Eylül'de kısa süre oluşturulamadı veya güncellenemedi, sonra çözüldü. TanStack Router bugün performans sürümü çıkardı, react-router bir nokta yüz yetmiş nokta otuz altı. GitHub MCP Server bir nokta on iki nokta bir OAuth scope metadata'yı sıkılaştırdı. Laravel on üç nokta otuz bir pencere dışı ama güncel minor. GOOGL Cuma yüzde bir nokta sekiz yükseldi diye ikincil rapor var; neden kanıtlı değil. Çip hisselerinde AI yavaşlatma anlatısı iddia seviyesinde, Pazartesi verisi bekle.
+
+Keşiflerden üç not. Cursor Agent Skills: taşınabilir SKILL.md. Gemini Spark bir: Windows'ta kişisel agent. HydraFusion: çok modellli orkestrasyon. GitHub MCP bir nokta on iki nokta bir: scope hijyeni.
+
+Bugün tarihte: on üç Eylül bin sekiz yüz on dört Fort McHenry bombardımanı; Star-Spangled Banner'ın arka planı. Ayrıca Oslo Anlaşmaları'nın bin dokuz yüz doksan üç yıldönümü.
+
+Kapanış. Kritik güvenlik yamalarını erteleme. Astra kapasite kısıtını iş planına yaz. BiGG için otuz Eylül'ü takvime koy. Yatırım tavsiyesi yok, exploit tarifi yok, savunma tarafında yalnızca kamuya açık yönetişim notları. Yarınki doğrulama turunda kaynakları yeniden açacağız. İyi kodlamalar.
