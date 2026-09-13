@@ -65,6 +65,17 @@ Hedef 45–60 dakika ve yaklaşık 6.500–8.500 Türkçe kelimedir; haber yoğu
 
 Her önemli maddede ne oldu, neden önemli, teknik/stratejik değişiklik, Emin'e etkisi, yapılacak işlem ve bilinmeyenleri doğal akışta açıkla. Savunma haberinde prototip, test, seri üretim, teslimat ve operasyonel hizmet seviyelerini karıştırma. Kamuya açık bilgiyle sınırlı kal; hassas operasyonel ayrıntı verme.
 
+### Voice için ritim
+
+- Metni gerçekten sesli okunacakmış gibi yaz: sakin, rahat, sohbet eder gibi.
+- Her ana bölümün başında sadece bölüm adını doğal biçimde söyle; sonra açıklamaya geç.
+- Bir bölüm bittiğinde metne “duruyorum”, “nefes”, “ara”, “şimdi geçiyorum” gibi sahne yönergesi yazma. Paragraf veya bölüm sınırı doğal boşluğu zaten sağlar.
+- Dinleyiciden “devam edeyim mi?” diye onay isteme ve anlatımı koşullu hâle getirme.
+- Başlıkları art arda hızlı okumak yerine her başlığın anlamını önce sadeleştir, sonra detaylandır.
+- Cümleleri sırf yavaşlık hissi için yapay biçimde parçalama; kısa ve orta uzunlukta doğal cümleleri karıştır.
+- Haber çok teknikse önce günlük dilde bir cümleyle çerçevele. Ardından teknik katmana geç.
+- Emin kod yazarken dinliyor olabilir; görsele bakmayı gerektiren ifadelerden ve uzun sayı/URL okumalarından kaçın.
+
 Uzun URL'leri gövdede okuma; kaynakçaya koy. Tabloları yalnızca hızlı başvuru için kullan.
 
 ## Çıktı ve kontrol
