@@ -149,7 +149,10 @@ DOSYAYA YAZMA
 ELEVENLABS TXT
 - Amaç: Emin'in metni ElevenLabs'a yapıştırıp seslendirmesi.
 - Dil: Türkçe, doğal konuşma, podcast ritmi; markdown, JSON, kod çiti, URL listesi yok.
-- Yapı: kısa açılış (tarih + 2–3 cümle özet) → critical/high adayları tek tek (ne oldu, neden önemli) → selected medium/watch kısa geçiş → keşiflerden 2–3 not → kısa kapanış.
+- İlk satır ZORUNLU ve birebir: `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.`
+  Örnek: `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.`
+  Yıl, timezone veya başka selamlama yok.
+- Yapı: o açılış → 2–3 cümle özet → critical/high adayları tek tek (ne oldu, neden önemli) → selected medium/watch kısa geçiş → keşiflerden 2–3 not → kısa kapanış.
 - Telaffuzu zor adlarda ilk kullanımda kısa okunuş ipucu ver.
 - Exploit/saldırı tarifi, yatırım tavsiyesi, gizli savunma ayrıntısı yok.
 ```

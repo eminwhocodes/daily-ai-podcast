@@ -28,7 +28,7 @@ eminwhocodes/daily-ai-podcast reposundaki AGENTS.md ve .codex/skills/daily-tech-
 
 ## Sesli dinleme
 
-04.00 çıktısının ElevenLabs metni `intake/...elevenlabs.txt` dosyasındadır; Emin bunu TTS’e yapıştırır. Nihai rapor için görev otomatik ses çalmayı garanti etmez; rapor Voice içinde bölüm kimlikleriyle kontrol edilir:
+04.00 çıktısının ElevenLabs metni `intake/...elevenlabs.txt` dosyasındadır; Emin bunu TTS’e yapıştırır. Açılış her zaman `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.` kalıbındadır (ör. `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.`). Nihai rapor için görev otomatik ses çalmayı garanti etmez; rapor Voice içinde bölüm kimlikleriyle kontrol edilir:
 
 - “B01'den başlayarak podcast gibi anlat.”
 - “B09'daki KAAN bölümünü daha teknik tekrar anlat.”

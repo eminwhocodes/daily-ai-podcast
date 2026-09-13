@@ -22,6 +22,11 @@ Bugünün en önemli 5–8 maddesi.
 
 ## [B01] Açılış: Bugünün haritası
 
+13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.
+
+(Kalıp: `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.` — yıl yok.)
+
+
 ## [B02] Kritik gelişmeler
 
 ## [B03] AI ve agent dünyası

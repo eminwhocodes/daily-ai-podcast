@@ -65,6 +65,16 @@ Hedef 45–60 dakika ve yaklaşık 6.500–8.500 Türkçe kelimedir; haber yoğu
 
 Her önemli maddede ne oldu, neden önemli, teknik/stratejik değişiklik, Emin'e etkisi, yapılacak işlem ve bilinmeyenleri doğal akışta açıkla. Savunma haberinde prototip, test, seri üretim, teslimat ve operasyonel hizmet seviyelerini karıştırma. Kamuya açık bilgiyle sınırlı kal; hassas operasyonel ayrıntı verme.
 
+### Açılış (zorunlu, birebir)
+
+Her ses metni ve `[B01]` şu üç cümleyle başlar; öncesine veya yerine başka selamlama koyma:
+
+`{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.`
+
+Örnek: `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.`
+
+Yıl, `Europe/Istanbul`, “hoş geldiniz” veya “tarama özetine” varyasyonu yok. Açılıştan sonra bugünün haritasına geç.
+
 ### Voice için ritim
 
 - Metni gerçekten sesli okunacakmış gibi yaz: sakin, rahat, sohbet eder gibi.

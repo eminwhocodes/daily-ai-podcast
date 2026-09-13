@@ -31,6 +31,7 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 
 ### Sesli anlatım ritmi
 
+- Açılış her zaman: `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.` (ör. `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.`)
 - Konuşma hızı sakin ve rahat olsun; radyo spikeri gibi acele etme, robotik de olma.
 - Ana başlığı önce kısa ve net söyle, ardından ne olduğunu ve neden önemli olduğunu tane tane açıkla.
 - Başlıklar arasında doğal bir kısa boşluk/nefes hissi bırak; bunu metin içinde meta cümleyle anlatma.
@@ -52,6 +53,7 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 - Alanları `…` veya benzeri kısaltmayla kesme; MCP/payload sınırı varsa dosyayı parçalı yaz veya geçici dosyadan commit et — içerik tam kalsın.
 - Her intake JSON ile birlikte ElevenLabs’a yapıştırılabilir Türkçe ses metni üret: `intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt`
 - Ses metni: markdown/JSON/URL yığını yok; doğal konuşma; özet + öncelikli adaylar; TTS’e uygun kısa paragraflar.
+- Ses ve rapor açılışında ilk üç cümle ZORUNLU ve birebir şu kalıptır: `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.` Örnek: `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.` Yıl, saat dilimi veya alternatif selamlama ekleme.
 
 ## Kapsam ve öncelik
 
