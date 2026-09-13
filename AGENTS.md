@@ -29,6 +29,23 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 - Kod bloklarını anlatı gövdesine koyma.
 - Telaffuzu zor adlarda ilk kullanımda Türkçe okunuş ipucu ver.
 
+### Sesli anlatım ritmi
+
+- Konuşma hızı sakin ve rahat olsun; radyo spikeri gibi acele etme, robotik de olma.
+- Ana başlığı önce kısa ve net söyle, ardından ne olduğunu ve neden önemli olduğunu tane tane açıkla.
+- Başlıklar arasında doğal bir kısa boşluk/nefes hissi bırak; bunu metin içinde meta cümleyle anlatma.
+- “Burada duruyorum”, “nefes alıyorum”, “sonraki başlığa geçiyorum”, “devam edeyim mi?” gibi anlatım sürecini tarif eden cümleler kullanma.
+- Kullanıcıdan bölüm bölüm devam onayı isteme. Akış kendi kendine sürsün.
+- Her paragrafı aşırı kısa kesme; aynı konuyu 2–4 doğal paragrafta bağlamıyla anlat.
+- Haber başlığını okuyup hemen jargon yığma. Önce sade anlamını ver, sonra teknik detaya gir.
+- Uzun bölümde ton monotonlaşmasın: önemli noktada vurgu yap, küçük gelişmede kısa kal.
+
+## Kullanıcı tercihleri
+
+- Emin podcastin kapsamı, tonu, ritmi, kaynak önceliği veya bölüm yapısı hakkında kalıcı bir tercih verdiğinde bu repo kurallarını da tercihe göre güncelle.
+- Tercihi en uygun yere işle: genel davranış için `AGENTS.md`, üretim ayrıntısı için `SKILL.md`, rapor yapısı için `templates/DAILY_REPORT.md`.
+- Aynı tercihi farklı dosyalarda gereksiz tekrar etme; ancak ajan davranışını güvenceye almak için gereken kısa çapraz kural eklenebilir.
+
 ## Kapsam ve öncelik
 
 1. Kritik güvenlik açığı, aktif istismar ve büyük servis kesintisi
