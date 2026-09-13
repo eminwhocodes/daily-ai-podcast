@@ -55,6 +55,18 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 - Ses metni: markdown/JSON/URL yığını yok; doğal konuşma; özet + öncelikli adaylar; TTS’e uygun kısa paragraflar.
 - Ses ve rapor açılışında ilk üç cümle ZORUNLU ve birebir şu kalıptır: `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.` Örnek: `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.` Yıl, saat dilimi veya alternatif selamlama ekleme.
 
+
+### Multi-bot orkestrasyon (kalıcı)
+
+- 04.00: Daily Podcast uzman DP botlarına fan-out (AI, Yazılım, Açık Kaynak, Altyapı, Siber, Büyük Tech, Piyasa, TR Tech, TR Savunma, Havacılık, Keşif, Tarih, TR Yatırım).
+- 04.45: paketleri birleştir → pretty JSON + `elevenlabs.txt` → Fish Audio MP3 (`fish-podcast.bat`) → WA Gönderici / MeteAI ile `905335666101`.
+- Uzman botlar yalnızca derin araştırma paketi üretir; repo yazımı ve WA orkestratördedir.
+
+### Fish Audio + WhatsApp
+
+- TTS: `C:\workspace\podcast\fish-audio\fish-podcast.bat` + raw `elevenlabs.txt` URL (KNT-MONSTER17, `FISH_API_KEY`).
+- WA hedef: `905335666101` (Evolution `whatsapp.codron.cloud` / `MeteAI`).
+
 ## Kapsam ve öncelik
 
 1. Kritik güvenlik açığı, aktif istismar ve büyük servis kesintisi
@@ -63,9 +75,10 @@ Bu repo, Emin için her gün Türkçe teknoloji gündemi ve podcast anlatı metn
 4. Geliştiriciyi/üretimi doğrudan etkileyen sürüm ve değişiklikler
 5. AI modelleri, agent'lar, araçlar ve açık kaynak projeler
 6. Laravel/PHP, Python, JS/TS, npm/PyPI, Docker, Coolify ve Cloudflare
-7. Türkiye'deki startup, yatırım, teknopark, TÜBİTAK ve TEKNOFEST gelişmeleri
-8. Büyük teknoloji şirketleri ve açıklanabilir piyasa hareketleri
-9. Günün keşifleri ve tarih bölümü
+7. Türkiye'deki startup, teknopark, TÜBİTAK ve TEKNOFEST gelişmeleri
+8. Türkiye yatırımlar ve fırsatlar (`tr_invest`: VC/PE, teşvik/grant, exit/M&A, yabancı yatırımcı hamleleri, açık çağrılar — bilgilendirme, tavsiye değil)
+9. Büyük teknoloji şirketleri ve açıklanabilir piyasa hareketleri
+10. Günün keşifleri ve tarih bölümü
 
 Savunma ve uçak takibi geniş olmalıdır ancak önemsiz sosyal medya söylentileri podcasti doldurmamalıdır.
 

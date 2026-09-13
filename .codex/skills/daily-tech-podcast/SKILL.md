@@ -1,6 +1,6 @@
 ---
 name: daily-tech-podcast
-description: Research and write the dated Turkish daily technology podcast report for this repository, including global and Turkish technology, startups, defense, aviation, software, security, AI, open-source, infrastructure, and market developments.
+description: Research and write the dated Turkish daily technology podcast report for this repository, including global and Turkish technology, startups, Turkey investments/opportunities (informational, not advice), defense, aviation, software, security, AI, open-source, infrastructure, and market developments.
 metadata:
   short-description: Günlük teknoloji podcast raporu
 ---
@@ -28,7 +28,8 @@ Ana pencere son 24–36 saattir. Yayın ve olay tarihini ayrı kontrol et. Daha 
 - CISA KEV, NVD/CVE, GitHub Security Advisories ve üretici bültenleri
 - Cloudflare, Microsoft, GitHub ve büyük servis status sayfaları
 - Büyük teknoloji şirketlerinin yatırımcı ilişkileri ve doğrulanmış piyasa verisi
-- Türkiye teknoloji gündemi, yerli startup/yatırım, teknopark, TÜBİTAK ve TEKNOFEST
+- Türkiye teknoloji gündemi, yerli startup, teknopark, TÜBİTAK ve TEKNOFEST
+- Türkiye yatırımlar ve fırsatlar (VC/PE, teşvik/grant, exit/M&A, yabancı yatırımcı, açık çağrılar — tavsiye değil)
 - Türkiye savunma sanayii kurumları, şirketleri ve programları
 - Küresel askeri/sivil havacılık, uçak, motor, avionik, İHA/SİHA, test, sertifikasyon, sipariş ve teslimatlar
 - Bugünün ve yarının önemli tarihleri
@@ -49,6 +50,7 @@ Gündem zayıfsa 60 dakikayı doldurmak için içerik uydurma.
 - Coolify, Docker, Cloudflare ve altyapı
 - Siber güvenlik ve güncelleme kontrol listesi
 - Türkiye teknoloji, girişimler ve TEKNOFEST
+- Türkiye yatırımlar ve fırsatlar (bilgilendirme; tavsiye değil)
 - Türk savunma sanayii
 - Dünya savunma ve havacılık
 - Büyük teknoloji şirketleri, kesintiler ve piyasalar

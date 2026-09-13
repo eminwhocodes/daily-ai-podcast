@@ -1,54 +1,46 @@
-# İki Aşamalı Zamanlanmış Görev Tasarımı
+# Multi-bot + iki aşamalı yayın
 
-## 04.00 — Grokbot taraması
+## 04.00 — Fan-out
 
-Grokbot her gün Europe/Istanbul 04.00'te [GROKBOT_PROMPT.md](GROKBOT_PROMPT.md) içindeki promptla çalışır. Dünya ve Türkiye gündemini geniş tarar, podcast yazmaz ve sonuçları şu iki dosyaya kaydeder:
+Daily Podcast, Europe/Istanbul 04.00'te uzman DP botlarına derin tarama dağıtır (AI, Yazılım, Açık Kaynak, Altyapı, Siber, Büyük Tech, Piyasa, TR Tech, TR Savunma, Havacılık, Keşif, Tarih, **TR Yatırım / `tr_invest`**).
 
-- `intake/YYYY/MM/YYYY-MM-DD.json` — pretty-print UTF-8 JSON (asla tek satır minify değil; alan kısaltması yok)
-- `intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt` — ElevenLabs’a yapıştırılacak Türkçe ses metni
+Botlar podcast yazmaz; kaynaklı uzun araştırma paketi üretir ve orkestratöre döner.
 
-Grokbot'un görevi yüksek geri çağırmalı aday keşfidir. Haber atlamamaya çalışır ancak iddiaları “doğrulandı/bildirildi/iddia” seviyesinde işaretler. GitHub'a yazamıyorsa her iki dosyanın içeriğini tam çıktı olarak verir ve başarısızlığı bildirir.
+## 04.45 — Merge + Fish + WhatsApp
+
+Daily Podcast staging/gelen paketleri birleştirir ve şunları yazar:
+
+- `intake/YYYY/MM/YYYY-MM-DD.json` — pretty-print UTF-8 (minify yok; alan kısaltması yok); track’ler arasında `tr_invest` vardır
+- `intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt` — açılış: `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.`
+
+Ardından KNT-MONSTER17 üzerinde:
+
+```bat
+fish-podcast.bat "https://raw.githubusercontent.com/eminwhocodes/daily-ai-podcast/main/intake/YYYY/MM/YYYY-MM-DD.elevenlabs.txt"
+```
+
+MP3 oluşunca WA Gönderici / Evolution MeteAI (`whatsapp.codron.cloud`) ile `905335666101` numarasına ses olarak gönderilir. Box TLS bozuksa PC üzerinden REST.
 
 ## 05.00 — ChatGPT doğrulaması ve podcast
 
 ChatGPT:
 
 1. Repo kurallarını ve bugünün intake dosyasını okur.
-2. Grok adaylarının kaynaklarını yeniden açar.
-3. Eksik alanlarda kendi güncel araştırmasını yapar.
-4. Yanlış, yinelenen veya önemsiz maddeleri eler.
-5. Nihai raporu `reports/YYYY/MM/YYYY-MM-DD.md` yoluna yazar.
-6. Sohbette kısa özet, süre ve rapor bağlantısını verir.
+2. Aday kaynaklarını yeniden açar.
+3. Eksik alanlarda ek araştırma yapar.
+4. Yanlış/yinelenen/önemsiz maddeleri eler.
+5. Nihai raporu `reports/YYYY/MM/YYYY-MM-DD.md` yoluna yazar (Türkiye yatırımlar/fırsatlar bölümü dahil; tavsiye değil).
+6. Kısa özet + rapor bağlantısı verir.
 
-ChatGPT zamanlanmış görev promptu:
+## Cron (Europe/Istanbul)
 
-```text
-eminwhocodes/daily-ai-podcast reposundaki AGENTS.md ve .codex/skills/daily-tech-podcast/SKILL.md talimatlarını tamamen oku. Bugünün intake/YYYY/MM/YYYY-MM-DD.json Grokbot taraması varsa onu aday havuzu olarak kullan fakat bütün önemli iddiaları kaynaklarını açarak yeniden doğrula; intake yoksa çalışmayı durdurma ve kendi taramanla devam et. Türkiye teknoloji/startup/TEKNOFEST, Türk savunma sanayii ve dünyadaki kritik askeri-sivil uçak/havacılık gelişmelerini özellikle kontrol et. Europe/Istanbul tarihine göre son 24–36 saatin teknoloji gündemini araştır. Türkçe, doğal podcast anlatımında, gündem yeterliyse 45–60 dakikalık rapor hazırla. Dosyayı reports/YYYY/MM/YYYY-MM-DD.md yolunda oluştur; aynı günün dosyası varsa önce okuyup yalnızca daha doğru veya güncel sürümle güncelle. Başka dosyaları değiştirme. Sonuçta 60 saniyelik özeti, tahmini dinleme süresini ve GitHub rapor bağlantısını ver.
+```cron
+0 4 * * *
+45 4 * * *
 ```
-
-## Sesli dinleme
-
-04.00 çıktısının ElevenLabs metni `intake/...elevenlabs.txt` dosyasındadır; Emin bunu TTS’e yapıştırır. Açılış her zaman `{gün} {ay} {haftanın günü}. Günaydın. Günün podcast'ına hoş geldin.` kalıbındadır (ör. `13 Eylül Pazar. Günaydın. Günün podcast'ına hoş geldin.`). Nihai rapor için görev otomatik ses çalmayı garanti etmez; rapor Voice içinde bölüm kimlikleriyle kontrol edilir:
-
-- “B01'den başlayarak podcast gibi anlat.”
-- “B09'daki KAAN bölümünü daha teknik tekrar anlat.”
-- “B10'daki ikinci uçak gelişmesine geri dön.”
-- “Burada dur; sonra B11'den devam et.”
-
-Kalıcı MP3 istenirse ayrı bir TTS hattı gerekir.
-
-## Kurulum gereksinimleri
-
-- Grok API/uygulama erişimi
-- GitHub'da yalnızca bu repoya gerekli minimum yazma yetkisi
-- `XAI_API_KEY` ve GitHub token'ının secret olarak tutulması
-- Harcama/token limiti, timeout ve en fazla bir kontrollü retry
-- Aynı tarih dosyasında idempotent çalışma
-- API anahtarlarının loga veya repoya yazılmaması
 
 ## Hata davranışı
 
-- Grok başarısız olsa da 05.00 ChatGPT kendi araştırmasıyla devam eder.
-- Intake bozuksa ChatGPT onu kullanmaz ve raporda belirtir.
-- Kaynak URL'siz aday nihai rapora otomatik alınmaz.
-- Görev rapor/intake varmış gibi sahte başarı bildirmez.
+- Eksik uzman paketi `failed_tracks` ile işaretlenir; merge mümkünse devam eder.
+- Fish veya WA başarısızsa “gönderildi” denmez; hata + local MP3 yolu bildirilir.
+- Kaynak URL’siz aday nihai rapora otomatik alınmaz.

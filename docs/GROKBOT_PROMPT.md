@@ -25,6 +25,7 @@ ZORUNLU TARAMA HATLARI
 10. Türkiye ve dünya havacılığı: önemli askeri ve sivil uçaklar, savaş uçakları, bombardıman/erken ihbar/nakliye/tanker/eğitim uçakları, motorlar, avionik, İHA/SİHA, helikopter, ilk uçuş, kritik test, sertifikasyon, kaza, yere indirme, büyük sipariş, teslimat, ihracat, yaptırım ve program kararları.
 11. Günün keşif adayları: birbirinden farklı en az 2 skill, 2 agent, 2 AI tool ve 2 AI firması adayı.
 12. Bugünün ve yarının anlamı: önemli gün, yıldönümü, etkinlik başlangıcı veya arife.
+13. Türkiye yatırımlar ve fırsatlar (`tr_invest`): VC/PE, melek, teşvik/TÜBİTAK/KOSGEB/grant, exit/M&A, yabancı yatırımcı hamleleri, açık çağrılar. Bilgilendirme; yatırım tavsiyesi yok.
 
 TÜRKİYE VE UÇAK TAKİBİNDE ATLAMA YAPMA
 - KAAN, HÜRJET, HÜRKUŞ, KIZILELMA, ANKA, AKSUNGUR, TB2, TB3, AKINCI, GÖKBEY ve ATAK örnek izleme listesidir; bunlarla sınırlı kalma.
@@ -76,7 +77,7 @@ GÜVENLİK VE PİYASA KURALI
   "items": [
     {
       "id": "TR-DEF-001",
-      "track": "ai|software|opensource|infrastructure|security|big_tech|market|tr_tech|tr_startup|tr_defense|global_defense|aviation|history",
+      "track": "ai|software|opensource|infrastructure|security|big_tech|market|tr_tech|tr_startup|tr_defense|global_defense|aviation|history|tr_invest",
       "priority": "critical|high|medium|watch",
       "status": "confirmed|reported|claim",
       "headline": "Kısa başlık",
@@ -157,12 +158,19 @@ ELEVENLABS TXT
 - Exploit/saldırı tarifi, yatırım tavsiyesi, gizli savunma ayrıntısı yok.
 ```
 
+## Multi-bot orkestrasyon
+
+- **04.00:** Daily Podcast uzman DP botlarına fan-out (derin araştırma paketleri).
+- **04.45:** Merge → pretty JSON + elevenlabs.txt → Fish Audio (`fish-podcast.bat`) → WhatsApp `905335666101` (MeteAI / WA Gönderici).
+- Track `tr_invest` zorunlu hatlar arasındadır.
+
 ## Zamanlama
 
-Cron ifadesi kullanan sistemlerde Europe/Istanbul saat dilimi açıkça ayarlanarak:
+Europe/Istanbul:
 
 ```cron
 0 4 * * *
+45 4 * * *
 ```
 
-kullanılır. Sunucu UTC çalışıyorsa sabit UTC dönüşümüne güvenmek yerine scheduler timezone desteği tercih edilir.
+Sunucu UTC çalışıyorsa sabit UTC dönüşümüne güvenmek yerine scheduler timezone desteği tercih edilir.

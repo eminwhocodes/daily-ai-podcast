@@ -4,9 +4,10 @@ Her sabah güncel teknoloji gündemini tarayan, kaynakları doğrulayan ve Türk
 
 ## Çalışma düzeni
 
-- **04.00 — Grokbot:** Dünya ve Türkiye gündemini geniş tarar, kaynak URL'leriyle yapılandırılmış ham dosya üretir.
-- **05.00 — ChatGPT:** Ham adayları yeniden doğrular, ek araştırma yapar ve nihai podcast raporunu oluşturur.
-- **Dinleme:** Intake için `*.elevenlabs.txt` ElevenLabs’a yapıştırılır; nihai rapor bölüm kimlikleriyle ChatGPT Voice içinde anlatılabilir.
+- **04.00 — Fan-out:** 13 uzman DP botuna derin tarama dağıtılır (AI, yazılım, güvenlik, TR tech/savunma/havacılık, **TR yatırım/fırsat**, keşif, tarih…).
+- **04.45 — Merge:** Daily Podcast paketleri birleştirir → pretty `intake/...json` + `...elevenlabs.txt` → Fish Audio MP3 → WhatsApp `905335666101`.
+- **05.00 — ChatGPT:** Ham adayları yeniden doğrular ve nihai podcast raporunu yazar.
+- **Dinleme:** Sabah MP3 WA ile gelir; txt ayrıca ElevenLabs’a da yapıştırılabilir.
 
 ## Kapsam
 
@@ -15,7 +16,8 @@ Her sabah güncel teknoloji gündemini tarayan, kaynakları doğrulayan ve Türk
 - Açık kaynak, GitHub sürümleri, Coolify, Docker, Cloudflare ve bulut altyapısı
 - Siber güvenlik, CVE'ler, aktif istismar ve tedarik zinciri riskleri
 - Büyük teknoloji şirketleri, servis kesintileri ve anlamlı piyasa hareketleri
-- Türkiye teknoloji gündemi, TEKNOFEST, TÜBİTAK, teknoparklar, yerli girişimler ve startup yatırımları
+- Türkiye teknoloji gündemi, TEKNOFEST, TÜBİTAK, teknoparklar, yerli girişimler
+- Türkiye yatırımlar ve fırsatlar (VC/PE, teşvik, exit, açık çağrılar — tavsiye değil)
 - Türk savunma sanayii: SSB, MSB, ASELSAN, TUSAŞ, Baykar, ROKETSAN, HAVELSAN, TEI, STM ve ilgili ekosistem
 - Türkiye ve dünyada kritik askeri/sivil uçak, motor, İHA/SİHA, helikopter, avionik, test, teslimat ve ihracat gelişmeleri
 - Her gün 1 AI skill, 1 agent, 1 AI aracı, 1 AI şirketi

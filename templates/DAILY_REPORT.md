@@ -41,6 +41,10 @@ Bugünün en önemli 5–8 maddesi.
 
 ## [B08] Türkiye teknoloji, yerli girişimler ve TEKNOFEST
 
+## [B08b] Türkiye yatırımlar ve fırsatlar
+
+Bilgilendirme; yatırım tavsiyesi değildir. VC/PE, teşvik/grant, exit/M&A, açık çağrılar.
+
 ## [B09] Türk savunma sanayii
 
 Program aşamasını açık yaz: duyuru / prototip / test / kalifikasyon / seri üretim / teslimat / operasyonel hizmet.
