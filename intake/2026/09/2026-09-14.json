@@ -1,1 +1,2123 @@
-<<FILE:/workspace/intake/2026/09/2026-09-14.json>>
+{
+  "schema_version": "1.0",
+  "date": "2026-09-14",
+  "timezone": "Europe/Istanbul",
+  "generated_at": "2026-09-14T05:20:00+03:00",
+  "window_start": "2026-09-12T16:00:00+03:00",
+  "window_end": "2026-09-14T05:00:00+03:00",
+  "summary": "14 Eylül sabah tarama özeti: Anthropic Pace the Frontier yavaşlatma taahhüdü, Altman'ın 2026 IPO yok açıklaması ve Nadella'nın embedded evaluators ile MAI Code of Conduct sinyali günün ana büyük-tech hikâyesi; Apple aynı gün iOS 27 ve Siri AI'yi İngilizce beta, günlük limit ve AB başlangıç kısıtıyla yayınlıyor. AI hattında Claude Code 2.1.270 hotfix, Cracked kamu MCP probe (yüzde 98.8 list / yüzde 67.1 keyless call), ChatGPT Avrupa yaklaşık 51 dk blip ve Codex GitHub PR kesintisi (ikisi de çözüldü) ile Agents API maliyet notları var. Güvenlikte CISA KEV vadesi bugün: GitLab CVE-2026-85706 (watchTowr probe), ConnectWise ScreenConnect CVE-2026-84869 ve PaperCut çift KEV; Cisco FMC/Talos kümeleri vadesi geçmiş ama sıcak. Açık kaynakta Homebrew 7.0.0 (brew vulns, Intel Tier 3), Void 113 paket orphan, Rune GPLv3 ve Debian 13.7. Altyapıda Hetzner hil-cloud1-leaf8 çözüldü; Cloudflare Connector/Tunnel minor ve ABD PoP bakımı. Türkiye'de TEKNOFEST Malatya İHA finalleri, GITEX 150 milyon USD AI VC, Metropal–Bilet.com, Safahat 590 bin USD ve KOSGEB yarın deadline. Savunma/havacılık: L-UMTAS GM ilk helikopter atışı, STM TUNGA-X saha, AKINCI İHA-300 250+ km, Amazon 21 Air pause. Piyasada HPE/DELL/SMCI Cuma ralli, ORCL fade. Bugün WTO Trade and Tech Day.",
+  "scan_status": {
+    "complete": true,
+    "failed_tracks": [],
+    "notes": [
+      "Truncated staging packs: ai (B3 Cracked MCP ortasında kesildi; LANE PULSE Iris/DeepSeek/Vero/ThakiCloud/MONAKA detayı yok — Cracked rakamları pulse+B3 başından alındı), acik_kaynak (AK-005+ kesildi; Meta Astryx MIT, ARCTIC dual-license, Intel One Mono, GTK 4.24, Shotwell GTK4 detay yok; AK-001–AK-004 merge edildi), siber (FINDING 4 Cisco FMC/Talos kaynak listesinde kesildi; MikroTik 13 Eyl vade ve Citrix/Fortinet kenar üçlüsü detayı bu pakette yok — MikroTik ayrı item açılmadı, window_note olarak kaydedildi), piyasa (MKT-005 ortasında kesildi; MKT-001–004 tam, Mag7/Nasdaq Cuma toparlanması MKT-002 teknik nota gömüldü).",
+      "Pace/IPO amplification ai pack A1 ile buyuk_tech paylaştı; tek item BT-001. AKINCI İHA-300 aviation AV-001; tr_defense yankısı dedup. Safahat.ai tek item TR-INV-002; tr_tech satırı tekrarlanmadı.",
+      "Rebuild 2026-09-14 ~05:20 TR from staging packs after incomplete compact merge missed ai/software/opensource tracks and GitHub JSON was a ~50-byte stub."
+    ]
+  },
+  "items": [
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact UTC publish time",
+        "VS Code bundle lag versus CLI"
+      ],
+      "action_for_emin": "Claude Code'u 2.1.270+ tut; uzun oturumlarda git izin prompt'u tekrarlanırsa sürümü doğrula.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-12T00:00:00+00:00",
+      "program_stage": "delivery",
+      "id": "AI-001",
+      "track": "ai",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Claude Code 2.1.270: uzun oturumda read-only git izni regresyon düzeltmesi",
+      "what_happened": "Anthropic, Claude Code 2.1.270 yamasını 12 Eylül 2026'da yayınladı. 2.1.269 sonrasında Bash üzerinden read-only git işlemleri uzun oturumlarda beklenmedik şekilde tekrar onay istemeye başlamıştı; 2.1.270 bu regresyonu kapatıyor. Changelog ve üçüncü taraf özetleri sürümün shipped olduğunu doğruluyor. VS Code paketinin gecikmesi bu taramada netleşmedi. Aynı pencerede Google Antigravity CLI 1.2.2 (MCP plugin namespace ve /resume düzeltmeleri) pencere kenarında çıktı; ana madde Claude Code hotfix.",
+      "why_it_matters": "Uzun coding-agent oturumlarında git izin hijyeni kırılırsa iş akışı durur veya fazla onay üretir; günlük Claude Code kullanıcıları için acil yama.",
+      "entities": [
+        "Anthropic",
+        "Claude Code"
+      ],
+      "technical_facts": [
+        "Claude Code 2.1.270 patches a 2.1.269 regression: read-only git via Bash started prompting unexpectedly after long sessions",
+        "Confirmed shipped via changelog / release notes",
+        "Antigravity CLI 1.2.2 (edge of window ~12 Sep 03:51 UTC): auto-namespace colliding plugin MCP as <plugin>_<server>; faster /resume; rejects non-UTF-8 or >100MB view_file"
+      ],
+      "sources": [
+        {
+          "title": "Claude Code 2.1.270",
+          "url": "https://www.havoptic.com/r/claude-code-2.1.270",
+          "publisher": "Havoptic",
+          "source_type": "secondary",
+          "supports": "Release note summary for 2.1.270 git permission regression"
+        },
+        {
+          "title": "Claude Code changelog",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "publisher": "Anthropic",
+          "source_type": "primary",
+          "supports": "Official changelog listing"
+        },
+        {
+          "title": "Claude briefing 2026-09-12",
+          "url": "https://claude-news.today/en/briefings/briefing-2026-09-12/",
+          "publisher": "Claude News Today",
+          "source_type": "secondary",
+          "supports": "Same-day briefing of the hotfix"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Mapping of remaining truncated report sections",
+        "Geographic bias of the single probe site"
+      ],
+      "action_for_emin": "MCP'ye bağlı agent'ta keyless call başarısını varsayma; kod/git sunucularında auth duvarını planla.",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "event_at": "2026-09-13T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "AI-002",
+      "track": "ai",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Cracked: kamu MCP sunucularında 13 Eylül remote probe — yüzde 98.8 list, yüzde 67.1 keyless call",
+      "what_happened": "Cracked, 13 Eylül 2026 gecesi kamu remote Streamable-HTTP MCP kayıt defterini taradı: initialize, ardından tools/list, ardından tek keyless tools/call. n=989 sunucudan 977'si (yüzde 98.8) tools/list yanıtladı; 664'ü (yüzde 67.1) keyless bir çağrıyı tamamladı. Medyan çağrı 418 ms, p95 1.9 s; medyan 6 araç. 211 başarısızlığın yüzde 64.9'u auth/ödeme duvarı; en sık başarısızlık anahtar/login/ödeme 112 (başarısızlıkların yüzde 34.5'i). Code ve git kohortunda call başarısı yalnızca yüzde 30.4. 7 sunucu üç ardışık list fail sonrası ölü. Yöntem önceki yaklaşık yüzde 49 npm/stdio handshake ölçümünden farklı kohort ve protokol — doğrudan karşılaştırma yapılmamalı. Staging paketi B3 ortasında kesildi; mapping tam değil.",
+      "why_it_matters": "Agent araç katmanının gerçek sağlık barometresi: list açık olsa da keyless call ve özellikle kod/git sunucuları zayıf. MCP'ye bağımlı agent tasarımında auth duvarı varsayımı şart.",
+      "entities": [
+        "Cracked",
+        "MCP"
+      ],
+      "technical_facts": [
+        "Probe night 2026-09-13; remote Streamable-HTTP only; one region; one call per server",
+        "n=989; 977 (98.8%) answered tools/list; 664 (67.1%) completed one keyless tools/call",
+        "Median call 418ms, p95 1.9s; median 6 tools",
+        "Top failure class key/login/payment 112 (34.5% of failures); 211 failures of which 64.9% auth/pay walls",
+        "Code and git cohort call success only 30.4%; 7 servers dead after 3 consecutive list fails",
+        "Not comparable 1:1 to prior ~49% npm/stdio handshake figure (different cohort/method)"
+      ],
+      "sources": [
+        {
+          "title": "State of public MCP servers 2026-09",
+          "url": "https://cracked.ai/reports/state-of-mcp-servers-2026-09",
+          "publisher": "Cracked",
+          "source_type": "primary",
+          "supports": "Monthly remote Streamable-HTTP probe figures"
+        },
+        {
+          "title": "MCP probe dataset",
+          "url": "https://cracked.ai/datasets/mcp-probe.csv",
+          "publisher": "Cracked",
+          "source_type": "primary",
+          "supports": "Underlying probe CSV"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "ChatGPT blip root cause and whether API/Codex were impacted",
+        "Fraction of Codex users affected",
+        "Agents API adoption volume and GA date"
+      ],
+      "action_for_emin": "Codex PR akışında GitHub status'u yedek kanal olarak izle. Agents API maliyetini token+tool+container üç sayaçla hesapla; ZDR yok ve US residency kısıtını not et.",
+      "published_at": "2026-09-13T16:56:00+00:00",
+      "event_at": "2026-09-13T09:35:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "AI-003",
+      "track": "ai",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "OpenAI ops: ChatGPT Avrupa ~51 dk hata dalgası ve Codex GitHub PR kesintisi (13 Eyl, çözüldü); Agents API maliyet notları",
+      "what_happened": "status.openai.com, 13 Eylül 2026'da Avrupa kapsamlı ChatGPT elevated errors kaydı tuttu: investigating 16:56, monitoring 17:00, resolved 17:47 UTC (yaklaşık 51 dakika, 1 ChatGPT bileşeni). Aynı gün Codex, yukarı akış GitHub kesintisi yüzünden review yayını ve PR oluşturmada hata verdi; tespit yaklaşık 09:35, GitHub mitigation 09:53–09:55, recovery 10:53. Her iki olay da çözüldü. Ayrıca Agents API (10 Eylül public beta) için 13 Eylül gazeteciliği maliyet netliği getirdi: 0 dolar servis ücreti ama üç sayaç (token, tools, hosted sandbox container); gpt-6-astra kısa fiyat 10/1/50 dolar per 1M in/cached/out; container 0.03–1.92 dolar / 20 dk RAM'e göre; ABD residency; ZDR yok; header OpenAI-Beta: agents=v1. Pro 200 pause devam ediyor.",
+      "why_it_matters": "Agent ve Codex iş akışları hem bölgesel ChatGPT kesintisine hem GitHub bağımlılığına açık. Agents API görünür ücretsiz servisin altında token/tool/sandbox üç sayacı production maliyetini belirler.",
+      "entities": [
+        "OpenAI",
+        "ChatGPT",
+        "Codex",
+        "GitHub",
+        "Agents API",
+        "Astra"
+      ],
+      "technical_facts": [
+        "ChatGPT Europe incident: investigating 16:56, monitoring 17:00, resolved 17:47 UTC; 1 ChatGPT component; Europe-scoped",
+        "Codex GitHub review/PR: identified ~09:35; GitHub mitigation ~09:53–09:55; recovered 10:53 UTC 13 Sep",
+        "Agents API public beta since 2026-09-10; $0 service fee; meters: tokens + tools + hosted sandbox containers",
+        "gpt-6-astra short: $10 / $1 / $50 per 1M input / cached / output (third-party cost writeups)",
+        "Containers $0.03–$1.92 per 20-min by RAM; US residency; no ZDR; header OpenAI-Beta: agents=v1",
+        "Pro $200 pause still in effect; no new openai.com product launch 13–14 Sep"
+      ],
+      "sources": [
+        {
+          "title": "ChatGPT Europe elevated errors",
+          "url": "https://status.openai.com/incidents/01M2DV6788RRSDZ5K98S5HN0A8",
+          "publisher": "OpenAI Status",
+          "source_type": "primary",
+          "supports": "Europe-scoped ChatGPT incident timeline"
+        },
+        {
+          "title": "Codex GitHub review/PR failures",
+          "url": "https://status.openai.com/incidents/01M2D1CZG0862JB4JHVW56QF89",
+          "publisher": "OpenAI Status",
+          "source_type": "primary",
+          "supports": "Codex disruption tied to upstream GitHub"
+        },
+        {
+          "title": "Introducing the Agents API",
+          "url": "https://openai.com/index/introducing-the-agents-api/",
+          "publisher": "OpenAI",
+          "source_type": "primary",
+          "supports": "Official Agents API product page"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [],
+      "action_for_emin": "TanStack Router kullanan projelerde changelog'u okuyup 1.170.36+ bump değerlendir.",
+      "published_at": "2026-09-13T13:19:16Z",
+      "event_at": "2026-09-13T13:19:16Z",
+      "program_stage": "not_applicable",
+      "id": "SW-001",
+      "track": "software",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "TanStack Router release-2026-09-13-1319: Link immutability ve performans",
+      "what_happened": "TanStack Router 13 Eylül 2026 13:19 UTC'de GitHub etiketi release-2026-09-13-1319 ile yayınlandı. Düzeltmeler: Link params/search immutable; memory history href normalize; Link stack incelemesi. Performans: lazy location match, memoized Link, daha az hook/allocation, SSR-slim Link, client-only location cache. Paketler: @tanstack/react-router@1.170.36, router-core@1.171.30, router-vite-plugin@1.167.38; Start/Vue/Solid ayna bump'ları.",
+      "why_it_matters": "React/Vite/Start ekipleri için günlük router hattı; Link hot-path maliyeti ve SSR ayak izi iyileştirmesi doğrudan frontend performansına yansır.",
+      "entities": [
+        "TanStack",
+        "TanStack Router"
+      ],
+      "technical_facts": [
+        "Tag release-2026-09-13-1319 at 2026-09-13T13:19:16Z",
+        "@tanstack/react-router@1.170.36, router-core@1.171.30, router-vite-plugin@1.167.38",
+        "Fixes: Link params/search immutable; memory history href normalize; Link stack review",
+        "Perf: lazy location match, memoized Link, fewer hooks/allocations, SSR-slim Link, client-only location cache",
+        "Start/Vue/Solid mirror bumps"
+      ],
+      "sources": [
+        {
+          "title": "release-2026-09-13-1319",
+          "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-13-1319",
+          "publisher": "GitHub/TanStack",
+          "source_type": "primary",
+          "supports": "Release notes, package versions, timestamp"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact commit set unique to this nightly versus 20260912.1"
+      ],
+      "action_for_emin": "Kararlıya alma; Next 16.3 typescript@^7 type-check denemelerinde nightly olarak izle.",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "event_at": "2026-09-13T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "SW-002",
+      "track": "software",
+      "priority": "medium",
+      "status": "confirmed",
+      "headline": "TypeScript nightly 7.1.0-dev.20260913.1 yayınlandı (kararlı değil)",
+      "what_happened": "13 Eylül 2026 tarih damgalı TypeScript 7.1 development build (öncesi 7.1.0-dev.20260912.1) yayımlandı. Snyk paket listesinde doğrulandı. Kararlı son sürüm hâlâ 7.0.2; bu nightly non-stable. 7.1 beta planı yaklaşık 6 Ekim (TypeScript issue 63703). Changelog satır satır bu nightly'ye özel değil.",
+      "why_it_matters": "Native TS 7.1 beta öncesi günlük binary; Next 16.3'ün typescript@^7 type-check yolu ile uyum denemeleri için sinyal.",
+      "entities": [
+        "TypeScript",
+        "Microsoft"
+      ],
+      "technical_facts": [
+        "Nightly stamp 7.1.0-dev.20260913.1 (prior 7.1.0-dev.20260912.1)",
+        "Stable latest still 7.0.2 per Snyk listing",
+        "7.1 beta planned ~6 Oct per TypeScript issue 63703",
+        "Changelog is not line-by-line specific to this nightly"
+      ],
+      "sources": [
+        {
+          "title": "typescript 7.1.0-dev.20260913.1",
+          "url": "https://security.snyk.io/package/npm/typescript/7.1.0-dev.20260913.1",
+          "publisher": "Snyk",
+          "source_type": "secondary",
+          "supports": "Package listing for the 13 Sep nightly"
+        },
+        {
+          "title": "TypeScript 7.1 planning issue",
+          "url": "https://github.com/microsoft/TypeScript/issues/63703",
+          "publisher": "GitHub/microsoft",
+          "source_type": "primary",
+          "supports": "7.1 beta timing plan"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [],
+      "action_for_emin": "React 19.3 ve Laravel 13.31 changelog'larını sprint backlog'una yakın pencere olarak işaretle; pencere içi yeni tag yok.",
+      "published_at": "2026-09-09T00:00:00+00:00",
+      "event_at": "2026-09-08T14:24:35Z",
+      "program_stage": "not_applicable",
+      "id": "SW-003",
+      "track": "software",
+      "priority": "medium",
+      "status": "confirmed",
+      "headline": "Yakın pencere: React 19.3 (View Transitions) ve Laravel 13.31.0 (8–9 Eyl)",
+      "what_happened": "Pencere içi yeni Laravel/PHP framework etiketi yok; son confirmed Laravel v13.31.0 8 Eylül. React 19.3 (9 Eylül) View Transitions ve Fragment Refs'i stable yaptı; use(browser()), Trusted Types ve RSC Context render eklendi. Laravel 13.31: Queue::totalSize(), JobInterrupted, BelongsToMany chaperone(), Vite::devServerUrl(), mail/notification assert*Once, Redis queue cluster-safe, PHP 9 create_sid hazırlığı. Her ikisi 24–36 saat penceresinin biraz dışında; merge için medium/yakın pencere olarak tutuldu.",
+      "why_it_matters": "Frontend ve Laravel ekipleri için hâlâ güncel minor'lar; pencere içi sessiz framework hattını bağlamlandırır.",
+      "entities": [
+        "React",
+        "Laravel"
+      ],
+      "technical_facts": [
+        "React 19.3 (2026-09-09): View Transitions + Fragment Refs stable; use(browser()); Trusted Types; RSC Context render",
+        "Laravel framework v13.31.0 (2026-09-08T14:24:35Z): Queue::totalSize(), JobInterrupted, BelongsToMany chaperone(), Vite::devServerUrl()",
+        "No new Laravel/PHP framework tag inside 12–14 Sep window"
+      ],
+      "sources": [
+        {
+          "title": "React 19.3",
+          "url": "https://react.dev/blog/2026/09/09/react-19-3",
+          "publisher": "react.dev",
+          "source_type": "primary",
+          "supports": "React 19.3 blog"
+        },
+        {
+          "title": "Laravel v13.31.0",
+          "url": "https://github.com/laravel/framework/releases/tag/v13.31.0",
+          "publisher": "GitHub/laravel",
+          "source_type": "primary",
+          "supports": "Framework tag and notes"
+        },
+        {
+          "title": "Laravel 13.31.0 on Laravel News",
+          "url": "https://laravel-news.com/laravel-13-31-0",
+          "publisher": "Laravel News",
+          "source_type": "secondary",
+          "supports": "Feature summary dated 9 Sep"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [
+          "GHSA-rg9r-ppxp-87hm",
+          "GHSA-5263-whxq-77hp",
+          "GHSA-hqpg-hjr9-c7j8"
+        ],
+        "affected_versions": [
+          "Homebrew before 6.0.12 for High/Moderate installer issues",
+          "Homebrew before 7.0.0 for LaunchServices advisory"
+        ],
+        "fixed_versions": [
+          "6.0.12",
+          "7.0.0"
+        ],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Blog UTC timestamp not published",
+        "Individual GHSA pages not opened this scan (IDs from blog)"
+      ],
+      "action_for_emin": "brew update ve brew vulns --severity=high. Intel Mac varsa MacPorts geçiş planı. CI pin'lerini yeni brew imajına çek.",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "event_at": "2026-09-13T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "OS-001",
+      "track": "opensource",
+      "priority": "critical",
+      "status": "confirmed",
+      "headline": "Homebrew 7.0.0: brew vulns, BrewUI, Intel Mac Tier 3",
+      "what_happened": "Homebrew 7.0.0, 13 Eylül 2026'da resmi blogda duyuruldu (Mike McQuaid). 6.0.0'dan beri en büyük değişiklikler: daha hızlı install/upgrade, sıkı sandbox, native macOS BrewUI, gömülü brew vulns ve OSV advisory DB. macOS 10.15 düştü; Intel Mac Tier 3 (yeni bottle yok; Intel tamamen 2027-09-01'de biter). GHSA-rg9r-ppxp-87hm High 6.0.12'de, GHSA-5263-whxq-77hp Moderate 7.0.0'da kapatıldı. Linux'ta Bubblewrap yerine Landlock. CI imajı ghcr.io/homebrew/ubuntu22.04 yerine ghcr.io/homebrew/brew; Actions @master kaldırıldı.",
+      "why_it_matters": "macOS/Linux/WSL paket yöneticisinin major'ı. Intel bottle yok; CI imaj/actions kırılır. brew vulns güvenlik için yeni birincil araç.",
+      "entities": [
+        "Homebrew",
+        "Mike McQuaid",
+        "Open Source Collective",
+        "Apple",
+        "OSV.dev"
+      ],
+      "technical_facts": [
+        "Upgrade via brew update",
+        "brew vulns: OSV + Homebrew advisory; --severity=high, --deps, --brewfile, --fix-available; CC0 advisory index",
+        "GHSA-rg9r-ppxp-87hm High fixed 6.0.12; GHSA-5263-whxq-77hp Moderate fixed 7.0.0 (LaunchServices sandbox)",
+        "GHSA-hqpg-hjr9-c7j8 Moderate fixed 6.0.12; additional Low GHSA IDs listed on blog",
+        "macOS <=10.15 removed; Sonoma 14 Tier 3; Sequoia 15+/Tahoe 26/Golden Gate 27 Apple Silicon Tier 1",
+        "Intel macOS 11+: Tier 3, no new bottles; Homebrew on Intel until 2027-09-01; .pkg Apple Silicon + Sequoia 15+ only"
+      ],
+      "sources": [
+        {
+          "title": "Homebrew 7.0.0",
+          "url": "https://brew.sh/2026/09/13/homebrew-7.0.0/",
+          "publisher": "Homebrew",
+          "source_type": "primary",
+          "supports": "Version, technical changes, GHSA list"
+        },
+        {
+          "title": "brew vulns PR",
+          "url": "https://github.com/Homebrew/brew/pull/23080",
+          "publisher": "GitHub",
+          "source_type": "primary",
+          "supports": "vulns command implementation"
+        },
+        {
+          "title": "HN 2026-09-13 Homebrew 7.0.0",
+          "url": "https://news.ycombinator.com/front?day=2026-09-13",
+          "publisher": "Hacker News",
+          "source_type": "secondary",
+          "supports": "Same-day discussion"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "void-packages orphan commit URL",
+        "How many packages have been adopted since"
+      ],
+      "action_for_emin": "Void kullanıyorsa orphan paket listesini kontrol et; docker/terraform/etcd hattı etkilenmiş olabilir.",
+      "published_at": "2026-09-12T11:11:00-04:00",
+      "event_at": "2026-09-12T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "OS-002",
+      "track": "opensource",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Void Linux: bakımcı AI politikası yüzünden 113 paketi orphan etti",
+      "what_happened": "Phoronix 12 Eylül 2026 11:11 AM EDT: Andrea Brancaleoni, Go 1.27.1 paket karşılaştırmasında GLM-5.3-Flash ve OpenCode kullandı ve AI kullanımını peşinen açıklamadı. Void katkı politikası katkının insan kaynaklı olmasını, AI'nın yalnız araştırma/öğrenme için kullanılmasını, tüm AI kullanımının açıklanmasını ve AI review tool'un PR'a getirilmemesini ister. Brancaleoni 113 paketi orphan etti (alacritty, docker-cli, moby, etcd, terraform, hugo, thermald, virt-manager ve diğerleri). Phoronix Kubernetes'i notable sayıyor; numaralı listede kubernetes adlı paket yok — k8s ekosistemi (etcd/flannel/moby/docker-cli) doğrulandı.",
+      "why_it_matters": "Distro bakım modeli ile AI yardımı çatışmasının somut sonucu. Void kullanıcılarında güvenlik/güncelleme boşluğu riski.",
+      "entities": [
+        "Void Linux",
+        "Andrea Brancaleoni",
+        "GLM-5.3-Flash",
+        "OpenCode"
+      ],
+      "technical_facts": [
+        "Policy: contributions must be human-authored; AI only for research/learning; all AI use must be disclosed; AI review tools must not be brought to PRs",
+        "113 packages orphaned; notable names include alacritty, docker-cli, docker-gc, docker-gen, etcd, flannel, hugo, moby, terraform, terragrunt, thermald, virt-manager, fscrypt, clementine",
+        "Phoronix cites Kubernetes as notable; numbered list has no package named kubernetes — k8s-adjacent ecosystem confirmed"
+      ],
+      "sources": [
+        {
+          "title": "Void Linux Maintainer Orphans 100+ Packages Over AI Policy Dispute",
+          "url": "https://www.phoronix.com/news/Void-Linux-AI-Policy-Orphan",
+          "publisher": "Phoronix",
+          "source_type": "secondary",
+          "supports": "Policy quote, 113 count, maintainer name, package list, date"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Blog fetch 422 this scan",
+        "Star count (prior scan ~451; not re-counted)"
+      ],
+      "action_for_emin": "İlgi varsa repo ve CONTRIBUTING; günlük IDE değilse watch listesine al.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-12T00:00:00+00:00",
+      "program_stage": "announcement",
+      "id": "OS-003",
+      "track": "opensource",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Rune IDE açık kaynak: GPLv3 + CLA'sız katkı gelir payı",
+      "what_happened": "Unstable Build, GPU hızlandırmalı klavye odaklı native IDE Rune'u açık kaynakladı. Repo github.com/unstablebuild/rune; LICENSE GNU GPL v3 (raw doğrulandı). Resmi blog 12 Eylül: katkıcılar telifi tutar; şirket relicensing CLA istemez; isteğe bağlı hizmet geliri havuzu ve DCO. Blog sayfası WebFetch'te 422; içerik arama özeti ve Linuxiac/LavX ile doğrulandı. Go/Python first-class; Rust/Zig beta; terminal ve komut paleti; agent iş akışları aynı ortamda.",
+      "why_it_matters": "Yeni ciddi OSS IDE; GPLv3 ve gelir paylaşımı yönetişim deneyi. Native IDE açık kaynaklanması izlenmeli.",
+      "entities": [
+        "Rune",
+        "Unstable Build",
+        "unstablebuild/rune"
+      ],
+      "technical_facts": [
+        "LICENSE = GNU GPL Version 3 (raw.githubusercontent.com/unstablebuild/rune/main/LICENSE)",
+        "github.com/unstablebuild/rune — the development environment for pros",
+        "Go/Python first-class; Rust/Zig beta (Linuxiac); terminal first-class; command palette; in-IDE agent workflows",
+        "No CLA for relicensing; optional service-revenue pool + DCO"
+      ],
+      "sources": [
+        {
+          "title": "LICENSE GPLv3",
+          "url": "https://raw.githubusercontent.com/unstablebuild/rune/main/LICENSE",
+          "publisher": "GitHub",
+          "source_type": "primary",
+          "supports": "GPLv3 confirmation"
+        },
+        {
+          "title": "unstablebuild/rune",
+          "url": "https://github.com/unstablebuild/rune",
+          "publisher": "GitHub",
+          "source_type": "primary",
+          "supports": "Repository"
+        },
+        {
+          "title": "Rune is now open source",
+          "url": "https://rune.build/blog/rune-is-now-open-source",
+          "publisher": "Unstable Build",
+          "source_type": "primary",
+          "supports": "12 Sep announcement + CLA-free revenue share (fetch 422; search snippet)"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [
+          "CVE-2026-5928",
+          "CVE-2026-5450"
+        ],
+        "affected_versions": [
+          "Debian 13 before 13.7 packages as listed in official news"
+        ],
+        "fixed_versions": [
+          "Debian 13.7"
+        ],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "AK-005+ (Astryx/GTK/Shotwell) truncated in staging pack"
+      ],
+      "action_for_emin": "Debian 13 VPS'te apt update ve apt full-upgrade; Coolify host'u nokta sürümüne çek.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-12T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "OS-004",
+      "track": "opensource",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Debian 13.7 (trixie) noktası yayınlandı",
+      "what_happened": "Debian, 12 Eylül 2026'da Debian 13 trixie yedinci nokta güncellemesini duyurdu. Yeni major değil; güvenlik ve ciddi hata düzeltmeleri. linux ABI installer 6.12.107+deb13; base-files common-licenses genişlemesi (AGPL-3.0, BSL-1.0, CC-BY, GFDL-1.1, OFL-1.1). Örnek düzeltmeler: glibc CVE-2026-5928/5450; openssl new upstream; qemu/python3.13/perl/imagemagick/samba/rustc çoklu kayıt; docker.io rebuild ve DSA-6443; linux birden fazla DSA. Üçüncü taraf 106/107 sayıları resmi sayfada yok — kullanılmamalı. acik_kaynak paketi AK-005 sonrası kesildi; Debian 13.7 AK-004 olarak tam.",
+      "why_it_matters": "Kararlı dal birikmiş güvenlik ve hata. Debian 13 VPS/Coolify için rutin upgrade.",
+      "entities": [
+        "Debian",
+        "trixie"
+      ],
+      "technical_facts": [
+        "Debian 13.7 (trixie) point release 2026-09-12",
+        "linux ABI installer 6.12.107+deb13",
+        "base-files common-licenses: AGPL-3.0, BSL-1.0, CC-BY, GFDL-1.1, OFL-1.1",
+        "Examples: glibc CVE-2026-5928/5450; openssl new upstream; qemu/python3.13/perl/imagemagick/samba/rustc multi-CVE; docker.io rebuild + DSA-6443",
+        "Do not use third-party 106/107 package counts — not on official page"
+      ],
+      "sources": [
+        {
+          "title": "Updated Debian 13: 13.7 released",
+          "url": "https://www.debian.org/News/2026/20260912",
+          "publisher": "Debian",
+          "source_type": "primary",
+          "supports": "Date, package/CVE/DSA tables"
+        },
+        {
+          "title": "trixie ChangeLog",
+          "url": "https://deb.debian.org/debian/dists/trixie/ChangeLog",
+          "publisher": "Debian",
+          "source_type": "primary",
+          "supports": "Point-release changelog"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Root cause not public in the status text"
+      ],
+      "action_for_emin": "Coolify/Hetzner VPS kullananlar leaf kesintisi sonrası sağlık ve volume/network kontrolü yapsın. Aggregator mirror'larına güvenme.",
+      "published_at": "2026-09-13T15:30:00Z",
+      "event_at": "2026-09-11T23:30:00Z",
+      "program_stage": "not_applicable",
+      "id": "INF-001",
+      "track": "infrastructure",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Hetzner Cloud leaf hil-cloud1-leaf8 sınırlı erişilebilirlik çözüldü",
+      "what_happened": "Hetzner, tek cloud leaf hil-cloud1-leaf8 üzerinde Cloud Server erişilebilirlik kısıtı yaşadı. Süre: 2026-09-11 23:30 UTC ile 2026-09-13 15:30 UTC (çözüldü; etki tarama penceresinin büyük kısmına yayıldı). Etkilenen ürünler leaf-scoped: Load Balancer, Networks, Cloud Server, Object Storage, Cloud Volume — tüm Hetzner değil. Aggregator siteleri aynı metni yanlışlıkla InMotion/HostGator'a yapıştırmış; birincil kaynak Hetzner status. HEL1 Object Storage degraded (9 Eyl'den beri, pencere dışı başlangıç) hâlâ in progress notu taşıyor.",
+      "why_it_matters": "Self-host / Coolify / Docker VPS dinleyicileri için gerçek hosting kesintisi; leaf izolasyonu anlatılabilir.",
+      "entities": [
+        "Hetzner",
+        "hil-cloud1-leaf8"
+      ],
+      "technical_facts": [
+        "Incident 2026-09-11 23:30 UTC to 2026-09-13 15:30 UTC resolved",
+        "Leaf-scoped: Cloud Server, Load Balancer, Networks, Object Storage, Cloud Volume — not all Hetzner",
+        "Primary: status.hetzner.com/incident/047f057d-4c18-424e-9758-282e928ccbe3",
+        "Aggregator mirrors misattributed the same text to InMotion/HostGator — ignored",
+        "HEL1 Object Storage degraded since 2026-09-09 12:00 UTC still in progress (some requests slow)"
+      ],
+      "sources": [
+        {
+          "title": "Hetzner Cloud Leaf limited connectivity",
+          "url": "https://status.hetzner.com/incident/047f057d-4c18-424e-9758-282e928ccbe3",
+          "publisher": "Hetzner Status",
+          "source_type": "primary",
+          "supports": "Leaf-scoped incident timeline and resolution"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Connector/Tunnel root causes not detailed publicly"
+      ],
+      "action_for_emin": "Cloud Connector kural senkronunu kontrol et; cloudflared tünelleri 12 Eyl kenar kesintisi sonrası doğrula. ABD PoP bakımı sırasında PNI/CNI failover uyarısını izle.",
+      "published_at": "2026-09-12T10:42:00Z",
+      "event_at": "2026-09-12T08:06:00Z",
+      "program_stage": "not_applicable",
+      "id": "INF-002",
+      "track": "infrastructure",
+      "priority": "medium",
+      "status": "confirmed",
+      "headline": "Cloudflare: Cloud Connector ve Tunnel minor kesintileri çözüldü; 14 Eyl ABD PoP bakımı planlı",
+      "what_happened": "Cloudflare'de geniş kesinti yok. Cloud Connector Rules create/update minor: 12 Eylül 08:06–10:42 UTC, resolved. Tunnel availability minor (pencere kenarı): 11 Eylül 21:55–12 Eylül 08:57 UTC, resolved. Bugün (14 Eylül UTC) planlı PoP bakımı: IAD 06:00–10:00, EWR 06:00–13:00, ATL 07:00–22:00 UTC; beklenen reroute ve hafif latency, PNI/CNI failover uyarısı. PHX 14 Eyl slotu status'ta 15 Eyl'e kaymış görünüyor. Docker Hub / Azure geniş olay yok; Coolify pencere içi yeni release yok (son v4.3.19 = 10 Eyl).",
+      "why_it_matters": "CDN çekirdeği değil ama Cloud Connector ve cloudflared tünel kullanan self-host iş akışları etkilendi; bugünkü ABD PoP bakımı latency notu.",
+      "entities": [
+        "Cloudflare",
+        "Cloud Connector",
+        "Cloudflare Tunnel"
+      ],
+      "technical_facts": [
+        "Cloud Connector Rules create/update: 2026-09-12 08:06–10:42 UTC, minor, resolved (t4gby3dqzbg1)",
+        "Tunnel availability: 2026-09-11 21:55–2026-09-12 08:57 UTC, minor, resolved (k7l4hzmthl3k)",
+        "Scheduled PoP 2026-09-14 UTC: IAD 06:00–10:00, EWR 06:00–13:00, ATL 07:00–22:00; reroute / light latency; PNI/CNI failover warning",
+        "PHX 14 Sep slot appears slid to 15 Sep on status",
+        "Docker Status fully operational; Azure no active events; Coolify no in-window GitHub release (last v4.3.19 = 10 Sep)"
+      ],
+      "sources": [
+        {
+          "title": "Issues creating and updating Cloud Connector Rules",
+          "url": "https://www.cloudflarestatus.com/incidents/t4gby3dqzbg1",
+          "publisher": "Cloudflare Status",
+          "source_type": "primary",
+          "supports": "Connector minor incident"
+        },
+        {
+          "title": "Tunnel availability",
+          "url": "https://www.cloudflarestatus.com/incidents/k7l4hzmthl3k",
+          "publisher": "Cloudflare Status",
+          "source_type": "primary",
+          "supports": "Tunnel minor incident"
+        },
+        {
+          "title": "IAD scheduled maintenance",
+          "url": "https://www.cloudflarestatus.com/incidents/xtmjwqxfxf1g",
+          "publisher": "Cloudflare Status",
+          "source_type": "primary",
+          "supports": "IAD PoP window"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [
+          "CVE-2026-85706"
+        ],
+        "affected_versions": [
+          "GitLab CE/EE 18.7 before 19.1.8",
+          "19.2 before 19.2.6",
+          "19.3 before 19.3.2"
+        ],
+        "fixed_versions": [
+          "19.1.8",
+          "19.2.6",
+          "19.3.2"
+        ],
+        "active_exploitation": "yes"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Public proof-of-concept existence",
+        "Successful mass compromise vs probes only",
+        "Actor name (CISA unspecified)"
+      ],
+      "action_for_emin": "Self-managed GitLab varsa hemen 19.3.2 / 19.2.6 / 19.1.8'e yükselt; internete açık instance'ta yama sonrası erişim ve anomali loglarını kontrol et. Sömürü adımı uygulama.",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "event_at": "2026-09-11T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "SEC-001",
+      "track": "security",
+      "priority": "critical",
+      "status": "confirmed",
+      "headline": "GitLab CVE-2026-85706 KEV: bugün FCEB vadesi; watchTowr in-the-wild probe sinyali",
+      "what_happened": "CISA, GitLab Community/Enterprise Edition kaydını (CVE-2026-85706) Known Exploited Vulnerabilities kataloğuna ekledi. Üretici: repository commits API'sinde path confinement ve kimlik doğrulama eksikliği; kimlik doğrulamasız dosya okuma. CVSS 10.0 (GitLab). Federal due date bugün 14 Eylül 2026; BOD-26-04 forensic triage Yes; ransomware Unknown. Yamalar: 19.1.8 / 19.2.6 / 19.3.2. GitLab.com yamalı; Dedicated aksiyon yok; self-managed acil. SecurityAffairs (13 Eyl): watchTowr, açıklamadan yaklaşık 24 saat içinde in-the-wild probe görüyor. Aynı tren CVE-2026-87719 (EE, 9.9, KEV değil). Sömürü adımı yok.",
+      "why_it_matters": "Bugün vade ve probe hızı. Self-managed public GitLab yüzeyi; yama ve log triajı acil.",
+      "entities": [
+        "GitLab",
+        "CISA",
+        "watchTowr",
+        "CVE-2026-85706"
+      ],
+      "technical_facts": [
+        "CWE-35; unauthenticated file read class via repository commits API (vendor description)",
+        "Affected: CE/EE 18.7 before 19.1.8; 19.2 before 19.2.6; 19.3 before 19.3.2",
+        "Fixed: 19.1.8 / 19.2.6 / 19.3.2; GitLab.com patched; Dedicated no action",
+        "CVSS 10.0 Critical (GitLab); CISA due 2026-09-14; forensicTriage Yes; ransomware Unknown",
+        "watchTowr via SecurityAffairs 13 Sep: in-the-wild probes within ~24h of disclosure",
+        "Sister CVE-2026-87719 EE 9.9 not on KEV"
+      ],
+      "sources": [
+        {
+          "title": "GitLab critical patch 19.3.2 / 19.2.6 / 19.1.8",
+          "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/",
+          "publisher": "GitLab",
+          "source_type": "primary",
+          "supports": "Vendor patch and version ranges"
+        },
+        {
+          "title": "CISA adds three known exploited vulnerabilities",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+          "publisher": "CISA",
+          "source_type": "primary",
+          "supports": "KEV listing"
+        },
+        {
+          "title": "CISA KEV JSON feed",
+          "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+          "publisher": "CISA",
+          "source_type": "primary",
+          "supports": "due date, forensic triage, ransomware Unknown"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [
+          "CVE-2026-84869"
+        ],
+        "affected_versions": [
+          "ScreenConnect client versions prior to 26.6.5"
+        ],
+        "fixed_versions": [
+          "26.6.5"
+        ],
+        "active_exploitation": "yes"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Huntress primary write-up URL not fetched this scan"
+      ],
+      "action_for_emin": "ScreenConnect istemcilerini 26.6.5+ güncelle; Host client reinstall ve Access agent. TransferFiles'ı geçici kapatmak yama yerine geçmez.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-08T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "SEC-002",
+      "track": "security",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "ConnectWise ScreenConnect CVE-2026-84869 KEV: bugün vade; istemci tarafı host onayı olmadan dosya transfer/çalıştırma",
+      "what_happened": "ConnectWise ScreenConnect CVE-2026-84869 KEV'de; FCEB vadesi bugün 14 Eylül 2026. İstemci (sunucu değil): aktif oturumda dosya transfer/çalıştırma Host onayı olmadan. Fix 26.6.5. Cloud güncellenmiş. On-prem: 25.4+ sürümler 26.6.5'e; Host client reinstall ve Access agent. Geçici: TransferFiles iznini kapat (yama yerine geçmez). CVSS 9.9 Critical üretici; üretici severity Important, Priority 1 High. The Hacker News (12 Eyl): Huntress üç ayrı olayda ScreenConnect bağlamı. Forensic triage Yes; ransomware Unknown.",
+      "why_it_matters": "MSP/RMM yüzeyi ve bugün vade. İstemci güncellemesi gecikirse aktif oturum host compromise riski (S:C).",
+      "entities": [
+        "ConnectWise",
+        "ScreenConnect",
+        "Huntress",
+        "CISA",
+        "CVE-2026-84869"
+      ],
+      "technical_facts": [
+        "CWE-862 + CWE-269; condition class: active remote session + low privilege to host compromise (S:C)",
+        "Client-only; servers not affected; fixed client 26.6.5; cloud updated; on-prem 25.4+ to 26.6.5 plus Host client reinstall + Access agent",
+        "Stopgap: disable TransferFiles permission (does not replace patch)",
+        "CVSS 9.9 Critical (ConnectWise); vendor severity Important, Priority 1 High",
+        "CISA due 2026-09-14; forensicTriage Yes; ransomware Unknown",
+        "THN 12 Sep: Huntress three incidents in ScreenConnect context (vendor Priority 1)"
+      ],
+      "sources": [
+        {
+          "title": "ConnectWise ScreenConnect bulletin 2026-09-08",
+          "url": "https://www.connectwise.com/company/trust/security-bulletins/2026-09-08-screenconnect-bulletin",
+          "publisher": "ConnectWise",
+          "source_type": "primary",
+          "supports": "Client-only scope, 26.6.5, TransferFiles stopgap"
+        },
+        {
+          "title": "CVE-2026-84869",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-84869",
+          "publisher": "CVE.org",
+          "source_type": "primary",
+          "supports": "CVE record"
+        },
+        {
+          "title": "CISA adds three KEV entries",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+          "publisher": "CISA",
+          "source_type": "primary",
+          "supports": "KEV inclusion and due date"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [
+          "CVE-2026-82078",
+          "CVE-2026-81578"
+        ],
+        "affected_versions": [
+          "All PaperCut NG/MF versions per vendor",
+          "v23 and older: no patched build"
+        ],
+        "fixed_versions": [
+          "26.0.5",
+          "25.0.13",
+          "24.1.10"
+        ],
+        "active_exploitation": "yes"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "How many customer incidents",
+        "Geography"
+      ],
+      "action_for_emin": "PaperCut NG/MF'i 26.0.5 / 25.0.13 / 24.1.10'a çek; v23- ise desteklenen hatta yükselt veya web'i IP kısıtla. İnternete açık Application Server'ı kapat.",
+      "published_at": "2026-09-10T00:00:00+10:00",
+      "event_at": "2026-08-31T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "SEC-003",
+      "track": "security",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "PaperCut NG/MF çift KEV CVE-2026-82078 ve CVE-2026-81578: bugün vade; üretici confirmed customer incidents",
+      "what_happened": "PaperCut NG/MF CVE-2026-82078 (unsafe reflection / dynamic class loading, CWE-470) ve CVE-2026-81578 (missing auth for critical function, CWE-306) KEV'de (eklenme 31 Ağustos); FCEB vadesi bugün 14 Eylül 2026. Üretici bülten (son güncelleme 10 Eyl AEST): confirmed customer incidents; internet-facing Application Server hedef. Security maintenance releases: NG/MF 26.0.5, 25.0.13, 24.1.10 (acil yamaları yerine geçer). v23 ve öncesi için yama yok — desteklenen hatta yükselt veya web erişimini güvenilir IP'ye kısıtla. Hive/Pocket etkilenmiyor. 82078 CVSS:4.0 9.4 CRITICAL; 81578 8.8 HIGH. Forensic triage No (her iki KEV); ransomware Unknown. Üretici IoC sınıfını bültende yayımladı; adım tarifi yok.",
+      "why_it_matters": "Bugün vade ve üretici confirmed customer incidents. Çift kayıt zincirlenebilir sınıfında (config sonra bytecode) — yalnızca yama ve erişim kısıtı.",
+      "entities": [
+        "PaperCut",
+        "CVE-2026-82078",
+        "CVE-2026-81578",
+        "Huntress",
+        "watchTowr",
+        "CISA"
+      ],
+      "technical_facts": [
+        "82078 unsafe reflection / dynamic class loading CWE-470 CVSS:4.0 9.4 CRITICAL; 81578 missing auth CWE-306 CVSS:4.0 8.8 HIGH",
+        "Fixed security maintenance: NG/MF 26.0.5, 25.0.13, 24.1.10 (Site Server + secondary too); supersede emergency patches",
+        "All NG/MF versions affected per vendor; v23 and older have no patched build — upgrade or restrict web to trusted IPs",
+        "Hive/Pocket not affected",
+        "CISA due 2026-09-14; forensicTriage No; ransomware Unknown; vendor confirmed customer incidents / active exploitation"
+      ],
+      "sources": [
+        {
+          "title": "PaperCut urgent security advisory 27 Aug 2026",
+          "url": "https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/",
+          "publisher": "PaperCut",
+          "source_type": "primary",
+          "supports": "Customer incidents, fixed builds, Hive/Pocket exclusion"
+        },
+        {
+          "title": "CISA KEV catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+          "publisher": "CISA",
+          "source_type": "primary",
+          "supports": "dateAdded 2026-08-31, due 2026-09-14"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [
+          "CVE-2026-20079",
+          "CVE-2026-20316"
+        ],
+        "affected_versions": [
+          "Cisco Secure FMC Software",
+          "SCC Firewall Management"
+        ],
+        "fixed_versions": [
+          "7.0.9.1-3",
+          "7.2.11.1-4",
+          "7.4.7.1-3",
+          "7.6.5.1-2",
+          "7.7.12.1-2",
+          "10.0.1.1-2"
+        ],
+        "active_exploitation": "yes"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Talos primary blog URL not fetched this scan (pack truncated)",
+        "Full actor attribution confidence"
+      ],
+      "action_for_emin": "On-prem FMC varsa hotfix tablosunu uygula; compromise şüphesinde TAC. Pack truncation nedeniyle Talos birincil yazıyı ayrıca aç.",
+      "published_at": "2026-09-09T00:00:00+00:00",
+      "event_at": "2026-09-09T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "SEC-004",
+      "track": "security",
+      "priority": "high",
+      "status": "reported",
+      "headline": "Cisco FMC CVE-2026-20079: Talos üç küme (UAT-12197 / 11823 / 11988 Qilin); vade 12 Eyl geçti",
+      "what_happened": "CVE-2026-20079 (FMC/SCC Firewall Management auth bypass to root) KEV 9 Eylül, vade 12 Eylül (geçti). Cisco advisory last updated 2026-09-09: active exploitation observed (Aug 2026 awareness). CVSS 10.0 (Cisco). Hotfix: 7.0.9.1-3 / 7.2.11.1-4 / 7.4.7.1-3 / 7.6.5.1-2 / 7.7.12.1-2 / 10.0.1.1-2. SCC SaaS Cisco tarafında yamalı. FDM/ASA/FTD/eski CDO etkilenmiyor. SecurityAffairs/THN (11–13 Eyl): Talos üç küme — UAT-12197, UAT-11823 (Sandworm overlap / Cyclops Blink), UAT-11988 (Qilin). CVE-2026-20316 ayrı KEV (29 Tem; ransomware Known). Siber paketi FINDING 4 kaynak listesinde kesildi; Talos birincil blog bu turda fetch edilmedi. Status=reported (küme atfı ikincil).",
+      "why_it_matters": "Yönetim düzlemi kökü ve Qilin/state-sponsored kümeler; vade geçmiş olsa da hâlâ sıcak. Hotfix gelecek sömürüyü önler; mevcut compromise için TAC.",
+      "entities": [
+        "Cisco Secure FMC",
+        "Talos",
+        "Qilin",
+        "Cyclops Blink",
+        "CVE-2026-20079",
+        "CVE-2026-20316"
+      ],
+      "technical_facts": [
+        "CWE-288; unauth HTTP class to script/root; CVSS 10.0 Cisco",
+        "Hotfix: 7.0.9.1-3 / 7.2.11.1-4 / 7.4.7.1-3 / 7.6.5.1-2 / 7.7.12.1-2 / 10.0.1.1-2; SCC SaaS patched by Cisco",
+        "Affected: Secure FMC Software + SCC Firewall Management (config-independent); FDM/ASA/FTD/legacy CDO not affected",
+        "CISA due 2026-09-12 (passed); forensicTriage Yes; ransomware Unknown for 20079 (Talos ties Qilin to UAT-11988 mostly via 20316)",
+        "Talos clusters reported via SA/THN: UAT-12197, UAT-11823 (Sandworm/Cyclops Blink overlap), UAT-11988 (Qilin)"
+      ],
+      "sources": [
+        {
+          "title": "Cisco SA on-prem FMC auth bypass",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-onprem-fmc-authbypass-5JPp45V2",
+          "publisher": "Cisco",
+          "source_type": "primary",
+          "supports": "CVSS 10, hotfix table, active exploitation"
+        },
+        {
+          "title": "CISA adds four KEV entries",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/09/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+          "publisher": "CISA",
+          "source_type": "primary",
+          "supports": "KEV 20079 due 12 Sep"
+        },
+        {
+          "title": "SecurityAffairs Cisco/Talos coverage",
+          "url": "https://securityaffairs.com/",
+          "publisher": "SecurityAffairs",
+          "source_type": "secondary",
+          "supports": "Talos three-cluster summary (pack truncated mid-URL)"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "OpenAI evaluator names, scope and timeline",
+        "Whether a multi-lab binding pact exists",
+        "Exact MAI Code of Conduct publish calendar",
+        "Summit exact day/time and public commitments"
+      ],
+      "action_for_emin": "Anthropic taahhüt versus OpenAI vaat ayrımını podcast'te net tut; IPO ertelemesini yatırım tavsiyesi olmadan sermaye-güvenlik gerilimi olarak anlat. Microsoft MAI CoC danışma tarihini izle.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-12T00:00:00+00:00",
+      "program_stage": "not_applicable",
+      "id": "BT-001",
+      "track": "big_tech",
+      "priority": "critical",
+      "status": "confirmed",
+      "headline": "Pace the Frontier: Amodei yavaşlatma planı, Altman 2026 IPO yok, Nadella embedded evaluators",
+      "what_happened": "Anthropic CEO Dario Amodei 12 Eylül 2026'da We Must Pace the Frontier yazısında yetenek temposunu bilinçli yavaşlatmayı savundu; üç adım. Anthropic tek taraflı Adım 1'e bağlı: kalıcı employee-level gömülü üçüncü taraf değerlendirmeciler (masa, rozet, laptop; yayın hakkı, dar redaksiyon). Sam Altman X'te pace the frontier ve bağımsız denetçi erişimini we will do the same, more soon dedi — niyet confirmed, uygulama detayı yok. Altman Fortune/Reuters: güvenlik nedeniyle 2026 IPO yok (not 2026). 13–14 Eylül amplifikasyonu: Guardian/Reuters/Nikkei/National ve tepkiler (Hassabis yön doğru detay TBD, Musk Dario is right, Trump/Sacks/Sunak, Amodei CBS'de Çin ikilemi). Satya Nadella 14 Eylül civarında insan kontrolü, deliberate pacing ve embedded evaluators desteğini yineledi; first-party MAI modelleri için Code of Conduct'ı kamu danışmasına açacaklarını söyledi (Mint/ANI; yarın takvimi 15 Eyl TR bağlamı, netleştir). King Charles AI zirvesine OpenAI CFO Sarah Friar katılımı confirmed. WIRED Sherman Act iddiası tek outlet — claim. Pace hikâyesi ai pack A1 ile paylaşıldı; tek item big_tech'te tutuldu.",
+      "why_it_matters": "Günün en büyük büyük-tech/AI politika hikâyesi: Anthropic somut taahhüt versus OpenAI niyet, IPO ertelemesi ve Microsoft evaluator/MAI CoC sinyali aynı hafta birleşiyor.",
+      "entities": [
+        "Dario Amodei",
+        "Anthropic",
+        "Sam Altman",
+        "OpenAI",
+        "Satya Nadella",
+        "Microsoft",
+        "Elon Musk",
+        "Demis Hassabis",
+        "Sarah Friar"
+      ],
+      "technical_facts": [
+        "Anthropic Step 1: permanent employee-level embedded third-party evaluators (desk, badge, laptop; publish rights with narrow redaction)",
+        "Altman X: match Anthropic on evaluators with employee-like access; more soon on details",
+        "Altman Fortune/Reuters: OpenAI IPO will not happen in 2026 amid AI safety framing",
+        "Nadella: supports embedded evaluators; MAI Code of Conduct to public consultation (Mint: around 14–15 Sep TR context)",
+        "Hassabis: direction correct, details TBD (points to July FINRA-style proposal — no GDM embedded-evaluator commit)",
+        "OpenAI confirmed CFO Sarah Friar attending King Charles AI summit (Dumfries House / Ditchley)"
+      ],
+      "sources": [
+        {
+          "title": "We Must Pace the Frontier",
+          "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+          "publisher": "Dario Amodei",
+          "source_type": "primary",
+          "supports": "Anthropic pacing essay and Step 1 evaluator commitment"
+        },
+        {
+          "title": "OpenAI IPO will not happen in 2026 amid AI safety fears, Altman says",
+          "url": "https://www.reuters.com/legal/litigation/openai-ipo-will-not-happen-2026-amid-ai-safety-fears-altman-says-2026-09-12/",
+          "publisher": "Reuters",
+          "source_type": "primary",
+          "supports": "Altman no-2026-IPO quote"
+        },
+        {
+          "title": "Altman and Musk back Anthropic calls for brakes",
+          "url": "https://www.theguardian.com/technology/2026/sep/13/openai-sam-altman-elon-musk-back-anthropic-calls-brakes-ai-development",
+          "publisher": "The Guardian",
+          "source_type": "secondary",
+          "supports": "13 Sep amplification, Musk/Hassabis/Friar summit"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact release hour",
+        "Fee amount and timing for expanded Siri AI access"
+      ],
+      "action_for_emin": "AB cihazlarında Siri AI yok varsay; 15 Pro+ İngilizce beta ve günlük limiti not et. Saat spekülasyonu yapma.",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "event_at": "2026-09-14T00:00:00-07:00",
+      "program_stage": "delivery",
+      "id": "BT-002",
+      "track": "big_tech",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Apple iOS 27 / Siri AI çıkış günü: İngilizce beta, günlük limit, AB başlangıçta yok",
+      "what_happened": "Bugün Pazartesi 14 Eylül 2026, Apple iOS/iPadOS/macOS/watchOS/tvOS/visionOS 27 ailesini yayınlıyor (Apple available starting 9.14). Siri AI: İngilizce beta; günlük kullanım limiti; expanded access for a fee in the future (fiyat/tarih yok). DMA nedeniyle AB'de iPhone/iPad/watch için Siri AI başlangıçta yok. Cihaz eşiği iPhone 15 Pro+. Apple resmi saat vermiyor; MacRumors beklenen yaklaşık 10:00 PT (reported expectation, confirmed değil).",
+      "why_it_matters": "Yıllık platform günü, DMA coğrafi kısıt ve ücretli geniş erişim sinyali. Siri AI'nin tüketici agent deneyimine girişi.",
+      "entities": [
+        "Apple",
+        "Siri AI",
+        "iOS 27"
+      ],
+      "technical_facts": [
+        "iOS/iPadOS/macOS/watchOS/tvOS/visionOS 27 available starting 2026-09-14",
+        "Siri AI English beta; daily usage limit; future expanded access for a fee (price/date unspecified)",
+        "EU iPhone/iPad/watch Siri AI not at launch (DMA); device floor iPhone 15 Pro+",
+        "Apple did not publish an official hour; MacRumors expected ~10:00 PT is reported expectation only"
+      ],
+      "sources": [
+        {
+          "title": "iOS 27 release date and new features",
+          "url": "https://www.macrumors.com/2026/09/13/ios-27-release-date-new-features/",
+          "publisher": "MacRumors",
+          "source_type": "secondary",
+          "supports": "Launch-day feature list and expected hour"
+        },
+        {
+          "title": "iOS 27 arrives September 14, no release hour",
+          "url": "https://www.macobserver.com/news/ios-27-arrives-september-14-no-release-hour/",
+          "publisher": "Mac Observer",
+          "source_type": "secondary",
+          "supports": "No official hour"
+        },
+        {
+          "title": "Apple Intelligence daily limits",
+          "url": "https://www.macobserver.com/news/apple-intelligence-daily-limits-confirmed-fee-not-priced/",
+          "publisher": "Mac Observer",
+          "source_type": "secondary",
+          "supports": "Daily limits and unpriced future fee"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact SKU/tenant rollout calendar",
+        "Official M365 product-page wording"
+      ],
+      "action_for_emin": "M365 admin merkezinde Grok opt-in default off; AB tenancy için preview dışı olduğunu not et. Resmi product page doğrulanınca status'u yükselt.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-12T00:00:00+00:00",
+      "program_stage": "testing",
+      "id": "BT-003",
+      "track": "big_tech",
+      "priority": "high",
+      "status": "reported",
+      "headline": "Microsoft, Grok'u M365 Copilot'ta Word Excel PowerPoint için Frontier Program'a ekledi (reported)",
+      "what_happened": "Nadella'nın 12 Eylül tweet'i ve güçlü secondary haberlere göre SpaceXAI/xAI Grok, Microsoft 365 Copilot'ta Word/Excel/PowerPoint için Frontier Program kapsamında sunuluyor. Admin opt-in, default off; SpaceXAI subprocessör listesinde; AB/EFTA/UK ilk preview dışı. Resmi M365 product page bu turda fetch edilmedi; Copilot Studio yüzeyi için resmi blog (Grok 4.1 Fast) ilişkili. Status=reported.",
+      "why_it_matters": "M365 içinde model seçimi genişliyor; Grok'un Word/Excel/PowerPoint'e girmesi kurumsal Copilot rekabetini ve AB veri yerleşimi tartışmasını açar.",
+      "entities": [
+        "Microsoft",
+        "Grok",
+        "xAI",
+        "Microsoft 365 Copilot"
+      ],
+      "technical_facts": [
+        "Frontier Program; admin opt-in (default off)",
+        "SpaceXAI on subprocessors list",
+        "EU/EFTA/UK out of first preview",
+        "Official M365 product page not fetched this scan; Copilot Studio Grok 4.1 Fast blog is related official surface"
+      ],
+      "sources": [
+        {
+          "title": "Microsoft adds SpaceXAI Grok to Copilot across Word Excel PowerPoint",
+          "url": "https://techau.com.au/microsoft-adds-spacexais-grok-llm-to-copilot-across-word-excel-and-powerpoint/",
+          "publisher": "techAU",
+          "source_type": "secondary",
+          "supports": "Frontier Program, admin opt-in, EU exclusion"
+        },
+        {
+          "title": "xAI Grok 4.1 Fast in Microsoft Copilot Studio",
+          "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/more-choice-more-flexibility-xai-grok-4-1-fast-now-available-in-microsoft-copilot-studio/",
+          "publisher": "Microsoft",
+          "source_type": "primary",
+          "supports": "Related official Studio surface"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": "HPE",
+        "exchange": "NYSE",
+        "currency": "USD",
+        "move_percent": 12.44,
+        "session": "regular_close_2026-09-11",
+        "data_at": "2026-09-11T20:00:00Z",
+        "correlation_note": "Oracle AI/cloud earnings ve capex anlatısı yaygın katalizör; her tekil ticker için eşzamanlı gelişme, kanıtlanmış neden değil. Aynı küme: DELL +11.98%, SMCI +7.28%."
+      },
+      "unknowns": [
+        "Share of Oracle hardware flow going to HPE/Dell vs others",
+        "Whether Friday move was Thursday AH reprice or fresh flow"
+      ],
+      "action_for_emin": "Piyasa bölümüne AI infra genişliği versus düz NVDA kontrastı; yatırım tavsiyesi yok. Hafta sonu pacing anlatısıyla eşleştir.",
+      "published_at": "2026-09-11T20:00:00Z",
+      "event_at": "2026-09-11T20:00:00Z",
+      "program_stage": "not_applicable",
+      "id": "MKT-001",
+      "track": "market",
+      "priority": "critical",
+      "status": "confirmed",
+      "headline": "AI sunucu donanım Cuma sert yükseldi: HPE +12.4%, DELL +12.0%, SMCI +7.3%; Oracle AI-cloud spillover",
+      "what_happened": "11 Eylül 2026 regular close: HPE yaklaşık +12.44% (~62.09 USD), DELL +11.98% (~567.30, rekor yüksek atıf), SMCI +7.28% (~40.10 vs önceki ~37.38); NTAP/ON/HPQ/ANET de güçlü. Katalizör zinciri: Oracle Q1 FY27 (10 Eyl AH) — toplam gelir 19.3 milyar dolar (+30%), Cloud Infra 7.4 milyar (+121%), RPO 664 milyar, 30 milyar üzeri yeni AI kontrat, FY capex ~90–95 milyar çerçevesi, Q1 FCF -5 milyar, 300 bin üzeri GPU teslim. NVDA aynı seans neredeyse düzken infra genişledi. ABD Pazartesi nakit seansı bu tarama anında henüz kapanmadı. Yatırım tavsiyesi yok.",
+      "why_it_matters": "Pencerenin en net tech equity hikâyesi — AI ticareti NVDA'dan sunucu/ağ/depolamaya genişledi.",
+      "entities": [
+        "HPE",
+        "DELL",
+        "SMCI",
+        "ORCL",
+        "NTAP",
+        "ON",
+        "ANET",
+        "HPQ"
+      ],
+      "technical_facts": [
+        "HPE NYSE ~$62.09, +12.44% USD regular_close_2026-09-11",
+        "DELL NYSE ~$567.30, +11.98% USD regular_close_2026-09-11 (record-high mention in secondary)",
+        "SMCI NASDAQ ~$40.10 vs prior ~$37.38, +7.28% USD regular_close_2026-09-11",
+        "Oracle IR Q1 FY27: revenue $19.3B (+30%); Cloud Infra $7.4B (+121%); RPO $664B; Q1 FCF -$5B; >$30B new AI contracts; FY capex ~$90–95B; >300k GPUs delivered"
+      ],
+      "sources": [
+        {
+          "title": "Oracle Q1 FY27 results",
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+          "publisher": "Oracle",
+          "source_type": "primary",
+          "supports": "Earnings, RPO, capex"
+        },
+        {
+          "title": "Oracle quarterly revenue beats estimates",
+          "url": "https://www.reuters.com/technology/oracles-quarterly-revenue-beats-estimates-ai-boom-drives-cloud-demand-2026-09-10/",
+          "publisher": "Reuters",
+          "source_type": "primary",
+          "supports": "AH ~+4%, backlog/cash-burn"
+        },
+        {
+          "title": "Stock market today Sept 11 — HPE surges",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/11/stock-market-today-sept-11-hpe-surges-on-ai-infrastructure-demand-and-recently-raised-guidance/",
+          "publisher": "Motley Fool",
+          "source_type": "secondary",
+          "supports": "HPE/DELL/ANET closes"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": "ORCL",
+        "exchange": "NYSE",
+        "currency": "USD",
+        "move_percent": -1.77,
+        "session": "regular_close_2026-09-11_after_2026-09-10_AH_gap",
+        "data_at": "2026-09-11T20:00:00Z",
+        "correlation_note": "earnings katalizörü confirmed; Cuma fade vs gap price action — fade sürücüsü için eşzamanlı gelişme, kanıtlanmış neden değil"
+      },
+      "unknowns": [
+        "Two-day net return (AH high sources diverge)",
+        "$20B ATM stock sale optionality"
+      ],
+      "action_for_emin": "Katalizör hisse fade, supply chain değil. Tavsiye yok. MKT-005 truncated — Asya bellek Pazartesi soft iddiasını yüzde ile kullanma.",
+      "published_at": "2026-09-11T20:00:00Z",
+      "event_at": "2026-09-10T21:00:00-04:00",
+      "program_stage": "not_applicable",
+      "id": "MKT-002",
+      "track": "market",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Oracle AI cloud/RPO Perşembe AH beat; Cuma gap up sonrası regular yaklaşık -1.8% fade",
+      "what_happened": "10 Eylül AH: ORCL beat (rev 19.3 milyar, adj EPS 1.92, RPO 664 milyar, AI bookings 30 milyar üzeri); Reuters hisseler extended yaklaşık +4%. 11 Eylül: açılış ~164 dolar (Perşembe close ~152.94'ten gap) kapanış ~150.23 (yaklaşık -1.77% vs Perşembe regular); high ~166, low ~149.84. Capex/cash-burn versus backlog kalitesi sindirildi. İhraççı lag, tedarikçiler rip — MKT-001 spillover hâlâ bullish çerçeve. Piyasa paketi MKT-005 (pace/Asya bellek) ortasında kesildi; Mag7/Nasdaq Cuma toparlanması (Nasdaq +0.96% 26,333.04; GOOGL ~+1.76%; NVDA ~-0.03%) bu maddeye kısa teknik not olarak gömüldü, ayrı item açılmadı.",
+      "why_it_matters": "Sell the news / fade the gap fiyat aksiyonu; tedarik zinciri (HPE/Dell/SMCI) aynı katalizörle yükseldi. Yatırım tavsiyesi yok.",
+      "entities": [
+        "ORCL",
+        "Oracle"
+      ],
+      "technical_facts": [
+        "Thu close ~$152.94; Fri open ~$164.43, high ~$166, low ~$149.84, close ~$150.23 (-1.77%)",
+        "Reuters AH ~+4% on 10 Sep",
+        "Nasdaq Composite 26,333.04 (+0.96%); GOOGL ~$338.45 vs ~$332.60 (+1.76%); NVDA ~$218.29 (-0.03%) Friday regular — breadth note, not a separate Mag7 item"
+      ],
+      "sources": [
+        {
+          "title": "Oracle Q1 FY27 results",
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+          "publisher": "Oracle",
+          "source_type": "primary",
+          "supports": "Beat, RPO, bookings"
+        },
+        {
+          "title": "Oracle revenue beats estimates",
+          "url": "https://www.reuters.com/technology/oracles-quarterly-revenue-beats-estimates-ai-boom-drives-cloud-demand-2026-09-10/",
+          "publisher": "Reuters",
+          "source_type": "primary",
+          "supports": "AH move"
+        },
+        {
+          "title": "ORCL dated quotes 2026-09-11",
+          "url": "https://exa.ai/library/markets/stock/ORCL?date=2026-09-11",
+          "publisher": "Exa",
+          "source_type": "secondary",
+          "supports": "Friday OHLC"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact finalist count 110 vs 113 across sources"
+      ],
+      "action_for_emin": "Podcast'te Malatya finalleri ve Şanlıurfa ana festival köprüsünü kullan; lise döner/serbest satırlarını reported tut.",
+      "published_at": "2026-09-13T00:00:00+03:00",
+      "event_at": "2026-09-13T00:00:00+03:00",
+      "program_stage": "delivery",
+      "id": "TR-TECH-001",
+      "track": "tr_tech",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "TEKNOFEST Malatya İHA finalleri tamamlandı; ödül töreni 13 Eylül",
+      "what_happened": "TÜBİTAK yürütücülüğünde TEKNOFEST 2026 Uluslararası ve Liseler Arası İHA finalleri Malatya 2. Kara Havacılık Alay / Tulga'da tamamlandı. Yaklaşık 110–113 finalist takım. Ödül töreni 13 Eylül; AA/CNN Türk kopyası 14 Eylül 01:21 güncellendi. Birinciler (AA/CNN Türk): Uluslararası Sabit Kanat VİENTO Teknogaraj; Uluslararası Döner Kanat Alacadoğan; Uluslararası Serbest Görev HHO-JamForce; Liseler Sabit Kanat TŞEBGM Eren Bülbül. Liseler Döner Kanat KİTT-TURAN ve Serbest Görev Şahinbey Göktürkler yerel kaynaklarda (AA özetinde yok — reported). TÜBİTAK BY Prof. Dr. Mesut Güner fikir-proje-ürün vurgusu yaptı. Sonraki: Ankara Dikey İnişli Roket 14–18 Eyl (TÜBİTAK SAGE); Diyarbakır 18–20 Eyl; ana festival Şanlıurfa GAP 30 Eyl–4 Eki.",
+      "why_it_matters": "Türkiye'nin güncel İHA yetenek havuzu ve TEKNOFEST takvim köprüsü; genç mühendislik hattının görünür çıktısı.",
+      "entities": [
+        "TEKNOFEST",
+        "TÜBİTAK",
+        "Malatya",
+        "VİENTO Teknogaraj"
+      ],
+      "technical_facts": [
+        "Venue: Malatya 2. Kara Havacılık Alay / Tulga; ~110–113 finalist teams",
+        "Award ceremony 13 Sep 2026; AA/CNN Türk copy updated 14 Sep 01:21",
+        "Winners (AA/CNN Türk): International fixed-wing VİENTO Teknogaraj; rotary Alacadoğan; free mission HHO-JamForce; high-school fixed-wing TŞEBGM Eren Bülbül",
+        "High-school rotary KİTT-TURAN and free-mission Şahinbey Göktürkler: local sources only (reported)",
+        "Next: Ankara vertical-landing rocket 14–18 Sep (TÜBİTAK SAGE); Diyarbakır 18–20 Sep; Şanlıurfa GAP 30 Sep–4 Oct"
+      ],
+      "sources": [
+        {
+          "title": "Malatya İHA yarışı tamamlandı",
+          "url": "https://www.cnnturk.com/yerel-haberler/malatya/malatyada-uluslararasi-ve-liseler-arasi-insansiz-hava-araclari-yarisi-tamamlandi-3466155",
+          "publisher": "CNN Türk",
+          "source_type": "secondary",
+          "supports": "Winners and ceremony"
+        },
+        {
+          "title": "AA Malatya İHA",
+          "url": "https://www.aa.com.tr/tr/bilim-teknoloji/malatyada-uluslararasi-ve-liseler-arasi-insansiz-hava-araclari-yarisi-tamamlandi/4056060",
+          "publisher": "Anadolu Ajansı",
+          "source_type": "secondary",
+          "supports": "AA copy, updated 14 Sep"
+        },
+        {
+          "title": "Malatya Olay ödül töreni",
+          "url": "https://malatyaolay.com/malatyada-teknofest-heyecani-iha-yarismalari-odul-toreniyle-son-buldu/",
+          "publisher": "Malatya Olay",
+          "source_type": "secondary",
+          "supports": "Local ceremony coverage"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Budget line-item proof for the $150M and $10B figures",
+        "Exact event-day vs media-day split inside 36h window"
+      ],
+      "action_for_emin": "150 milyon USD'yi hedef/kamu kaynağı olarak anlat; bütçe kanıtı yok iddiasını hedef olarak tut. Safahat'ı burada tekrarlama.",
+      "published_at": "2026-09-12T00:00:00+03:00",
+      "event_at": "2026-09-10T00:00:00+03:00",
+      "program_stage": "announcement",
+      "id": "TR-TECH-002",
+      "track": "tr_tech",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "GITEX Ai Türkiye: Bakan Kacır 150 milyon USD AI VC kamu kaynağı ve Turcorn hedefleri",
+      "what_happened": "Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, İstanbul Fuar Merkezi GITEX Ai Türkiye'de (etkinlik resmi sitede ~10 Eyl; TR medya 12–13 Eyl, 36s sınırına yakın) ekosistem hedeflerini açıkladı: 100 bin teknoloji girişimi; Turcorn toplam değerleme 100 milyar USD; dünyanın top-10 startup ekosistemi; AI odaklı VC fonlarına 150 milyon USD kamu kaynağı (erken + büyüme). Bugün 8 Turcorn (2019'da 0). Millî Teknoloji ve YZ GM Sadullah Uzun / 2026–2030 plan (reported via medya): kamu yatırımının en az yüzde 2'si AI; 5 milyon kişiye AI okuryazarlığı; 10 bin ileri AI uzmanı / 100 bin AI profesyoneli; en az 2 bin kamu veri seti; veri merkezi 1 GW; AI/bulut/dijital için 10 milyar USD üzeri yatırım iddiası (Milliyet — claim/hedef, bütçe kanıtı yok). GITEX ölçek: ~88 ülke, 350+ şirket/girişim (yönetim claim). Safahat pre-seed tr_tech pack'te de geçiyor; tek kopya tr_invest TR-INV-002.",
+      "why_it_matters": "Kamu AI VC 150 milyon USD ve Turcorn/ekosistem hedefleri TR tech politikasının en somut güncel çerçevesi.",
+      "entities": [
+        "Mehmet Fatih Kacır",
+        "GITEX Ai Türkiye",
+        "Sadullah Uzun"
+      ],
+      "technical_facts": [
+        "Public AI-focused VC: $150M (early + growth access)",
+        "Targets: 100k tech ventures; Turcorn aggregate $100B; top-10 global startup ecosystem; 8 Turcorns today (0 in 2019)",
+        "Reported 2026–2030 plan via media: at least 2% of public investment program to AI; 5M AI literacy; 10k advanced AI specialists / 100k AI professionals; at least 2k public datasets; 1 GW data-center capacity",
+        "$10B AI/cloud/digital investment claim (Milliyet) is a target, not a budget proof",
+        "Next GITEX Ai Türkiye: 15–16 Sep 2027"
+      ],
+      "sources": [
+        {
+          "title": "Minister Kacır at GITEX Ai Türkiye",
+          "url": "https://www.gitexturkiye.com/minister-kacr-charts-trkiyes-next-phase-of-technology-growth-at-gitex-ai-trkiye",
+          "publisher": "GITEX Türkiye",
+          "source_type": "primary",
+          "supports": "Minister remarks"
+        },
+        {
+          "title": "Bakan Kacır yapay zeka mesajı",
+          "url": "https://www.milliyet.com.tr/ekonomi/bakan-kacirdan-yapay-zeka-mesaji-turkiyeyi-lider-ulkeler-arasina-tasiyacagiz-7657792",
+          "publisher": "Milliyet",
+          "source_type": "secondary",
+          "supports": "150m, Turcorn, 2030 plan figures"
+        },
+        {
+          "title": "Türkiye 150 milyon dolarlık kamu kaynağı",
+          "url": "https://www.chip.com.tr/galeri/turkiye-yapay-zeka-girisimleri-icin-150-milyon-dolarlik-kamu-kaynagi-ayiriyor_183693.html",
+          "publisher": "Chip",
+          "source_type": "secondary",
+          "supports": "VC public capital figure"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact range achieved in this firing",
+        "Official MSB primary URL beyond TURDEF citation"
+      ],
+      "action_for_emin": "Podcast'te test/entegrasyon doğrulama olarak tut; envanter veya IOC deme. Üs/görev detayı yok.",
+      "published_at": "2026-09-13T20:05:00+03:00",
+      "event_at": "2026-09-13T00:00:00+03:00",
+      "program_stage": "test_fire",
+      "id": "TR-DEF-001",
+      "track": "tr_defense",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "DzKK S-70 Seahawk'tan ROKETSAN L-UMTAS GM ilk helikopter atışı",
+      "what_happened": "13 Eylül 2026 (yaklaşık 20:05 haberi) MSB duyurusuna dayanan TURDEF haberine göre Deniz Kuvvetleri S-70 Seahawk'tan L-UMTAS GM sabit deniz hedefine ateşlendi — bilinen ilk helikopter atışı. Aynı faaliyette IIR TEMREN hava hedefine (UMTAS hattında bir ilk). Lazer güdümlü L-UMTAS GM menzil: döner kanat ~20 km, yüzey ~16 km (TURDEF). ATAK/AH-1W entegrasyonu bekleniyor deniyor. Aşama: atış testi / entegrasyon doğrulama — envanter veya IOC iddiası yok.",
+      "why_it_matters": "Deniz helikopteri ASuW menzil yükseltmesi ve TEMREN'in hava/İHA tehdidine yönelmesi. Kamuya açık test notu; üs/görev detayı yok.",
+      "entities": [
+        "DzKK",
+        "S-70 Seahawk",
+        "ROKETSAN",
+        "L-UMTAS GM",
+        "IIR TEMREN"
+      ],
+      "technical_facts": [
+        "First known helicopter firing of L-UMTAS GM from Turkish Navy S-70 against a fixed sea target",
+        "Same activity: IIR TEMREN against an air target (first on the UMTAS line)",
+        "Laser-guided L-UMTAS GM range cited by TURDEF: rotary-wing ~20 km, surface ~16 km",
+        "ATAK/AH-1W integration said to be expected — not a fielding claim",
+        "Stage: firing test / integration validation; no inventory/IOC claim"
+      ],
+      "sources": [
+        {
+          "title": "Turkish Navy S-70 first helicopter to fire L-UMTAS GM",
+          "url": "https://www.turdef.com/article/turkish-navy-s-70-first-helicopter-to-fire-l-umtas-gm",
+          "publisher": "TURDEF",
+          "source_type": "secondary",
+          "supports": "MSB-based first helicopter firing + TEMREN"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact test location/date beyond 12–13 Sep media window"
+      ],
+      "action_for_emin": "C-UAS saha doğrulaması olarak anlat; envanter deme. AKINCI'yi burada echo etme.",
+      "published_at": "2026-09-13T00:00:00+03:00",
+      "event_at": "2026-09-12T00:00:00+03:00",
+      "program_stage": "field_validation",
+      "id": "TR-DEF-002",
+      "track": "tr_defense",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "STM TUNGA-X C-UAS ve TOGAN NEST saha doğrulaması",
+      "what_happened": "STM, avcı dron TUNGA-X'in tehdit İHA'ya radar destekli tespit-takip-imha senaryosunu saha doğrulaması olarak duyurdu (şirket açıklaması; AA/Milliyet 12–13 Eylül 2026). Aynı pakette TOGAN ve NEST akıllı yuva (kritik tesis gözetleme); TOGAN-M ve yuva; TOGAN/SpecDrone sinyal istihbaratı entegrasyonu. Aşama: saha testi / kabiliyet doğrulama — seri üretim veya envanter iddiası yok. AKINCI x İHA-300 yankısı aviation AV-001'de; burada tekrarlanmadı.",
+      "why_it_matters": "C-UAS ve otonom keşif paketinin ürünleşme sinyali; kamuya açık saha testi.",
+      "entities": [
+        "STM",
+        "TUNGA-X",
+        "TOGAN",
+        "NEST"
+      ],
+      "technical_facts": [
+        "TUNGA-X hunter drone: radar-supported detect-track-engage against a threat UAV in a field scenario",
+        "TOGAN + NEST smart nest for critical-facility observation; TOGAN-M + nest; TOGAN/SpecDrone SIGINT integration",
+        "Stage: field test / capability validation; no serial-production or inventory claim"
+      ],
+      "sources": [
+        {
+          "title": "STM otonom sistemleri sahada gücünü gösterdi",
+          "url": "https://www.milliyet.com.tr/gundem/stmnin-otonom-sistemleri-sahada-gucunu-gosterdi-7659254",
+          "publisher": "Milliyet",
+          "source_type": "secondary",
+          "supports": "TUNGA-X / TOGAN / NEST field validation"
+        },
+        {
+          "title": "STM TUNGA-X ve TOGAN saha",
+          "url": "https://www.sondakika.com/guncel/haber-stm-nin-otonom-sistemleri-tunga-x-ve-togan-ile-sah-20230916/",
+          "publisher": "SonDakika",
+          "source_type": "secondary",
+          "supports": "Same company statement roundup"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Independent confirmation of impact (video gap noted by Aviationist)",
+        "Qualification/serial timeline"
+      ],
+      "action_for_emin": "Test/entegrasyon olarak tut; envanter veya 500 km savaş uçağı bandını hedef olarak etiketle. Dedup: tr_defense echo yok.",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "event_at": "2026-09-11T00:00:00+03:00",
+      "program_stage": "test_fire",
+      "id": "AV-001",
+      "track": "aviation",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Baykar AKINCI x ROKETSAN İHA-300: 250+ km deniz hedefi canlı atış",
+      "what_happened": "11 Eylül 2026 test; haber dolaşımı 11–14 Eylül. Baykar AKINCI (Çorlu kalkış, Sinop açıklarında Karadeniz) ROKETSAN İHA-300 süpersonik balistik füzesiyle deniz hedefini 250+ km'den tam isabet vurduğunu açıkladı. Aynı uçuşta İHA-122 de atıldı (Aviationist). ROKETSAN GM Murat İkinci: ilk canlı İHA-300 testi; aileyi genişletecekler — SİHA ~300+ km, savaş uçağı ~500+ km angajman hedefi (kamuya açıklanan beklenti). Haluk Bayraktar: yerli platformdan en uzun menzilli yerli füze. Aviationist notu: vuruş anı videosunda yok; şirket tam isabet diyor. Aşama: ilk canlı atış testi ve entegrasyon — envanter yok. tr_defense pack yankısı tek item olarak burada tutuldu.",
+      "why_it_matters": "Yerli TİHA'dan en uzun menzilli yerli havadan-yere süpersonik vuruş; mühimmat ekosistemi hikâyesi. Test aşaması abartılmamalı.",
+      "entities": [
+        "Baykar",
+        "AKINCI",
+        "ROKETSAN",
+        "İHA-300",
+        "Haluk Bayraktar",
+        "Murat İkinci"
+      ],
+      "technical_facts": [
+        "AKINCI departed Çorlu; maritime target in the Black Sea off Sinop; 250+ km hit claimed",
+        "İHA-300 first live fire; İHA-122 also fired on the same flight (Aviationist)",
+        "Prior integrations: İHA-122, İHA-230",
+        "ROKETSAN GM Murat İkinci: family to expand; UCAV ~300+ km / fighter ~500+ km engagement bands as public targets",
+        "Aviationist: impact moment not in released video; company says direct hit",
+        "Stage: first live firing test + integration; no inventory claim"
+      ],
+      "sources": [
+        {
+          "title": "AA EN AKINCI hits target with supersonic ballistic missile",
+          "url": "https://www.aa.com.tr/en/turkiye/turkish-combat-drone-akinci-hits-target-with-supersonic-ballistic-missile/4054350",
+          "publisher": "Anadolu Ajansı",
+          "source_type": "secondary",
+          "supports": "250+ km maritime hit"
+        },
+        {
+          "title": "AA TR İHA-300",
+          "url": "https://www.aa.com.tr/tr/bilim-teknoloji/bayraktar-akinci-supersonik-iha-300-fuzesi-ile-vurdu/4054208",
+          "publisher": "Anadolu Ajansı",
+          "source_type": "secondary",
+          "supports": "Turkish-language primary-adjacent report"
+        },
+        {
+          "title": "Baykar press AKINCI UAV-300",
+          "url": "https://baykartech.com/en/press/akinci-strikes-with-supersonic-uav-300-missile/",
+          "publisher": "Baykar",
+          "source_type": "primary",
+          "supports": "Company claim"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Root cause / final probable cause",
+        "Duration of the Amazon pause"
+      ],
+      "action_for_emin": "Podcast'te Amazon pause ve NTSB ön bulguları; neden spekülasyonu yok.",
+      "published_at": "2026-09-13T00:00:00-04:00",
+      "event_at": "2026-09-06T00:00:00-04:00",
+      "program_stage": "not_applicable",
+      "id": "AV-002",
+      "track": "aviation",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Amazon, Miami B767 kazası sonrası 21 Air operasyonunu askıya aldı",
+      "what_happened": "13 Eylül 2026 (Pazar) NBC News: Amazon, 6 Eylül Miami International'da pist dışına çıkan (yerde 5 ölü) 21 Air / Flight 7598 Boeing 767-300 operasyonunu pause etti; diğer taşıyıcılarla (Sun Country, Hawaiian, ATI, ABX, ASL, Cargojet) devam. 21 Air NTSB ile işbirliği açıklaması yaptı. NTSB (9–12 Eyl): iniş hızı ~158 kt; geç go-around thrust; speed brake / thrust reverser deploy edilmemiş görünümü. Kök neden yok.",
+      "why_it_matters": "Kargo/e-ticaret havacılığı ve taşeron risk yönetimi; kaza takip güncellemesi. Spekülasyon yok.",
+      "entities": [
+        "Amazon",
+        "21 Air",
+        "NTSB",
+        "Boeing 767",
+        "Miami International Airport"
+      ],
+      "technical_facts": [
+        "Amazon paused 21 Air operations after 6 Sep MIA runway excursion of Flight 7598 B767-300; 5 fatalities on the ground",
+        "Other Amazon air partners continue: Sun Country, Hawaiian, ATI, ABX, ASL, Cargojet",
+        "NTSB prelim: touchdown ~158 kt; late go-around thrust; no indication speed brakes or thrust reversers deployed",
+        "No probable cause yet"
+      ],
+      "sources": [
+        {
+          "title": "Amazon suspends use of 21 Air after fatal Miami crash",
+          "url": "https://www.nbcnews.com/news/us-news/amazon-suspends-use-21-air-cargo-carrier-involved-fatal-miami-crash-rcna597593",
+          "publisher": "NBC News",
+          "source_type": "secondary",
+          "supports": "Pause and other carriers"
+        },
+        {
+          "title": "NTSB statement on Miami cargo crash",
+          "url": "https://fullavantenews.com/ntsb-issues-statement-on-miami-cargo-aircraft-crash/",
+          "publisher": "Full Avante News",
+          "source_type": "secondary",
+          "supports": "NTSB speed/go-around summary"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [],
+      "action_for_emin": "Podcast tarih segmentini WTO AI and Trade ile aç; Coding Week + LIGO 11; yarın köprüsü google.com/ACM/IT Pros.",
+      "published_at": "2026-09-14T00:00:00+02:00",
+      "event_at": "2026-09-14T00:00:00+03:00",
+      "program_stage": "not_applicable",
+      "id": "HIST-001",
+      "track": "history",
+      "priority": "medium",
+      "status": "confirmed",
+      "headline": "Bugün: WTO World Trade and Tech Day, National Coding Week, LIGO GW150914 11. yıl",
+      "what_happened": "14 Eylül 2026 Pazartesi: WTO ilk World Trade and Tech Day'i Cenevre'de düzenliyor; tema AI and Trade: Turning Potential into Progress. WTO World Trade Report 2025: AI 2040'a kadar küresel GSYİH'yi yaklaşık yüzde 13, ticareti yaklaşık yüzde 37 artırabilir (koşullu). Aynı gün National Coding Week (14–20 Eylül) başlıyor — dünkü Programcı Günü (yılın 256. günü) köprüsü. LIGO ilk yerçekimi dalgası gözlemi GW150914'ün 11. yılı (14 Eylül 2015; iki kara delik birleşmesi). Ayrıca 14 Eylül 1959 Bank of America ERMA/MICR kabulü ve Luna 2 Ay'a ilk insan yapımı nesne; 2015 React Native Android OSS; 2016 Angular 2.0 final. Yarın (15 Eyl arife): google.com domain 29. yıl (1997), ACM kuruluşu 79. yıl (1947), National IT Professionals Day (Eylül'ün 3. Salısı).",
+      "why_it_matters": "AI podcast için en sıcak bugün kancası WTO AI and Trade; Coding Week ve LIGO büyük veri/açık bilim köprüsü.",
+      "entities": [
+        "WTO",
+        "National Coding Week",
+        "LIGO",
+        "GW150914"
+      ],
+      "technical_facts": [
+        "WTO World Trade and Tech Day 14 Sep 2026 Geneva; theme AI and Trade: Turning Potential into Progress",
+        "WTO World Trade Report 2025 conditional: AI could raise global GDP ~13% and trade ~37% by 2040",
+        "National Coding Week 14–20 Sep 2026; Programmer's Day was 13 Sep (day 256)",
+        "LIGO GW150914 observed 14 Sep 2015 — 11th anniversary of first gravitational-wave detection",
+        "Arife 15 Sep: google.com registered 15 Sep 1997 (29 years); ACM founded 15 Sep 1947 (79 years); IT Professionals Day is the third Tuesday of September = 15 Sep 2026"
+      ],
+      "sources": [
+        {
+          "title": "WTO World Trade and Tech Day",
+          "url": "https://www.wto.org/english/res_e/reser_e/dtech_1409202609_e/dtech_1409202609_e.htm",
+          "publisher": "WTO",
+          "source_type": "primary",
+          "supports": "Event and AI and Trade theme"
+        },
+        {
+          "title": "National Coding Week",
+          "url": "https://nationaltoday.com/national-coding-week/",
+          "publisher": "National Today",
+          "source_type": "secondary",
+          "supports": "14–20 Sep 2026"
+        },
+        {
+          "title": "LIGO GW150914 press",
+          "url": "https://www.ligo.caltech.edu/page/press-release-gw150914",
+          "publisher": "LIGO/Caltech",
+          "source_type": "primary",
+          "supports": "First detection anniversary"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": "MCARD",
+        "exchange": "BIST",
+        "currency": "TRY",
+        "move_percent": null,
+        "session": null,
+        "data_at": "2026-09-13T00:00:00+03:00",
+        "correlation_note": "KAP kapanış haberi; fiyat hareketi bu taramada bağlanmadı, kanıtlanmış neden değil"
+      },
+      "unknowns": [
+        "Undisclosed cash consideration",
+        "Integration timeline"
+      ],
+      "action_for_emin": "Travel-tech M&A olarak anlat; bedel gizli. Tavsiye yok.",
+      "published_at": "2026-09-13T00:00:00+03:00",
+      "event_at": "2026-09-11T00:00:00+03:00",
+      "program_stage": "delivery",
+      "id": "TR-INV-001",
+      "track": "tr_invest",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Metropal (MCARD) Bilet.com'un yüzde 51'ini aldı; kontrol sağlandı",
+      "what_happened": "Metropal Kurumsal Hizmetler, Digital Trade (Bilet.com) sermayesinin yüzde 51'ini aldı; kontrol sağlandı. Aynı SPA kapsamında YK başkanı ve vekili ayrı ayrı yüzde 10.75 (toplam yaklaşık yüzde 72.5 pay devri çerçevesi). Bedel KAP'ta paylaşılmadı (peşin; nominal 127.500 TL). SPA 7 Eylül; kapanış YK kararı 11 Eylül; medya yeniden 13 Eylül. Travel-tech entegrasyonu (MetropolCard) planı. Yatırım tavsiyesi yok.",
+      "why_it_matters": "BIST-listeli corporate benefit ve seyahat-fintech entegrasyonu; pencere içi taze kapsama.",
+      "entities": [
+        "Metropal",
+        "MCARD",
+        "Bilet.com",
+        "Digital Trade"
+      ],
+      "technical_facts": [
+        "51% of Digital Trade (Bilet.com) acquired; control obtained",
+        "Same SPA: chair + deputy each 10.75% additional — ~72.5% transfer frame (media)",
+        "Consideration not disclosed on KAP (cash; nominal 127,500 TL)",
+        "SPA 2026-09-07; closing board decision 2026-09-11; media recap 2026-09-13"
+      ],
+      "sources": [
+        {
+          "title": "Metropal Bilet.com devir işlemlerini tamamladı",
+          "url": "https://www.borsagundem.com.tr/metropal-biletcom-devir-islemlerini-tamamladi",
+          "publisher": "Borsa Gündem",
+          "source_type": "secondary",
+          "supports": "Closing and 51%"
+        },
+        {
+          "title": "Metropal KAP bildirimi haberi",
+          "url": "https://www.patronlardunyasi.com/metropal-kurumsal-hizmetler-biletcomu-satin-aldigini-kapa-bildirdi",
+          "publisher": "Patronlar Dünyası",
+          "source_type": "secondary",
+          "supports": "KAP citation"
+        },
+        {
+          "title": "Bilet.com çoğunluk hissesi",
+          "url": "https://acik-devre.com.tr/2026/09/unlu-bilet-platformunun-yeni-sahibi-belli-oldu-cogunluk-hissesi-icin-anlasma-imzalandi/",
+          "publisher": "Açık Devre",
+          "source_type": "secondary",
+          "supports": "Majority stake narrative"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "Exact close date versus first media date",
+        "Valuation / dilution"
+      ],
+      "action_for_emin": "Legaltech on-prem pre-seed olarak anlat; tavsiye yok. tr_tech ile dedup.",
+      "published_at": "2026-09-13T21:20:00+03:00",
+      "event_at": "2026-09-10T00:00:00+03:00",
+      "program_stage": "announcement",
+      "id": "TR-INV-002",
+      "track": "tr_invest",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "Safahat.ai 590 bin USD pre-seed: Insha GSYF ve CoFunds",
+      "what_happened": "Yerli legaltech AI Safahat.ai, Insha GSYF (Albaraka Portföy / Insha Ventures) ve CoFunds GSYF'den 590 bin USD pre-seed aldı. Türk mevzuatı/içtihat odaklı icra/dava/sözleşme; on-prem; UK ve Körfez hedefi. Kurucu Ahmet Necip Arslan. İlk yayın ~10–11 Eylül; 13 Eylül 21:20 Business World Global yeniden yayın — haber döngüsü hâlâ sıcak. tr_tech pack'teki Safahat satırı burada tekilleştirildi.",
+      "why_it_matters": "TR legaltech AI'nin on-prem ve mevzuat odaklı pre-seed'i; Insha/Albaraka hattı. Yatırım tavsiyesi yok.",
+      "entities": [
+        "Safahat.ai",
+        "Insha GSYF",
+        "CoFunds",
+        "Ahmet Necip Arslan"
+      ],
+      "technical_facts": [
+        "$590k pre-seed from Insha GSYF (Albaraka Portföy / Insha Ventures) + CoFunds GSYF",
+        "Legaltech: enforcement/litigation/contracts; Turkish statute/precedent; on-prem; UK + Gulf target",
+        "Founder Ahmet Necip Arslan",
+        "First coverage ~10–11 Sep; recirculation 13 Sep 21:20"
+      ],
+      "sources": [
+        {
+          "title": "Insha GSYF'den hukuk teknolojilerine stratejik yatırım",
+          "url": "https://businessworldglobal.com/insha-gsyfden-hukuk-teknolojilerine-stratejik-yatirim/",
+          "publisher": "Business World Global",
+          "source_type": "secondary",
+          "supports": "13 Sep 21:20 recirculation"
+        },
+        {
+          "title": "Capital Safahat.ai",
+          "url": "https://www.capital.com.tr/haberler/tum-haberler/insha-gsyfden-yapay-zeka-girisimi-safahataiye-yatirim",
+          "publisher": "Capital",
+          "source_type": "secondary",
+          "supports": "Round description"
+        },
+        {
+          "title": "Fintechtime Insha GSYF",
+          "url": "https://fintechtime.com/2026/09/insha-gsyfden-hukuk-teknolojilerine-stratejik-yatirim/",
+          "publisher": "Fintechtime",
+          "source_type": "secondary",
+          "supports": "Insha/CoFunds, on-prem"
+        }
+      ]
+    },
+    {
+      "security": {
+        "cve": [],
+        "affected_versions": [],
+        "fixed_versions": [],
+        "active_exploitation": "unknown"
+      },
+      "market": {
+        "ticker": null,
+        "exchange": null,
+        "currency": null,
+        "move_percent": null,
+        "session": null,
+        "data_at": null,
+        "correlation_note": null
+      },
+      "unknowns": [
+        "KOSGEB Küresel Rekabetçilik gerçek kapanış tarihi",
+        "Tera binding calendar",
+        "HubX exact invested amount $50M vs $75M"
+      ],
+      "action_for_emin": "KOSGEB 15 Eylül'ü takvime koy. Tera'yı mutabakat/regülasyon aşaması olarak tut. HubX tutar tutarsızlığını reported işaretle. Tavsiye yok.",
+      "published_at": "2026-09-14T00:00:00+03:00",
+      "event_at": "2026-09-15T00:00:00+03:00",
+      "program_stage": "announcement",
+      "id": "TR-INV-003",
+      "track": "tr_invest",
+      "priority": "high",
+      "status": "confirmed",
+      "headline": "KOSGEB Kapasite Geliştirme 2026/3 son başvuru yarın (15 Eylül); Tera mutabakat ve HubX Nasdaq LOI notu",
+      "what_happened": "KOSGEB Kapasite Geliştirme Destek Programı 2026/3 son başvuru tarihi yarın 15 Eylül 2026. Medya: 30 milyon TL'ye kadar kredi, 20 puan finansman ve KGF. KOSGEB Küresel Rekabetçilik için medya 30 Eylül diyor, resmi sayfa sürekli başvuru — sistemi doğrula. Tera Grubu x Pusula Finans Holding 13–14 Eylül mutabakat haberleri: Pusula, İktisat Katılım, Katılımevim, Birevim vb. için temel ticari/finansal şartlarda anlaşma; SPK/BDDK/Rekabet onayları bekleniyor; binding agreement yok aşaması. HubX (8. Turcorn) Point72 up to 75 milyon USD / 1.2 milyar pre-money ve Daedalus (DSAC) non-binding Nasdaq LOI ongoing — pencere dışı başlangıç, medium not. Yatırım tavsiyesi yok.",
+      "why_it_matters": "Yarın deadline acil KOBİ sinyali; Tera yerli fintech M&A regülasyon aşaması; HubX exit sinyali ongoing.",
+      "entities": [
+        "KOSGEB",
+        "Tera Grubu",
+        "Pusula Finans Holding",
+        "HubX"
+      ],
+      "technical_facts": [
+        "KOSGEB Kapasite Geliştirme 2026/3 deadline 2026-09-15; media: up to 30M TL credit + 20-point financing + KGF",
+        "KOSGEB Küresel Rekabetçilik: media 30 Sep vs official continuous application — verify on KOSGEB system",
+        "Tera x Pusula: agreement on commercial/financial terms; SPK/BDDK/Competition approvals pending; media stresses no binding agreement yet (Takvim 14 Sep)",
+        "HubX: Point72 up to $75M ($50M + $25M option), $1.2B pre-money; non-binding LOI with Daedalus Special Acquisition (DSAC) ~8–9 Sep; amount $50–75M varies in sources — reported inconsistency"
+      ],
+      "sources": [
+        {
+          "title": "KOSGEB Kapasite Geliştirme son başvuru",
+          "url": "https://www.cnbce.com/haberler/kobilere-30-milyon-tllik-destek-iste-kosgeb-basvuru-sartlari-ve-son-basvuru-tarihi-h36653",
+          "publisher": "CNBCE",
+          "source_type": "secondary",
+          "supports": "15 Sep deadline and 30M TL frame"
+        },
+        {
+          "title": "Pusula–Tera mutabakat",
+          "url": "https://www.takvim.com.tr/ekonomi/2026/09/13/pusula-grubu-sirketlerinin-tera-grubuna-devrinde-yeni-asama-mutabakat-saglandi",
+          "publisher": "Takvim",
+          "source_type": "secondary",
+          "supports": "13–14 Sep agreement-in-principle"
+        },
+        {
+          "title": "HubX Point72",
+          "url": "https://hubx.co/news/hubx-point72",
+          "publisher": "HubX",
+          "source_type": "primary",
+          "supports": "Up to $75M / $1.2B pre-money"
+        }
+      ]
+    }
+  ],
+  "discoveries": {
+    "skills": [
+      {
+        "name": "Dynatrace Cursor plugin skills",
+        "url": "https://www.dynatrace.com/news/blog/investigate-production-issues-from-cursor-with-the-dynatrace-plugin/",
+        "why": "11 Eylül verified Marketplace plugin: 1 MCP + 30 skill (dt-dql-essentials, dashboards, alerting). MCP veri erişimini verir; skill'ler Dynatrace şema/organizasyon bilgisini progressive load ile taşır — production root-cause'u editörden DQL yazmadan çekmek için pratik paket."
+      },
+      {
+        "name": "Anthropic Agent Skills (public repo)",
+        "url": "https://github.com/anthropics/skills",
+        "why": "Bu hafta (yaklaşık 6–7 Eylül) public açıldı: SKILL.md örnekleri, spec, template; agentskills.io açık standardıyla hizalı. Claude Code plugin marketplace + API Skills endpoint referansı — taşınabilir agent uzmanlık formatının somut implementasyonu."
+      }
+    ],
+    "agents": [
+      {
+        "name": "Cursor Projects (coordinator)",
+        "url": "https://cursor.com/blog/projects",
+        "why": "10 Eylül beta. Kalıcı cloud coordinator: aylarca shared context, binlerce parallel subagent, Slack/schedule/PR subscription. Chat session'dan feature/migration/gardening orkestrasyonuna geçiş; agent'ı yönetmek yerine işi yönetme modeli."
+      },
+      {
+        "name": "AllSpark Iris-mini / Iris-pro",
+        "url": "https://huggingface.co/AllSpark-Research/Iris-pro",
+        "why": "Yaklaşık 13 Eylül open-weight search agent'ları (35B-A3B / 397B-A17B, Qwen tabanlı, 256K). Harness + eval açık; BrowseComp vb. skorlar. Paper'ın teknik iddiası: skor farkının büyük kısmı context management scaffolding'ten — ağırlık + runtime birlikte değerlendirilmeli."
+      }
+    ],
+    "ai_tools": [
+      {
+        "name": "Pizza Bot",
+        "url": "https://github.com/pizza-bot-app/pizza-bot",
+        "why": "Yaklaşık 10–13 Eylül Apache 2.0 self-hosted inbox (DeepAgents/LangGraph checkpoint). Chat yerine email-style thread: onay pause, client disconnect sonrası resume, SQLite state. Amazon içi yaklaşık 2k kullanıcı sonrası community project — uzun koşan agent UX'inin referans arayüzü."
+      },
+      {
+        "name": "Tencent teamai-cli",
+        "url": "https://github.com/Tencent/teamai-cli",
+        "why": "Yaklaşık 13 Eylül. Tek Git repo'da skills/rules/hooks.yaml/mcp.yaml + culture.md, her agent CLAUDE.md'ye SessionStart hook ile inject. MR ile yayılım — takım agent harness'ini monorepo gibi versiyonlamak için CLI."
+      }
+    ],
+    "ai_companies": [
+      {
+        "name": "Mistral AI",
+        "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "why": "8 Eylül 3 milyar euro Series D (Samsung lead), 21 milyar euro üzeri valuation — Avrupa tech equity rekoru. Open-weight + infra + compute full-stack sovereign AI tezi; ASML/Samsung gibi endüstriyel stratejik yatırımcı sinyali."
+      },
+      {
+        "name": "Positron AI",
+        "url": "https://www.techtimes.com/articles/327400/20260912/positron-ai-raises-875m-prove-commodity-memory-can-beat-hbm-inference.htm",
+        "why": "12 Eylül 875 milyon USD Series C (yaklaşık 5 milyar post). Asimov inference ASIC: LPDDR5X (commodity) vs HBM — HBM arz sıkışırken maliyet/kapasite tezi; Qualcomm–Amazon LPDDR inference ortaklığıyla aynı hafta mimari doğrulama."
+      }
+    ]
+  },
+  "deduplication_notes": [
+    "Pace the Frontier / OpenAI no-2026-IPO / Nadella evaluators: tek item BT-001 (big_tech); ai pack A1 amplification aynı hikâyeye gömüldü, ayrı AI item açılmadı.",
+    "AKINCI x İHA-300: tek item AV-001 (aviation); tr_defense pack yankısı dedup — ayrı TR-DEF item yok.",
+    "Safahat.ai 590k: tek item TR-INV-002 (tr_invest); tr_tech pack'teki Safahat satırı tekrarlanmadı.",
+    "HubX Nasdaq LOI ve Tera–Pusula mutabakat TR-INV-003 altında medium not; ayrı item açılmadı (hedef 24–32).",
+    "Mag7/Nasdaq Cuma toparlanması ayrı item değil; MKT-002 teknik notu.",
+    "MikroTik 13 Eylül vadesi siber pack'te truncated; ayrı item yok — scan_status.notes."
+  ],
+  "editorial_warnings": [
+    "Yatırım tavsiyesi yok; market ve tr_invest maddelerinde bilgilendirme only; correlation_note kullanıldı.",
+    "Türk savunma: hassas üs/operasyon detayı yok; program_stage abartılmadı (test_fire / field_validation).",
+    "Güvenlik maddelerinde yalnızca yama, erişim kısıtı ve üretici sınıfı; sömürü adımı yok.",
+    "Kaza nedeni NTSB final bulgusundan önce iddia edilmemeli (AV-002).",
+    "Cisco FMC Talos kümeleri SA/THN özeti; birincil Talos blog bu taramada fetch edilmedi (pack truncated) — status=reported.",
+    "Grok to M365 Copilot resmi M365 product page fetch edilmedi — status=reported."
+  ]
+}
