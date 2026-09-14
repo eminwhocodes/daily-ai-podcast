@@ -1,35 +1,79 @@
 14 Eylül Pazartesi. Günaydın. Günün podcast'ına hoş geldin.
 
-Kısaca: Anthropic Pace the Frontier ile yavaşlatma taahhüdü verdi, Altman iki bin yirmi altı IPO yok dedi, Nadella gömülü değerlendirmecileri ve MAI Code of Conduct danışmasını savundu. Apple bugün iOS yirmi yedi ve Siri AI'yi İngilizce beta, günlük limit ve Avrupa Birliği başlangıç kısıtıyla yayınlıyor. Güvenlikte GitLab, ScreenConnect ve PaperCut için CISA KEV vadesi bugün. Homebrew yedi nokta sıfır çıktı; Türkiye'de TEKNOFEST Malatya İHA finalleri, GITEX'te yüz elli milyon dolar AI risk sermayesi hedefi ve KOSGEB yarın deadline var.
+Kısaca bugün: Anthropic Pace the Frontier ile yetenek temposunu yavaşlatma taahhüdü verdi, Sam Altman iki bin yirmi altı halka arz yok dedi, Satya Nadella gömülü değerlendirmecileri ve MAI Code of Conduct kamu danışmasını savundu. Apple bugün iOS yirmi yedi ailesini ve Siri AI'yi İngilizce beta, günlük limit ve Avrupa Birliği başlangıç kısıtıyla yayınlıyor. Yapay zekâ hattında Claude Code iki nokta bir nokta iki yüz yetmiş hotfix'i, Cracked'in kamu MCP sondası — yüzde doksan sekiz nokta sekiz list, yüzde altmış yedi nokta bir keyless çağrı — ve ChatGPT Avrupa ile Codex GitHub kesintileri var; ikisi de çözüldü. Güvenlikte GitLab, ScreenConnect ve PaperCut için CISA bilinen sömürü kataloğu vadesi bugün. Homebrew yedi nokta sıfır çıktı. Türkiye'de TEKNOFEST Malatya İHA finalleri, GITEX'te yüz elli milyon dolar yapay zekâ risk sermayesi hedefi ve KOSGEB yarın son başvuru. Bugün Cenevre'de Dünya Ticaret Örgütü Trade and Tech Day, tema AI and Trade.
 
 Kritik başlıklar.
 
-Pace the Frontier. Dario Amodei on iki Eylül yazısında yetenek temposunu bilinçli yavaşlatmayı savundu; Anthropic tek taraflı gömülü üçüncü taraf değerlendirmeci taahhüdüne bağlandı. Sam Altman aynı yönde niyet açıkladı ama uygulama detayı yok; Fortune ve Reuters'e göre güvenlik nedeniyle iki bin yirmi altı halka arz yok. Satya Nadella gömülü değerlendirmecileri destekledi. Bu, sermaye piyasası ile güvenlik gerilimini aynı haftada birleştiriyor.
+Pace the Frontier. Dario Amodei on iki Eylül yazısında yetenek temposunu bilinçli yavaşlatmayı savundu. Anthropic tek taraflı birinci adıma bağlandı: kalıcı, çalışan düzeyinde gömülü üçüncü taraf değerlendirmeciler — masa, rozet, dizüstü; yayın hakkı, dar redaksiyon. Altman aynı yönde niyet açıkladı ama uygulama detayı yok; Fortune ve Reuters'e göre güvenlik gerekçesiyle iki bin yirmi altı halka arz yok. Elon Musk Dario haklı dedi. Demis Hassabis yönü doğru buldu, detayı sonraya bıraktı. Nadella insan kontrolü, temkinli tempo ve gömülü değerlendirmecileri savundu; Microsoft first-party MAI modelleri için davranış kodunu kamu danışmasına açacağını söyledi. OpenAI finans şefi Sarah Friar, Kral Charles'ın yapay zekâ zirvesine katılıyor. Bu, sermaye piyasası ile güvenlik gerilimini aynı haftada birleştiriyor. Anthropic taahhüt, OpenAI niyet — ayrımı net tut.
 
-Apple iOS yirmi yedi. Bugün platform ailesi yirmi yedi çıkıyor. Siri AI İngilizce beta; günlük kullanım limiti var; gelecekte ücretli geniş erişim sinyali fiyat olmadan verildi. DMA nedeniyle Avrupa Birliği'nde iPhone iPad watch için Siri AI başlangıçta yok. Cihaz eşiği iPhone on beş Pro ve üzeri.
+Apple iOS yirmi yedi. Bugün telefon, tablet, Mac, saat, tvOS ve visionOS yirmi yedi çıkıyor. Siri AI İngilizce beta; günlük kullanım limiti var; gelecekte ücretli geniş erişim sinyali fiyat olmadan verildi. Dijital Piyasalar Tüzüğü nedeniyle Avrupa Birliği'nde iPhone, iPad ve saatte Siri AI başlangıçta yok. Cihaz eşiği iPhone on beş Pro ve üzeri. Apple resmi saat yayımlamadı.
 
-Güvenlik üçlüsü, vade bugün. GitLab CVE iki bin yirmi altı sekiz beş yedi sıfır altı: kimlik doğrulamasız dosya okuma, CVSS on. Yamalar on dokuz nokta bir nokta sekiz, on dokuz nokta iki nokta altı, on dokuz nokta üç nokta iki. watchTowr probe sinyali var. Self-managed GitLab varsa hemen yükselt. ConnectWise ScreenConnect CVE iki bin yirmi altı sekiz dört sekiz altı dokuz istemci tarafı; yirmi altı nokta altı nokta beşe güncelle. PaperCut NG MF çift KEV; bakım sürümleri yirmi altı nokta sıfır nokta beş, yirmi beş nokta sıfır nokta on üç, yirmi dört nokta bir nokta on. Sömürü adımı yok; yama ve erişim kısıtı var.
+Yapay zekâ operasyon ve ajanlar.
 
-Homebrew yedi nokta sıfır. On üç Eylül resmi. brew vulns geldi, BrewUI geldi, Intel Mac Tier üç. brew update ve brew vulns severity high çalıştır. Intel Mac varsa MacPorts planı düşün.
+Claude Code iki nokta bir nokta iki yüz yetmiş. İki nokta bir nokta iki yüz altmış dokuz sonrası uzun oturumlarda salt okunur git, Bash üzerinden beklenmedik onay istemeye başlamıştı; yama bu regresyonu kapatıyor.
 
-Hetzner. hil-cloud1-leaf8 leaf kesintisi on bir Eylül'den on üç Eylül on beş otuza çözüldü. Coolify VPS kullananlar sağlık kontrolü yapsın.
+Cracked kamu MCP raporu. On üç Eylül gecesi uzak akış protokolü kayıt defteri: dokuz yüz seksen dokuz sunucu. Yüzde doksan sekiz nokta sekiz tools list yanıtladı; yüzde altmış yedi nokta bir keyless bir çağrıyı bitirdi. Başarısızlıkların çoğu kimlik veya ödeme duvarı. Kod ve git kohortunda çağrı başarısı yalnızca yüzde otuz nokta dört. Önceki el sıkışma ölçümüyle bire bir kıyaslama yok.
 
-Türkiye ve havacılık.
+OpenAI durum sayfası. On üç Eylül'de Avrupa'da ChatGPT yükselmiş hata dalgası yaklaşık elli bir dakika sürdü, on altı elli altıdan on yedi kırk yediye çözüldü. Aynı gün Codex, yukarı akış GitHub kesintisi yüzünden inceleme yayını ve çekme isteği oluşturamadı; sabah dokuz otuz beşte tespit, on elli üçte toparlandı. Agents API on Eylül public beta. Sıfır servis ücreti ama token, araç ve kapsayıcı üç sayacı var. İki yüz dolarlık Pro duraklaması sürüyor.
 
-TEKNOFEST Malatya İHA finalleri on üç Eylül'de bitti. Uluslararası sabit kanat birincisi VİENTO Teknogaraj. Sonraki durak Ankara roket, sonra Şanlıurfa ana festival otuz Eylül dört Ekim.
+Güvenlik üçlüsü, vade bugün.
 
-GITEX Ai Türkiye. Bakan Mehmet Fatih Kacır AI odaklı risk sermayesi fonlarına yüz elli milyon dolar kamu kaynağı ve yüz bin teknoloji girişimi, yüz milyar dolar Turcorn hedefi açıkladı. Bugün sekiz Turcorn var.
+GitLab kaydı iki bin yirmi altı sekiz beş yedi sıfır altı. Kimlik doğrulamasız dosya okuma sınıfı, CVSS on. Depo commits API'sinde yol sınırlaması ve kimlik doğrulama eksikliği. Yamalar on dokuz nokta bir nokta sekiz, on dokuz nokta iki nokta altı, on dokuz nokta üç nokta iki. GitLab nokta com yamalı; self-managed acil. watchTowr, açıklamadan yaklaşık yirmi dört saat içinde sahada sonda gördüğünü bildiriyor. Sömürü adımı yok; yama ve günlük kontrolü var. Federal vade bugün, on dört Eylül. ConnectWise ScreenConnect kaydı iki bin yirmi altı sekiz dört sekiz altı dokuz, istemci tarafı; yirmi altı nokta altı nokta beşe güncelle. 
 
-Yatırım bilgilendirmesi, tavsiye değil. Metropal Bilet nokta com'un yüzde elli birini aldı. Safahat nokta ai beş yüz doksan bin dolar pre-seed aldı, Insha GSYF ve CoFunds. KOSGEB Kapasite Geliştirme son başvurusu yarın, on beş Eylül.
+PaperCut NG ve MF çift kayıt, üretici confirmed müşteri olayları. Bakım sürümleri yirmi altı nokta sıfır nokta beş, yirmi beş nokta sıfır nokta on üç, yirmi dört nokta bir nokta on. 
 
-Savunma ve havacılık, kamuya açık. Baykar AKINCI, ROKETSAN İHA üç yüz ile iki yüz elli kilometre üzeri deniz hedefi canlı atış; aşama test, envanter iddiası yok. Deniz Kuvvetleri S yetmiş'ten L-UMTAS GM ilk helikopter atışı. STM TUNGA-X C-UAS saha doğrulaması. Amazon, Miami Boeing yedi yüz altmış yedi kazası sonrası yirmi bir Air operasyonunu askıya aldı.
+Cisco FMC, vade geçti ama sıcak. Kimlik doğrulama baypası, CVSS on. Talos üç küme aktarıldı; hotfix tablosu yedi nokta sıfırdan ona kadar. 
 
-Piyasa. Cuma HPE yaklaşık artı on iki nokta dört, DELL artı on iki, SMCI artı yedi nokta üç; Oracle gap sonrası yaklaşık eksi bir nokta sekiz fade. Yatırım tavsiyesi yok.
+Açık kaynak ve yazılım.
 
-Yazılım. TanStack Router on üç Eylül performans sürümü; react-router bir nokta yüz yetmiş nokta otuz altı. TypeScript nightly yedi nokta bir geliştirme build'i geldi.
+Homebrew yedi nokta sıfır. On üç Eylül resmi. brew vulns geldi, OSV tabanlı. BrewUI geldi. Intel Mac kademe üç, yeni şişe yok; Intel tamamen iki bin yirmi yedi Eylül bir'de biter. brew update ve brew vulns severity high.
 
-Bugün tarihte. Dünya Ticaret Örgütü Trade and Tech Day, Cenevre, tema AI and Trade. National Coding Week başlıyor. LIGO'nun ilk yerçekimi dalgası gözleminin on birinci yılı.
+Void Linux. Bakımcı Andrea Brancaleoni, Go bir nokta yirmi yedi nokta bir karşılaştırmasında GLM beş nokta üç Flash ve OpenCode kullanıp AI kullanımını peşinen açıklamayınca yüz on üç paketi orphan etti. Politika: katkı insan kaynaklı; tüm AI kullanımı açıklanmalı. docker, etcd, terraform hattı etkilenmiş.
 
-Keşif notları. Dynatrace Cursor skill paketi, Anthropic public Agent Skills reposu, Cursor Projects coordinator, AllSpark Iris search agent'ları, Pizza Bot inbox UX, Tencent teamai-cli.
+Rune IDE açık kaynak. Unstable Build, GPLv3 lisanslı klavye odaklı native IDE'yi açtı. CLA yok; isteğe bağlı hizmet geliri havuzu. Go ve Python birinci sınıf.
 
-Kapanış. Bugünkü üç KEV yamasını erteleme. Pace the Frontier tartışmasını Anthropic taahhüt versus OpenAI niyet diye ayır. KOSGEB için yarını takvime koy. Yatırım tavsiyesi yok, sömürü tarifi yok, savunmada yalnızca kamuya açık test notları. İyi kodlamalar.
+Debian on üç nokta yedi, trixie noktası on iki Eylül. Güvenlik ve ciddi hata. VPS ve Coolify host'ları için rutin yükseltme.
+
+TanStack Router on üç Eylül performans sürümü. Etiket release iki bin yirmi altı sıfır dokuz on üç bir üç bir dokuz. react-router bir nokta yüz yetmiş nokta otuz altı. TypeScript nightly yedi nokta bir geliştirme build'i aynı gün damgalı. 
+
+Altyapı.
+
+Hetzner. hil-cloud1-leaf8 yaprak kesintisi on bir Eylül gece yarısından on üç Eylül on beş otuza. Yaprak kapsamlı, tüm Hetzner değil. Çözüldü. 
+
+Cloudflare. Geniş kesinti yok. Cloud Connector kuralları on iki Eylül'de yaklaşık iki buçuk saat oluşturulamadı veya güncellenemedi. Tunnel kenar kesintisi çözüldü. Bugün Amerika PoP bakımı, Atlanta uzun pencere; hafif gecikme beklenir. 
+
+Türkiye, yatırım ve savunma. Bilgilendirme; tavsiye değil.
+
+TEKNOFEST Malatya İHA finalleri on üç Eylül'de bitti. Yaklaşık yüz on finalist. Uluslararası sabit kanat birincisi VİENTO Teknogaraj. Sonraki durak Ankara roket, sonra Şanlıurfa ana festival otuz Eylül dört Ekim.
+
+GITEX Ai Türkiye. Bakan Mehmet Fatih Kacır AI odaklı risk sermayesi fonlarına yüz elli milyon dolar kamu kaynağı açıkladı. Hedef: yüz bin teknoloji girişimi ve yüz milyar dolar Turcorn. Bugün sekiz Turcorn var. 
+
+Metropal, Bilet nokta com'un yüzde elli birini aldı; kontrol geçti. Bedel KAP'ta yok. Safahat nokta ai beş yüz doksan bin dolar pre-seed aldı, Insha GSYF ve CoFunds. Yerli legaltech, Türk mevzuatı, on-prem, İngiltere ve Körfez hedefi. KOSGEB Kapasite Geliştirme son başvurusu yarın, on beş Eylül. 
+
+Savunma ve havacılık, yalnızca kamuya açık test notları. Aşama abartılmıyor.
+
+Deniz Kuvvetleri S yetmiş Seahawk'tan ROKETSAN L-UMTAS GM ilk helikopter atışı, sabit deniz hedefi. Envanter iddiası yok; atış testi.
+
+STM TUNGA-X, tehdit İHA'ya radar destekli tespit takip imha saha doğrulaması. 
+
+Baykar AKINCI, ROKETSAN İHA üç yüz ile iki yüz elli kilometre üzeri deniz hedefi canlı atış. Test ve entegrasyon; envanter yok. Bu madde havacılıkta bir kez.
+
+Amazon, Miami Boeing yedi yüz altmış yedi kazası sonrası yirmi bir Air operasyonunu askıya aldı. Altı Eylül, yerde beş ölü. 
+
+Piyasa. Cuma düzenli kapanış. HPE yaklaşık artı on iki nokta dört, DELL artı on iki, Super Micro artı yedi nokta üç. Oracle Perşembe kapanış sonrası açıklanan bulut altyapısı artı yüz yirmi bir ve altı yüz altmış dört milyar RPO; Cuma boşluk açılışı sonrası düzenli seans yaklaşık eksi bir nokta sekiz fade. Yatırım tavsiyesi yok. Eşzamanlı gelişme, kanıtlanmış neden değil.
+
+Bugün tarihte.
+
+Dünya Ticaret Örgütü ilk Trade and Tech Day, Cenevre. Tema yapay zekâ ve ticaret: potansiyeli ilerlemeye çevirmek. National Coding Week bugün başlıyor, yirmi Eylül'e kadar; dün Programcı Günüydü, yılın iki yüz elli altıncı günü. LIGO'nun ilk yerçekimi dalgası gözlemi GW bir beş sıfır dokuz bir dört, on dört Eylül iki bin on beş, on birinci yıl. 
+
+Keşif notları.
+
+Beceriler. Dynatrace Cursor eklentisi: bir MCP ve otuz skill. Anthropic Agent Skills kamu deposu, SKILL.md standardı.
+
+Ajanlar. Cursor Projects coordinator, kalıcı bulut orkestrasyonu. AllSpark Iris mini ve Iris pro açık ağırlık arama ajanları.
+
+Araçlar. Pizza Bot, e-posta ipliği agent gelen kutusu. Tencent teamai-cli, takım agent harness'ini Git ile versiyonlar.
+
+Şirketler. Mistral AI üç milyar euro Series D, yirmi bir milyar euro üzeri değerleme. Positron AI sekiz yüz yetmiş beş milyon Series C, ticari bellek ile HBM'ye karşı çıkarım tezi.
+
+Kapanış. Bugünkü üç KEV yamasını erteleme. Pace'i Anthropic taahhüt versus OpenAI niyet diye ayır. KOSGEB yarın. Dünya Ticaret Örgütü AI and Trade bugünün kancası. Yatırım tavsiyesi yok, sömürü tarifi yok. İyi kodlamalar.
